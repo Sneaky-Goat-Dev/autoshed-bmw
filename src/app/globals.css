@@ -1,26 +1,165 @@
 @import "tailwindcss";
 
+/* Autoshed Design System CSS Variables - BMW Style with Gold Branding */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary Brand - Autoshed Gold */
+  --color-white: #ffffff;
+  --color-primary: #C9A86C;
+  --color-primary-light: #D4BC8A;
+  --color-primary-dark: #B8956A;
+  --color-accent: #C9A86C;
+
+  /* Gold color aliases for Autoshed branding */
+  --color-gold: #C9A86C;
+  --color-gold-light: #D4BC8A;
+  --color-gold-dark: #B8956A;
+
+  /* Legacy aliases - now pointing to gold */
+  --color-bmw-blue: #C9A86C;
+  --color-bmw-focus: #B8956A;
+
+  /* Neutral Scale */
+  --color-near-black: #262626;
+  --color-dark-text: #3D3D3D;
+  --color-meta-gray: #757575;
+  --color-silver: #bbbbbb;
+
+  /* Backgrounds */
+  --color-dark-bg: #0a0a0a;
+  --color-dark-surface: #111111;
+
+  /* Site context variables (Autoshed Gold branded) */
+  --site-context-theme-color: #ffffff;
+  --site-context-highlight-color: #C9A86C;
+  --site-context-focus-color: #B8956A;
+  --site-context-metainfo-color: #757575;
 }
 
+/* Tailwind v4 Theme Configuration */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Autoshed Brand Colors - Gold */
+  --color-primary: #C9A86C;
+  --color-primary-light: #D4BC8A;
+  --color-primary-dark: #B8956A;
+  --color-accent: #C9A86C;
+
+  /* Gold color palette */
+  --color-gold: #C9A86C;
+  --color-gold-light: #D4BC8A;
+  --color-gold-dark: #B8956A;
+
+  /* Legacy BMW color aliases - now gold */
+  --color-bmw-blue: #C9A86C;
+  --color-bmw-focus: #B8956A;
+
+  /* Neutral Scale */
+  --color-near-black: #262626;
+  --color-dark-text: #3D3D3D;
+  --color-meta-gray: #757575;
+  --color-silver: #bbbbbb;
+  --color-dark-bg: #0a0a0a;
+  --color-dark-surface: #111111;
+
+  /* Font families - Inter as fallback */
+  --font-bmw: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Line heights - BMW tight system */
+  --line-height-display: 1.15;
+  --line-height-tight: 1.20;
+  --line-height-snug: 1.30;
+
+  /* Border radius - BMW uses ZERO for sharp corners */
+  --radius-none: 0px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base styles */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-bmw);
+  color: var(--color-near-black);
+  background-color: var(--color-white);
+  line-height: 1.15;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* BMW Typography - Display headlines (light weight, uppercase) */
+.heading-display {
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1.30;
+  letter-spacing: -0.02em;
+}
+
+/* BMW Typography - Section headings */
+.heading-section {
+  font-weight: 400;
+  line-height: 1.30;
+}
+
+/* BMW Typography - Navigation (heavy weight) */
+.nav-text {
+  font-weight: 900;
+  line-height: 1.30;
+  letter-spacing: 0.01em;
+}
+
+/* BMW Typography - Body text */
+.body-text {
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+/* BMW Typography - Button text */
+.button-text {
+  font-weight: 700;
+  line-height: 1.20;
+}
+
+/* Focus states - Autoshed Gold */
+*:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* Remove all border-radius - BMW angular design */
+* {
+  border-radius: 0 !important;
+}
+
+/* Links - BMW style */
+a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Form inputs - BMW angular style */
+input, textarea, select {
+  border-radius: 0 !important;
+  font-family: var(--font-bmw);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 0;
+}
+
+/* Buttons - BMW angular style */
+button {
+  border-radius: 0 !important;
+  font-family: var(--font-bmw);
+  cursor: pointer;
+}
+
+/* Image treatment */
+img {
+  max-width: 100%;
+  height: auto;
 }
