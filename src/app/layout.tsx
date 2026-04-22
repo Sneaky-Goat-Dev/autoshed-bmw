@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FormspreeProvider from "@/components/FormspreeProvider";
 import { autoshedData } from "@/data/autoshed-data";
 
 const inter = Inter({
@@ -15,6 +16,10 @@ export const metadata: Metadata = {
   title: autoshedData.meta.title,
   description: autoshedData.meta.description,
   keywords: autoshedData.meta.keywords.join(", "),
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: autoshedData.meta.title,
     description: autoshedData.meta.description,
@@ -36,9 +41,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable}`}>
       <body className="min-h-screen flex flex-col antialiased" style={{ fontFamily: 'var(--font-inter), Inter, Helvetica Neue, Helvetica, Arial, sans-serif' }}>
-        <Header />
-        <main className="flex-1 pt-20">{children}</main>
-        <Footer />
+        <FormspreeProvider>
+          <Header />
+          <main className="flex-1 pt-20">{children}</main>
+          <Footer />
+        </FormspreeProvider>
       </body>
     </html>
   );
