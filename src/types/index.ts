@@ -102,6 +102,14 @@ export interface AutoshedData {
   meta: Meta;
 }
 
+// Stock Data Types
+export interface StockData {
+  lastUpdated: string;
+  source: string;
+  vehicleCount: number;
+  vehicles: Vehicle[];
+}
+
 // Form Types
 export interface EnquiryFormData {
   name: string;
