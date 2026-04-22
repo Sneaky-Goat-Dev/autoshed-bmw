@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sync:stock": "tsx scripts/sync-autotrader.ts"
   },
   "dependencies": {
     "next": "16.2.3",
@@ -15,6 +16,8 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "dotenv": "^16.4.5",
+    "tsx": "^4.19.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
