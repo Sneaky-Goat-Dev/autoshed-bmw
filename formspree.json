@@ -1,0 +1,13 @@
+{
+  "forms": {
+    "contact": {
+      "name": "Contact Form"
+    },
+    "sellCar": {
+      "name": "Sell Your Car Form"
+    },
+    "vehicleEnquiry": {
+      "name": "Vehicle Enquiry Form"
+    }
+  }
+}
