@@ -1,42 +1,14 @@
 'use client';
 
-import { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import { autoshedData } from '@/data/autoshed-data';
 import SectionHeading from '@/components/SectionHeading';
 import Button from '@/components/Button';
-import { ContactFormData } from '@/types';
 
 export default function ContactPage() {
   const { business, contact, social } = autoshedData;
 
-  const [formData, setFormData] = useState<ContactFormData>({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
+  const [state, handleSubmit] = useForm('contact');
 
   const inputClasses =
     'w-full px-4 py-3 border border-gray-200 text-sm focus:border-gold focus:ring-0 focus:outline-none bg-white';
@@ -200,7 +172,7 @@ export default function ContactPage() {
                   Fill out the form below and we will get back to you as soon as possible.
                 </p>
 
-                {isSubmitted ? (
+                {state.succeeded ? (
                   <div className="text-center py-12">
                     <div className="w-16 h-16 bg-gold mx-auto flex items-center justify-center mb-6">
                       <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -212,10 +184,7 @@ export default function ContactPage() {
                       Thank you for contacting us. We will get back to you shortly.
                     </p>
                     <Button
-                      onClick={() => {
-                        setIsSubmitted(false);
-                        setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-                      }}
+                      onClick={() => window.location.reload()}
                       variant="outline"
                     >
                       Send Another Message
@@ -232,12 +201,11 @@ export default function ContactPage() {
                           type="text"
                           id="name"
                           name="name"
-                          value={formData.name}
-                          onChange={handleInputChange}
                           required
                           className={inputClasses}
                           placeholder="John Doe"
                         />
+                        <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-500 text-sm mt-1" />
                       </div>
                       <div>
                         <label htmlFor="phone" className={labelClasses}>
@@ -247,12 +215,11 @@ export default function ContactPage() {
                           type="tel"
                           id="phone"
                           name="phone"
-                          value={formData.phone}
-                          onChange={handleInputChange}
                           required
                           className={inputClasses}
                           placeholder="012 345 6789"
                         />
+                        <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-red-500 text-sm mt-1" />
                       </div>
                     </div>
 
@@ -264,12 +231,11 @@ export default function ContactPage() {
                         type="email"
                         id="email"
                         name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
                         required
                         className={inputClasses}
                         placeholder="john@example.com"
                       />
+                      <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-500 text-sm mt-1" />
                     </div>
 
                     <div>
@@ -279,8 +245,6 @@ export default function ContactPage() {
                       <select
                         id="subject"
                         name="subject"
-                        value={formData.subject}
-                        onChange={handleInputChange}
                         required
                         className={inputClasses}
                       >
@@ -292,6 +256,7 @@ export default function ContactPage() {
                         <option value="service">Service & Warranty</option>
                         <option value="general">General Enquiry</option>
                       </select>
+                      <ValidationError prefix="Subject" field="subject" errors={state.errors} className="text-red-500 text-sm mt-1" />
                     </div>
 
                     <div>
@@ -301,13 +266,12 @@ export default function ContactPage() {
                       <textarea
                         id="message"
                         name="message"
-                        value={formData.message}
-                        onChange={handleInputChange}
                         required
                         rows={5}
                         className={inputClasses}
                         placeholder="How can we help you?"
                       />
+                      <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-500 text-sm mt-1" />
                     </div>
 
                     <Button
@@ -315,9 +279,9 @@ export default function ContactPage() {
                       variant="primary"
                       size="lg"
                       fullWidth
-                      disabled={isSubmitting}
+                      disabled={state.submitting}
                     >
-                      {isSubmitting ? 'Sending...' : 'Send Message'}
+                      {state.submitting ? 'Sending...' : 'Send Message'}
                     </Button>
                   </form>
                 )}
@@ -328,22 +292,31 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="bg-gray-100">
-        <div className="aspect-[21/9] w-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-dark-bg mx-auto flex items-center justify-center mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-            </div>
-            <p className="text-meta-gray text-sm uppercase tracking-wider mb-2">Find Us At</p>
-            <p className="text-near-black font-bold">
-              {contact.address.street}, {contact.address.suburb}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">
+              Visit Our Showroom
             </p>
-            <p className="text-meta-gray">
-              {contact.address.city}, {contact.address.postalCode}
+            <h2 className="heading-display text-3xl sm:text-4xl text-near-black mb-4">
+              Find Us
+            </h2>
+            <p className="text-meta-gray max-w-2xl mx-auto">
+              {contact.address.street}, {contact.address.suburb}, {contact.address.city}, {contact.address.postalCode}
             </p>
+          </div>
+          <div className="aspect-[16/9] lg:aspect-[21/9] w-full shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448.0!2d28.1920191!3d-25.865026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x16825fc1c96b637%3A0xf0df7fae6a9ee154!2sThe%20Auto%20Shed!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title={`${business.name} Location`}
+              className="w-full h-full"
+            />
           </div>
         </div>
       </section>
