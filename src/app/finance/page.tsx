@@ -1,52 +1,20 @@
 'use client';
 
-import { useState } from 'react';
+import { Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { autoshedData } from '@/data/autoshed-data';
 import SectionHeading from '@/components/SectionHeading';
 import Button from '@/components/Button';
 import FinanceCalculator from '@/components/FinanceCalculator';
-import { FinanceFormData } from '@/types';
+import SignioFinanceForm from '@/components/SignioFinanceForm';
 
-export default function FinancePage() {
+function FinancePageContent() {
+  const searchParams = useSearchParams();
+  const vehicleId = searchParams.get('vehicle');
   const { business, financeRequirements, vehicles } = autoshedData;
 
-  const [formData, setFormData] = useState<FinanceFormData>({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    idNumber: '',
-    employmentStatus: '',
-    monthlyIncome: '',
-    vehicleInterest: '',
-    depositAmount: '',
-    message: '',
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
-
-  const inputClasses =
-    'w-full px-4 py-3 border border-gray-200 text-sm focus:border-gold focus:ring-0 focus:outline-none bg-white';
-  const labelClasses = 'block text-sm font-medium text-near-black mb-2';
+  // Find vehicle if ID is provided
+  const selectedVehicle = vehicleId ? vehicles.find(v => v.id === vehicleId) : undefined;
 
   const financePartners = [
     'ABSA Vehicle Finance',
@@ -129,7 +97,7 @@ export default function FinancePage() {
 
             {/* Finance Calculator */}
             <div>
-              <FinanceCalculator vehiclePrice={900000} />
+              <FinanceCalculator vehiclePrice={selectedVehicle?.price || 900000} />
             </div>
           </div>
         </div>
@@ -185,274 +153,30 @@ export default function FinancePage() {
       {/* Application Form Section */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <div className="text-center mb-10">
               <h2 className="heading-display text-3xl sm:text-4xl text-near-black mb-4">
                 Finance Application
               </h2>
               <p className="text-meta-gray">
-                Complete the form below to start your finance application. Our team will contact
-                you within 24 hours.
+                Complete the form below to start your finance application. Your application will be
+                submitted directly to our finance partners for assessment.
               </p>
             </div>
 
-            {isSubmitted ? (
-              <div className="text-center py-12 bg-gray-50">
-                <div className="w-16 h-16 bg-gold mx-auto flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-near-black mb-2">Application Submitted</h3>
-                <p className="text-meta-gray mb-6 max-w-md mx-auto">
-                  Thank you for your finance application. Our team will review your details and
-                  contact you within 24 hours.
+            {selectedVehicle && (
+              <div className="mb-8 p-4 bg-gold/10 border border-gold/20">
+                <p className="text-sm text-meta-gray mb-1">Applying for finance on:</p>
+                <p className="font-bold text-near-black">
+                  {selectedVehicle.year} {selectedVehicle.make} {selectedVehicle.model} {selectedVehicle.variant}
                 </p>
-                <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <Button href="/vehicles" variant="primary">
-                    Browse Vehicles
-                  </Button>
-                  <Button
-                    onClick={() => {
-                      setIsSubmitted(false);
-                      setFormData({
-                        firstName: '',
-                        lastName: '',
-                        email: '',
-                        phone: '',
-                        idNumber: '',
-                        employmentStatus: '',
-                        monthlyIncome: '',
-                        vehicleInterest: '',
-                        depositAmount: '',
-                        message: '',
-                      });
-                    }}
-                    variant="outline"
-                  >
-                    Submit Another Application
-                  </Button>
-                </div>
+                <p className="text-gold font-bold">
+                  R{selectedVehicle.price.toLocaleString()}
+                </p>
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="bg-gray-50 p-8 space-y-6">
-                {/* Personal Information */}
-                <div>
-                  <h3 className="text-lg font-bold text-near-black mb-4 pb-2 border-b border-gray-200">
-                    Personal Information
-                  </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="firstName" className={labelClasses}>
-                        First Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="firstName"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleInputChange}
-                        required
-                        className={inputClasses}
-                        placeholder="John"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="lastName" className={labelClasses}>
-                        Last Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="lastName"
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleInputChange}
-                        required
-                        className={inputClasses}
-                        placeholder="Doe"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className={labelClasses}>
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className={inputClasses}
-                        placeholder="john@example.com"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="phone" className={labelClasses}>
-                        Phone Number *
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        required
-                        className={inputClasses}
-                        placeholder="012 345 6789"
-                      />
-                    </div>
-                    <div className="sm:col-span-2">
-                      <label htmlFor="idNumber" className={labelClasses}>
-                        ID Number *
-                      </label>
-                      <input
-                        type="text"
-                        id="idNumber"
-                        name="idNumber"
-                        value={formData.idNumber}
-                        onChange={handleInputChange}
-                        required
-                        maxLength={13}
-                        className={inputClasses}
-                        placeholder="13-digit SA ID number"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Employment Information */}
-                <div>
-                  <h3 className="text-lg font-bold text-near-black mb-4 pb-2 border-b border-gray-200">
-                    Employment Information
-                  </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="employmentStatus" className={labelClasses}>
-                        Employment Status *
-                      </label>
-                      <select
-                        id="employmentStatus"
-                        name="employmentStatus"
-                        value={formData.employmentStatus}
-                        onChange={handleInputChange}
-                        required
-                        className={inputClasses}
-                      >
-                        <option value="">Select status</option>
-                        <option value="employed">Employed (Full-time)</option>
-                        <option value="self-employed">Self-Employed</option>
-                        <option value="contract">Contract Worker</option>
-                        <option value="part-time">Part-time Employed</option>
-                        <option value="retired">Retired</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label htmlFor="monthlyIncome" className={labelClasses}>
-                        Gross Monthly Income *
-                      </label>
-                      <select
-                        id="monthlyIncome"
-                        name="monthlyIncome"
-                        value={formData.monthlyIncome}
-                        onChange={handleInputChange}
-                        required
-                        className={inputClasses}
-                      >
-                        <option value="">Select range</option>
-                        <option value="0-20000">R0 - R20,000</option>
-                        <option value="20000-40000">R20,000 - R40,000</option>
-                        <option value="40000-60000">R40,000 - R60,000</option>
-                        <option value="60000-80000">R60,000 - R80,000</option>
-                        <option value="80000-100000">R80,000 - R100,000</option>
-                        <option value="100000+">R100,000+</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Vehicle Interest */}
-                <div>
-                  <h3 className="text-lg font-bold text-near-black mb-4 pb-2 border-b border-gray-200">
-                    Vehicle Interest
-                  </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="vehicleInterest" className={labelClasses}>
-                        Vehicle of Interest
-                      </label>
-                      <select
-                        id="vehicleInterest"
-                        name="vehicleInterest"
-                        value={formData.vehicleInterest}
-                        onChange={handleInputChange}
-                        className={inputClasses}
-                      >
-                        <option value="">Select a vehicle (optional)</option>
-                        {vehicles.map((vehicle) => (
-                          <option key={vehicle.id} value={vehicle.id}>
-                            {vehicle.year} {vehicle.make} {vehicle.model} {vehicle.variant}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label htmlFor="depositAmount" className={labelClasses}>
-                        Available Deposit
-                      </label>
-                      <select
-                        id="depositAmount"
-                        name="depositAmount"
-                        value={formData.depositAmount}
-                        onChange={handleInputChange}
-                        className={inputClasses}
-                      >
-                        <option value="">Select range (optional)</option>
-                        <option value="0">No deposit</option>
-                        <option value="0-50000">Up to R50,000</option>
-                        <option value="50000-100000">R50,000 - R100,000</option>
-                        <option value="100000-200000">R100,000 - R200,000</option>
-                        <option value="200000+">R200,000+</option>
-                      </select>
-                    </div>
-                    <div className="sm:col-span-2">
-                      <label htmlFor="message" className={labelClasses}>
-                        Additional Information
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        rows={4}
-                        className={inputClasses}
-                        placeholder="Any additional information you would like to share..."
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Disclaimer */}
-                <div className="bg-white p-4 border border-gray-200 text-xs text-meta-gray">
-                  <p>
-                    By submitting this form, you consent to {business.name} contacting you regarding
-                    your finance application. Your personal information will be handled in accordance
-                    with POPIA regulations. Finance subject to credit approval. Terms and conditions apply.
-                  </p>
-                </div>
-
-                <Button
-                  type="submit"
-                  variant="primary"
-                  size="lg"
-                  fullWidth
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? 'Submitting Application...' : 'Submit Finance Application'}
-                </Button>
-              </form>
             )}
+
+            <SignioFinanceForm vehicle={selectedVehicle} />
           </div>
         </div>
       </section>
@@ -473,5 +197,20 @@ export default function FinancePage() {
         </div>
       </section>
     </>
+  );
+}
+
+export default function FinancePage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-8 h-8 border-2 border-gold border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-meta-gray">Loading...</p>
+        </div>
+      </div>
+    }>
+      <FinancePageContent />
+    </Suspense>
   );
 }

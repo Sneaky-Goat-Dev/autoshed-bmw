@@ -70,8 +70,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Section - Light gray background */}
+      {/* Featured Inventory Section - Light gray background */}
       <section className="py-16 lg:py-24 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-10 lg:mb-12">
+            <SectionHeading
+              title="Featured Vehicles"
+              subtitle="Discover our hand-selected premium inventory"
+            />
+            <Button href="/vehicles" variant="outline" size="md">
+              View All
+            </Button>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featuredVehicles.map((vehicle) => (
+              <VehicleCard key={vehicle.id} vehicle={vehicle} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section - White background */}
+      <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Our Services"
@@ -90,26 +110,6 @@ export default function HomePage() {
                 <h3 className="text-lg font-bold text-near-black mb-2">{service.title}</h3>
                 <p className="text-sm text-meta-gray leading-relaxed">{service.description}</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Inventory Section - White background */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-10 lg:mb-12">
-            <SectionHeading
-              title="Featured Vehicles"
-              subtitle="Discover our hand-selected premium inventory"
-            />
-            <Button href="/vehicles" variant="outline" size="md">
-              View All
-            </Button>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredVehicles.map((vehicle) => (
-              <VehicleCard key={vehicle.id} vehicle={vehicle} />
             ))}
           </div>
         </div>

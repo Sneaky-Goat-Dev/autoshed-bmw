@@ -9,21 +9,56 @@ interface FinanceCalculatorProps {
 }
 
 export default function FinanceCalculator({ vehiclePrice }: FinanceCalculatorProps) {
+  const [price, setPrice] = useState(vehiclePrice);
   const [deposit, setDeposit] = useState(vehiclePrice * 0.1);
   const [term, setTerm] = useState(60);
   const [interestRate, setInterestRate] = useState(11.75);
   const [monthlyPayment, setMonthlyPayment] = useState(0);
 
+  // Update price when vehiclePrice prop changes
   useEffect(() => {
-    const payment = calculateMonthlyPayment(vehiclePrice, interestRate, term, deposit);
-    setMonthlyPayment(payment);
-  }, [vehiclePrice, deposit, term, interestRate]);
+    setPrice(vehiclePrice);
+    setDeposit(vehiclePrice * 0.1);
+  }, [vehiclePrice]);
 
-  const depositPercentage = Math.round((deposit / vehiclePrice) * 100);
+  useEffect(() => {
+    const payment = calculateMonthlyPayment(price, interestRate, term, deposit);
+    setMonthlyPayment(payment);
+  }, [price, deposit, term, interestRate]);
+
+  // Ensure deposit doesn't exceed 50% of price
+  useEffect(() => {
+    if (deposit > price * 0.5) {
+      setDeposit(price * 0.5);
+    }
+  }, [price, deposit]);
+
+  const depositPercentage = Math.round((deposit / price) * 100);
 
   return (
     <div className="bg-gray-50 p-6">
       <h3 className="text-lg font-bold uppercase tracking-wider mb-6">Finance Calculator</h3>
+
+      {/* Vehicle Price Slider */}
+      <div className="mb-6">
+        <div className="flex justify-between items-center mb-2">
+          <label className="text-sm font-medium text-near-black">Vehicle Value</label>
+          <span className="text-sm font-bold text-gold">{formatPrice(price)}</span>
+        </div>
+        <input
+          type="range"
+          min={100000}
+          max={3000000}
+          step={25000}
+          value={price}
+          onChange={(e) => setPrice(Number(e.target.value))}
+          className="w-full h-2 bg-gray-200 appearance-none cursor-pointer accent-gold"
+        />
+        <div className="flex justify-between text-xs text-meta-gray mt-1">
+          <span>{formatPrice(100000)}</span>
+          <span>{formatPrice(3000000)}</span>
+        </div>
+      </div>
 
       {/* Deposit Slider */}
       <div className="mb-6">
@@ -36,7 +71,7 @@ export default function FinanceCalculator({ vehiclePrice }: FinanceCalculatorPro
         <input
           type="range"
           min={0}
-          max={vehiclePrice * 0.5}
+          max={price * 0.5}
           step={10000}
           value={deposit}
           onChange={(e) => setDeposit(Number(e.target.value))}
@@ -44,7 +79,7 @@ export default function FinanceCalculator({ vehiclePrice }: FinanceCalculatorPro
         />
         <div className="flex justify-between text-xs text-meta-gray mt-1">
           <span>{formatPrice(0)}</span>
-          <span>{formatPrice(vehiclePrice * 0.5)}</span>
+          <span>{formatPrice(price * 0.5)}</span>
         </div>
       </div>
 
@@ -105,7 +140,7 @@ export default function FinanceCalculator({ vehiclePrice }: FinanceCalculatorPro
         <div className="grid grid-cols-2 gap-4 text-sm">
           <div>
             <p className="text-meta-gray">Vehicle Price</p>
-            <p className="font-bold">{formatPrice(vehiclePrice)}</p>
+            <p className="font-bold">{formatPrice(price)}</p>
           </div>
           <div>
             <p className="text-meta-gray">Deposit</p>
@@ -113,7 +148,7 @@ export default function FinanceCalculator({ vehiclePrice }: FinanceCalculatorPro
           </div>
           <div>
             <p className="text-meta-gray">Loan Amount</p>
-            <p className="font-bold">{formatPrice(vehiclePrice - deposit)}</p>
+            <p className="font-bold">{formatPrice(price - deposit)}</p>
           </div>
           <div>
             <p className="text-meta-gray">Total Repayment</p>

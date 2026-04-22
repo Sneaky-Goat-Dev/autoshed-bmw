@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Vehicle } from '@/types';
@@ -8,15 +11,29 @@ interface VehicleCardProps {
 }
 
 export default function VehicleCard({ vehicle }: VehicleCardProps) {
-  const vehicleImage = vehicle.images && vehicle.images.length > 0 ? vehicle.images[0] : null;
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = vehicle.images || [];
+  const hasMultipleImages = images.length > 1;
+
+  const handlePrevImage = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const handleNextImage = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
 
   return (
     <Link href={`/vehicles/${vehicle.id}`} className="group block bg-white">
       {/* Vehicle Image */}
       <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden">
-        {vehicleImage ? (
+        {images.length > 0 ? (
           <Image
-            src={vehicleImage}
+            src={images[currentImageIndex]}
             alt={`${vehicle.year} ${vehicle.make} ${vehicle.model} ${vehicle.variant}`}
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -50,8 +67,51 @@ export default function VehicleCard({ vehicle }: VehicleCardProps) {
             </div>
           </div>
         )}
+
         {/* Hover Overlay */}
         <div className="absolute inset-0 bg-gold/0 group-hover:bg-gold/10 transition-colors duration-300" />
+
+        {/* Navigation Arrows - Only show on hover and if multiple images */}
+        {hasMultipleImages && (
+          <>
+            {/* Left Arrow */}
+            <button
+              onClick={handlePrevImage}
+              className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 hover:bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md"
+              aria-label="Previous image"
+            >
+              <svg className="w-4 h-4 text-near-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            {/* Right Arrow */}
+            <button
+              onClick={handleNextImage}
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 hover:bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md"
+              aria-label="Next image"
+            >
+              <svg className="w-4 h-4 text-near-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            {/* Image Indicators */}
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              {images.slice(0, 5).map((_, index) => (
+                <div
+                  key={index}
+                  className={`w-1.5 h-1.5 rounded-full transition-colors ${
+                    index === currentImageIndex ? 'bg-gold' : 'bg-white/70'
+                  }`}
+                />
+              ))}
+              {images.length > 5 && (
+                <span className="text-white text-xs ml-1">+{images.length - 5}</span>
+              )}
+            </div>
+          </>
+        )}
       </div>
 
       {/* Content */}

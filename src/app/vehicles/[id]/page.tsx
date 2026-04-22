@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation';
 import { autoshedData } from '@/data/autoshed-data';
 import Button from '@/components/Button';
 import FinanceCalculator from '@/components/FinanceCalculator';
+import VehicleCard from '@/components/VehicleCard';
 import { formatPrice, formatMileage } from '@/utils/format';
 import { EnquiryFormData } from '@/types';
 
@@ -505,26 +506,7 @@ export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {similarVehicles.map((v) => (
-                <Link key={v.id} href={`/vehicles/${v.id}`} className="group block bg-white">
-                  <div className="aspect-[4/3] bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                    <div className="text-center">
-                      <svg className="w-12 h-12 mx-auto text-gray-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
-                      <p className="text-xs text-gray-500">{v.make} {v.model}</p>
-                    </div>
-                  </div>
-                  <div className="p-4 border-l border-r border-b border-gray-200">
-                    <h3 className="text-lg font-bold text-near-black group-hover:text-gold transition-colors mb-1">
-                      {v.year} {v.make} {v.model}
-                    </h3>
-                    <p className="text-sm text-meta-gray mb-3">{v.variant}</p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-lg font-bold text-near-black">{formatPrice(v.price)}</span>
-                      <span className="text-xs text-meta-gray">{formatMileage(v.mileage)}</span>
-                    </div>
-                  </div>
-                </Link>
+                <VehicleCard key={v.id} vehicle={v} />
               ))}
             </div>
           </div>
@@ -542,7 +524,7 @@ export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
             institutions. Get pre-approved today.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button href="/finance" variant="primary" size="lg">
+            <Button href={`/finance?vehicle=${vehicle.id}`} variant="primary" size="lg">
               Apply for Finance
             </Button>
             <Button href="/contact" variant="outlineLight" size="lg">
