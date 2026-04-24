@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-24T06:38:14.921Z",
+  "lastUpdated": "2026-04-24T07:36:10.585Z",
   "source": "AutoTrader Syndication API",
   "vehicleCount": 30,
   "vehicles": [
@@ -1060,7 +1060,9 @@
       "serviceHistory": "FullByFranchise",
       "stockNumber": "FCD60886",
       "vehicleCategory": "Cars",
-      "features": [],
+      "features": [
+        "Sunroof"
+      ],
       "dealerContactInformation": {
         "name": "The Auto Shed",
         "emailAddress": "sales2@theautoshed.co.za",
@@ -1077,7 +1079,7 @@
         }
       },
       "created": "2026-01-23T16:11:50.4952074+02:00",
-      "updated": "2026-04-23T13:21:12.2089512+02:00"
+      "updated": "2026-04-24T09:01:42.8342628+02:00"
     },
     {
       "id": 28398570,
