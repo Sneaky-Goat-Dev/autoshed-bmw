@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-28T07:47:28.423Z",
+  "lastUpdated": "2026-04-28T08:48:58.915Z",
   "source": "AutoTrader Syndication API",
   "vehicleCount": 29,
   "vehicles": [
@@ -61,7 +61,7 @@
       "variant": "35TFSI  Urban Edition 110kW",
       "newUsed": "Used",
       "year": 2024,
-      "price": 544900,
+      "price": 539900,
       "mileage": 26700,
       "transmission": "Automatic",
       "fuelType": "Petrol",
@@ -167,7 +167,7 @@
       "variant": "35TFSI Sport",
       "newUsed": "Used",
       "year": 2020,
-      "price": 369900,
+      "price": 364900,
       "mileage": 79500,
       "transmission": "Automatic",
       "fuelType": "Petrol",
