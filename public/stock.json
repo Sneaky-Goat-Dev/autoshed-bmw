@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-02T08:30:17.618Z",
+  "lastUpdated": "2026-05-02T09:25:12.917Z",
   "source": "AutoTrader Syndication API",
   "vehicleCount": 27,
   "vehicles": [
@@ -621,9 +621,7 @@
       "serviceHistory": "FullByFranchise",
       "stockNumber": "TAS76764",
       "vehicleCategory": "Cars",
-      "features": [
-        "Sunroof"
-      ],
+      "features": [],
       "dealerContactInformation": {
         "name": "The Auto Shed",
         "emailAddress": "sales2@theautoshed.co.za",
@@ -640,7 +638,7 @@
         }
       },
       "created": "2025-12-19T15:34:22.4081617+02:00",
-      "updated": "2026-04-23T12:50:47.2054276+02:00"
+      "updated": "2026-05-02T10:59:58.7764454+02:00"
     },
     {
       "id": 28344178,
