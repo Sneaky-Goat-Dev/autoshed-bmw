@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2026-05-04T10:39:51.594Z",
+  "lastUpdated": "2026-05-04T11:34:19.165Z",
   "source": "AutoTrader Syndication API",
-  "vehicleCount": 26,
+  "vehicleCount": 25,
   "vehicles": [
     {
       "id": 28168394,
@@ -79,7 +79,7 @@
       "newUsed": "Used",
       "year": 2024,
       "mileageInKm": 26700,
-      "price": "539900,0000",
+      "price": "534900,0000",
       "colour": "Green",
       "description": "Stand out with this stunning 2024 Audi Q2 Urban Edition — a refined, late-model SUV that delivers the perfect balance of luxury, performance, and everyday practicality. This is the smart buy: modern Audi quality with low-risk ownership and strong future value.\n\nPowered by a responsive 1.4 TFSI turbo petrol engine (110kW / 250Nm) paired to a smooth automatic transmission, the Q2 offers excellent fuel efficiency with confident, effortless performance both in the city and on the open road.\n\nKey Features:\n• Audi Virtual Cockpit Digital Display\n• Touchscreen Infotainment System\n• Apple CarPlay & Bluetooth Connectivity\n• Electric Sunroof\n• LED Headlights\n• Alloy Wheels\n• Multi-Function Steering Wheel\n• Cruise Control\n• Premium Leather Interior\n• Electric Boot\n\nSafety & Comfort:\n• Park Distance Control\n• Electronic Stability & Traction Control\n• ISOFIX Child Seat Anchors\n\nOwnership Benefits:\n• Balance of Audi Freeway Plan\n• 4 BRAND NEW TYRES\n• Latest Urban Edition styling\n\nThis Q2 is perfectly suited for professionals, couples, or small families looking for premium motoring with everyday usability and standout design.\n\nThe Auto Shed Advantage:\nProfessionally selected, meticulously prepared, and ready for immediate delivery.\n\nFinance available | Trade-ins welcome\n\nPLEASE NOTE: Lic/Reg/Admin/Dekra Roadworthy Fee: R9 990\n\nTHE AUTO SHED – IN PURSUIT OF EXCELLENCE",
       "imageUrls": [
@@ -136,7 +136,7 @@
         }
       },
       "created": "2025-09-02T13:10:31.1105996+02:00",
-      "updated": "2026-04-28T10:06:11.9692055+02:00"
+      "updated": "2026-05-04T13:11:20.7624357+02:00"
     },
     {
       "id": 28227569,
@@ -219,7 +219,7 @@
       "newUsed": "Used",
       "year": 2020,
       "mileageInKm": 79500,
-      "price": "364900,0000",
+      "price": "359900,0000",
       "colour": "Silver",
       "description": "Stand out from the ordinary with this beautifully prepared 2020 Audi Q2 Sport, combining Audi luxury, sporty performance and everyday practicality in one premium compact SUV. Professionally detailed the Auto Shed way, this Q2 is ready to drive and enjoy immediately.\n\nPowered by a lively yet efficient 1.4L Turbo Petrol engine (110kW / 250Nm) paired to Audi’s renowned 7-Speed S-Tronic Dual Clutch transmission, it delivers smooth acceleration, excellent fuel economy and effortless driving comfort.\n\nEnjoy complete peace of mind with the Balance of Audi’s 7 Year / 100 000km Maintenance Plan valid until 27 February 2027 — a major value advantage.\n\nKey Features:\n• 17” Alloy Wheels with 4 New Tyres\n• Leather Interior\n• Panoramic Sunroof\n• Automatic Boot\n• Xenon Headlights with Daytime Running Lights\n• Cruise Control & Hill Hold Assist\n• Rear Park Distance Control\n• Climate Control Air Conditioning\n• Bluetooth & USB Connectivity\n• Eco Stop/Start System\n• Electric Windows & Mirrors\n• ISOFIX Child Anchors\n• Space Saver Spare Wheel\n\nA stylish, economical and highly sought-after Audi SUV — ideal for professionals or young families looking for premium without compromise.\n\nThe Auto Shed – In Pursuit of Excellence\nLIC/REG/ADMIN/DEKRA Roadworthy Fee R9 990.",
       "imageUrls": [
@@ -280,7 +280,7 @@
         }
       },
       "created": "2025-10-10T13:09:23.7088625+02:00",
-      "updated": "2026-04-28T10:07:12.897303+02:00"
+      "updated": "2026-05-04T13:10:46.5217271+02:00"
     },
     {
       "id": 28241084,
@@ -621,7 +621,10 @@
       "serviceHistory": "FullByFranchise",
       "stockNumber": "TAS76764",
       "vehicleCategory": "Cars",
-      "features": [],
+      "features": [
+        "Navigation",
+        "Panoramic roof"
+      ],
       "dealerContactInformation": {
         "name": "The Auto Shed",
         "emailAddress": "sales2@theautoshed.co.za",
@@ -638,7 +641,7 @@
         }
       },
       "created": "2025-12-19T15:34:22.4081617+02:00",
-      "updated": "2026-05-02T10:59:58.7764454+02:00"
+      "updated": "2026-05-04T13:10:07.8455479+02:00"
     },
     {
       "id": 28344178,
@@ -1245,10 +1248,10 @@
       "variant": "Macan",
       "newUsed": "Used",
       "year": 2019,
-      "mileageInKm": 133000,
+      "mileageInKm": 134000,
       "price": "689900,0000",
       "colour": "White",
-      "description": "Experience the perfect blend of performance, luxury and everyday practicality with this 2019 Porsche Macan Automatic, finished in White with Black Leather interior. With 133,000km, this vehicle has been meticulously maintained with a Full Porsche Service History and has recently been serviced, ensuring peace of mind for its next owner.\n\nThe Macan delivers the unmistakable Porsche driving experience with sharp handling, excellent balance and refined comfort, making it one of the most desirable luxury SUVs on the road.\n\nThis example has been fitted with brand new 19-inch tyres, ensuring superb road holding and a confident driving experience.\n\nFeatures Include:\n• Panoramic Sunroof\n• Black Leather Interior\n• 19” Alloy Wheels with Brand New Tyres\n• Full Porsche Service History\n• Recently Serviced\n• Park Distance Control\n• Multi-Function Steering Wheel\n• Bluetooth Connectivity\n• Climate Control\n• Electric Windows & Mirrors\n\nWell cared for and competitively priced, this Macan offers exceptional value for those wanting to step into the Porsche brand without compromise.\n\nA superb combination of performance, luxury and everyday usability.\n\nAvailable now at The Auto Shed – In Pursuit of Excellence.",
+      "description": "Experience the perfect blend of performance, luxury and everyday practicality with this 2019 Porsche Macan Automatic, finished in White with Black Leather interior. With 134,000km, this vehicle has been meticulously maintained with a Full Porsche Service History and has recently been serviced, ensuring peace of mind for its next owner.\n\nThe Macan delivers the unmistakable Porsche driving experience with sharp handling, excellent balance and refined comfort, making it one of the most desirable luxury SUVs on the road.\n\nThis example has been fitted with brand new 19-inch tyres, ensuring superb road holding and a confident driving experience.\n\nFeatures Include:\n• Panoramic Sunroof\n• Black Leather Interior\n• 19” Alloy Wheels with Brand New Tyres\n• Full Porsche Service History\n• Recently Serviced\n• Park Distance Control\n• Multi-Function Steering Wheel\n• Bluetooth Connectivity\n• Climate Control\n• Electric Windows & Mirrors\n\nWell cared for and competitively priced, this Macan offers exceptional value for those wanting to step into the Porsche brand without compromise.\n\nA superb combination of performance, luxury and everyday usability.\n\nAvailable now at The Auto Shed – In Pursuit of Excellence.",
       "imageUrls": [
         "https://img.autotrader.co.za/46641338",
         "https://img.autotrader.co.za/46035297",
@@ -1312,7 +1315,7 @@
         }
       },
       "created": "2026-03-11T21:05:02.7601525+02:00",
-      "updated": "2026-04-23T13:19:57.2363951+02:00"
+      "updated": "2026-05-04T13:12:23.9270241+02:00"
     },
     {
       "id": 28461789,
@@ -1462,85 +1465,6 @@
       },
       "created": "2026-03-11T21:27:04.8903461+02:00",
       "updated": "2026-04-23T13:01:51.976818+02:00"
-    },
-    {
-      "id": 28486889,
-      "make": "Volvo",
-      "model": "XC40",
-      "variant": "B4 Essential",
-      "newUsed": "Used",
-      "year": 2023,
-      "mileageInKm": 34000,
-      "price": "549900,0000",
-      "colour": "Grey",
-      "description": "Experience premium Scandinavian design, advanced safety, and refined performance in this exceptionally well-kept Volvo XC40 B4 Essential. With low mileage and the balance of Volvo’s factory maintenance plan, this is outstanding value in the luxury compact SUV segment.\n\nKey Features:\n• Heated Front Seats\n• Rear Park Distance Control With Reverse Camera\n• 4 Brand New Tyres\n• Multi-Functional Steering Wheel\n• LED Headlights & Daytime Running Lights\n• Bluetooth Connectivity/ Android Auto\n• Electric Windows & Mirrors\n• Isofix Child Seat Anchors\n\nPerformance & Efficiency:\n2.0L Turbocharged Petrol Engine with Mild Hybrid Technology delivering a smooth, responsive and fuel-efficient drive.\n\nPeace of Mind:\nBalance of 5 Year / 100 000km Maintenance Plan valid until\n\nMeticulously prepared to The Auto Shed standard — offering you a premium vehicle without the new-car depreciation.\n\nFinance available | Trade-ins welcome | Nationwide delivery\n\nThe Auto Shed – In Pursuit of Excellence\n\nPlease note our Lic/Reg/Admin/Dekra Roadworthy Fee is R9 990",
-      "imageUrls": [
-        "https://img.autotrader.co.za/46641368",
-        "https://img.autotrader.co.za/46050658",
-        "https://img.autotrader.co.za/46050649",
-        "https://img.autotrader.co.za/46050646",
-        "https://img.autotrader.co.za/46050665",
-        "https://img.autotrader.co.za/46050669",
-        "https://img.autotrader.co.za/46050655",
-        "https://img.autotrader.co.za/46050678",
-        "https://img.autotrader.co.za/46050743",
-        "https://img.autotrader.co.za/21863380",
-        "https://img.autotrader.co.za/46050661",
-        "https://img.autotrader.co.za/46050667",
-        "https://img.autotrader.co.za/46050721",
-        "https://img.autotrader.co.za/46050732",
-        "https://img.autotrader.co.za/46050684",
-        "https://img.autotrader.co.za/46050726",
-        "https://img.autotrader.co.za/46050697",
-        "https://img.autotrader.co.za/46050703",
-        "https://img.autotrader.co.za/46050707",
-        "https://img.autotrader.co.za/46050692",
-        "https://img.autotrader.co.za/46050748",
-        "https://img.autotrader.co.za/46050738",
-        "https://img.autotrader.co.za/46050750",
-        "https://img.autotrader.co.za/40651865",
-        "https://img.autotrader.co.za/46050694",
-        "https://img.autotrader.co.za/46050715",
-        "https://img.autotrader.co.za/46050709",
-        "https://img.autotrader.co.za/46050753",
-        "https://img.autotrader.co.za/22024143"
-      ],
-      "bodyType": "SportsUtilityVehicle",
-      "doors": 5,
-      "engineCapacityInCc": 1969,
-      "fuelType": "Petrol",
-      "transmissionDrive": "FrontWheelDrive",
-      "transmission": "Automatic",
-      "dealerId": 369,
-      "dealerLogoUrl": "https://img.autotrader.co.za/20764250",
-      "tummCode": 65033330,
-      "registrationNumber": "BJ64MBZN",
-      "serviceHistory": "FullByFranchise",
-      "stockNumber": "FCD44443",
-      "vehicleCategory": "Cars",
-      "features": [
-        "Active/adaptive cruise control",
-        "Camera for park distance control",
-        "Lane change / blind spot warning/assist/monitor",
-        "Park distance control (PDC) - front"
-      ],
-      "dealerContactInformation": {
-        "name": "The Auto Shed",
-        "emailAddress": "sales2@theautoshed.co.za",
-        "contactNumber": "010 590 9898",
-        "latitude": -25.864466,
-        "longitude": 28.191956,
-        "address": {
-          "line1": "31 Kwartsiet Street",
-          "line2": "Centurion",
-          "postalCode": "0157",
-          "suburb": "Zwartkops Ext 15",
-          "city": "Centurion",
-          "province": "Gauteng"
-        }
-      },
-      "created": "2026-03-27T15:51:41.6432595+02:00",
-      "updated": "2026-04-23T13:20:34.2230627+02:00"
     },
     {
       "id": 28493050,
