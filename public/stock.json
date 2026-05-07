@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-07T13:34:17.669Z",
+  "lastUpdated": "2026-05-07T14:56:08.154Z",
   "source": "AutoTrader Syndication API",
   "vehicleCount": 26,
   "vehicles": [
@@ -485,7 +485,7 @@
         }
       },
       "created": "2025-11-25T14:16:05.8010091+02:00",
-      "updated": "2026-05-07T12:05:56.0062264+02:00"
+      "updated": "2026-05-07T16:54:43.1083351+02:00"
     },
     {
       "id": 28327660,
@@ -1051,9 +1051,7 @@
       "serviceHistory": "FullByFranchise",
       "stockNumber": "70TAS02989",
       "vehicleCategory": "Cars",
-      "features": [
-        "Heated seats - front"
-      ],
+      "features": [],
       "dealerContactInformation": {
         "name": "The Auto Shed",
         "emailAddress": "sales2@theautoshed.co.za",
@@ -1070,7 +1068,7 @@
         }
       },
       "created": "2026-02-03T14:43:59.0948855+02:00",
-      "updated": "2026-04-23T13:17:06.2597384+02:00"
+      "updated": "2026-05-07T16:04:13.2109694+02:00"
     },
     {
       "id": 28427558,
@@ -1372,7 +1370,7 @@
         }
       },
       "created": "2026-03-11T21:18:16.4517414+02:00",
-      "updated": "2026-05-07T12:04:59.6607729+02:00"
+      "updated": "2026-05-07T16:06:41.3526136+02:00"
     },
     {
       "id": 28461794,
@@ -1758,7 +1756,7 @@
       "mileageInKm": 26500,
       "price": "599900,0000",
       "colour": "Black",
-      "description": "Tank 300 HEV Super Luxury Powered by a 2.0L turbo petrol hybrid system producing approximately 255kW and 648Nm, paired to a smooth 9-speed automatic gearbox and advanced 4x4 system, \nBalance of 7-year / 150 000km vehicle warranty\nBalance of 8-year hybrid battery warranty\nBalance of 5-year / 75 000km service plan until\n\nKey Features: Fitted with brand new Cooper tyres, enhancing both on-road comfort and off-road grip.• Super Luxury specification • Advanced 4x4 system with multiple terrain modes • Adaptive cruise control • 360° camera system • Front & rear park distance control • Electric leather seats • Heated & ventilated front seats • Sunroof • Premium infotainment with Apple CarPlay & Android Auto • Wireless charging • Digital instrument cluster • Keyless entry & start • LED headlights with DRLs • Multi-function steering wheel • Autonomous emergency braking • Traffic sign recognition • Driver assistance safety systems",
+      "description": "Refined and incredibly capable, this Tank 300 HEV Super Luxury delivers the perfect blend of hybrid efficiency, serious off-road ability and premium comfort. Presented in solid black and in immaculate condition, this is a standout SUV offering exceptional value with long factory cover remaining.\n\nPowered by a 2.0L turbo petrol hybrid system producing approximately 255kW and 648Nm, paired to a smooth 9-speed automatic gearbox and advanced 4x4 system, it delivers effortless performance on-road and outstanding off-road capability.\n\nBalance of 7-year / 150 000km vehicle warranty\nBalance of 8-year hybrid battery warranty\nBalance of 5-year / 75 000km service plan until\n\nFitted with brand new Cooper tyres, enhancing both on-road comfort and off-road grip.\n\nKey Features:\n• Super Luxury specification\n• Advanced 4x4 system with multiple terrain modes\n• Adaptive cruise control\n• 360° camera system\n• Front & rear park distance control\n• Electric leather seats\n• Heated & ventilated front seats\n• Sunroof\n• Premium infotainment with Apple CarPlay & Android Auto\n• Wireless charging\n• Digital instrument cluster\n• Keyless entry & start\n• LED headlights with DRLs\n• Multi-function steering wheel\n\nSafety & Technology:\n• Autonomous emergency braking\n• Traffic sign recognition\n• Driver assistance safety systems\n\nA highly sought-after hybrid 4x4 offering luxury, performance and reliability with full peace of mind.\n\nThe Auto Shed – In Pursuit of Excellence\n\nFinance available. Trade-ins",
       "imageUrls": [
         "https://img.autotrader.co.za/46641030",
         "https://img.autotrader.co.za/46577187",
@@ -1818,7 +1816,7 @@
         }
       },
       "created": "2026-04-21T14:02:12.190795+02:00",
-      "updated": "2026-05-07T15:20:32.1719419+02:00"
+      "updated": "2026-05-07T16:00:23.7571274+02:00"
     },
     {
       "id": 28538041,
