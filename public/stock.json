@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-07T12:36:14.221Z",
+  "lastUpdated": "2026-05-07T13:34:17.669Z",
   "source": "AutoTrader Syndication API",
   "vehicleCount": 26,
   "vehicles": [
@@ -69,7 +69,7 @@
         }
       },
       "created": "2025-08-21T14:50:05.1755483+02:00",
-      "updated": "2026-04-23T13:08:10.9671536+02:00"
+      "updated": "2026-05-07T15:04:30.4442055+02:00"
     },
     {
       "id": 28184374,
@@ -189,10 +189,7 @@
       "serviceHistory": "FullByFranchise",
       "stockNumber": "70USD29523",
       "vehicleCategory": "Cars",
-      "features": [
-        "Panoramic roof",
-        "Park assist (self-parking)"
-      ],
+      "features": [],
       "dealerContactInformation": {
         "name": "The Auto Shed",
         "emailAddress": "sales2@theautoshed.co.za",
@@ -209,7 +206,7 @@
         }
       },
       "created": "2025-10-02T12:02:49.0757863+02:00",
-      "updated": "2026-05-07T12:07:14.085768+02:00"
+      "updated": "2026-05-07T15:13:12.7836767+02:00"
     },
     {
       "id": 28241017,
@@ -401,9 +398,7 @@
       "serviceHistory": "FullByFranchise",
       "stockNumber": "70USD78923",
       "vehicleCategory": "Cars",
-      "features": [
-        "Sunroof"
-      ],
+      "features": [],
       "dealerContactInformation": {
         "name": "The Auto Shed",
         "emailAddress": "sales2@theautoshed.co.za",
@@ -420,7 +415,7 @@
         }
       },
       "created": "2025-11-07T13:59:37.4937262+02:00",
-      "updated": "2026-04-23T13:13:08.0239415+02:00"
+      "updated": "2026-05-07T15:17:54.7882647+02:00"
     },
     {
       "id": 28308549,
@@ -564,7 +559,7 @@
         }
       },
       "created": "2025-12-08T14:34:18.6947804+02:00",
-      "updated": "2026-05-07T12:06:14.1005577+02:00"
+      "updated": "2026-05-07T14:49:21.6255899+02:00"
     },
     {
       "id": 28344154,
@@ -619,10 +614,7 @@
       "serviceHistory": "FullByFranchise",
       "stockNumber": "TAS76764",
       "vehicleCategory": "Cars",
-      "features": [
-        "Navigation",
-        "Panoramic roof"
-      ],
+      "features": [],
       "dealerContactInformation": {
         "name": "The Auto Shed",
         "emailAddress": "sales2@theautoshed.co.za",
@@ -639,7 +631,7 @@
         }
       },
       "created": "2025-12-19T15:34:22.4081617+02:00",
-      "updated": "2026-05-04T13:10:07.8455479+02:00"
+      "updated": "2026-05-07T15:15:55.4803306+02:00"
     },
     {
       "id": 28344178,
@@ -693,9 +685,7 @@
       "serviceHistory": "FullByFranchise",
       "stockNumber": "TAS45576",
       "vehicleCategory": "Cars",
-      "features": [
-        "Panoramic roof"
-      ],
+      "features": [],
       "dealerContactInformation": {
         "name": "The Auto Shed",
         "emailAddress": "sales2@theautoshed.co.za",
@@ -712,7 +702,7 @@
         }
       },
       "created": "2025-12-19T15:41:06.1679427+02:00",
-      "updated": "2026-05-07T12:09:51.587648+02:00"
+      "updated": "2026-05-07T14:57:25.9313863+02:00"
     },
     {
       "id": 28355807,
@@ -721,7 +711,7 @@
       "variant": "N",
       "newUsed": "Used",
       "year": 2025,
-      "mileageInKm": 3990,
+      "mileageInKm": 4200,
       "price": "764900,0000",
       "colour": "White",
       "description": "This is as close to new as it gets. With just 3 900km, this 2025 i30 N delivers the perfect blend of everyday usability and serious performance — built for drivers who want excitement without compromise.\n\nPowered by a 2.0L Turbo petrol engine (206kW / 392Nm) paired to an 8-Speed Dual-Clutch Automatic, this hot hatch offers explosive acceleration, razor-sharp response, and an engaging drive every time.\n\nOwnership Peace of Mind:\n• Balance of 5 Year / 75 000km Service Plan\n• Balance of 5 Year Factory Warranty\n• Additional 2 Year / 50 000km Powertrain Warranty\n• Full Franchise Service History\n\nPerformance & Driving:\n• Drive Mode Select & Paddle Shifts\n• Electronic Limited-Slip Differential\n• Adaptive Cruise Control\n\nFeatures:\n• 19” Alloy Wheels\n• Sunroof\n• Navigation System\n• Apple CarPlay & Android Auto\n• Wireless Charging & Bluetooth\n• Heated Seats & Heated Steering Wheel\n• Electric Memory Seats\n• Keyless Start\n\nSafety & Tech:\n• Reverse Camera + Front & Rear Park Distance Control\n• Blind Spot Assist\n• Lane Keep Assist\n• Forward Collision Assist\n• Rear Cross Traffic Alert\n\nThis is a high-performance hatch that delivers daily comfort, cutting-edge tech, and track-inspired capability — all in one package. Low km examples like this are in high demand.\n\nThe Auto Shed Advantage:\nMeticulously selected and prepared to our exacting standards.\n\nFinance available | Trade-ins welcome\n\nPLEASE NOTE: Lic/Reg/Admin/Dekra Roadworthy Fee: R9 990\n\nTHE AUTO SHED – IN PURSUIT OF EXCELLENCE",
@@ -785,7 +775,7 @@
         }
       },
       "created": "2026-01-06T11:07:44.2862092+02:00",
-      "updated": "2026-04-23T13:10:08.8456677+02:00"
+      "updated": "2026-05-07T15:10:28.2831247+02:00"
     },
     {
       "id": 28355963,
@@ -856,7 +846,7 @@
         }
       },
       "created": "2026-01-06T12:30:24.6132496+02:00",
-      "updated": "2026-05-07T12:09:08.1943907+02:00"
+      "updated": "2026-05-07T14:59:29.5212562+02:00"
     },
     {
       "id": 28376690,
@@ -910,10 +900,9 @@
       "features": [
         "Adaptive headlights (varying light distribution)",
         "Camera for park distance control",
-        "Heated seats - front",
+        "Heated seats - rear",
         "High-beam assist",
-        "Keyless access+start / hands-free key",
-        "Lane change / blind spot warning/assist/monitor"
+        "Keyless access+start / hands-free key"
       ],
       "dealerContactInformation": {
         "name": "The Auto Shed",
@@ -931,7 +920,7 @@
         }
       },
       "created": "2026-01-20T12:58:00.4913698+02:00",
-      "updated": "2026-05-07T12:07:44.3378932+02:00"
+      "updated": "2026-05-07T14:53:17.5673138+02:00"
     },
     {
       "id": 28383384,
@@ -1004,7 +993,7 @@
         }
       },
       "created": "2026-01-23T16:11:50.4952074+02:00",
-      "updated": "2026-05-07T12:03:21.5253298+02:00"
+      "updated": "2026-05-07T15:01:42.5009172+02:00"
     },
     {
       "id": 28398570,
@@ -1138,9 +1127,7 @@
       "serviceHistory": "Full",
       "stockNumber": "70USD56987",
       "vehicleCategory": "Cars",
-      "features": [
-        "Panoramic roof"
-      ],
+      "features": [],
       "dealerContactInformation": {
         "name": "The Auto Shed",
         "emailAddress": "sales2@theautoshed.co.za",
@@ -1157,7 +1144,7 @@
         }
       },
       "created": "2026-02-19T16:56:26.4730788+02:00",
-      "updated": "2026-05-07T10:59:32.0950398+02:00"
+      "updated": "2026-05-07T15:07:25.428373+02:00"
     },
     {
       "id": 28441413,
@@ -1771,7 +1758,7 @@
       "mileageInKm": 26500,
       "price": "599900,0000",
       "colour": "Black",
-      "description": "Refined and incredibly capable, this Tank 300 HEV Super Luxury delivers the perfect blend of hybrid efficiency, serious off-road ability and premium comfort. Presented in solid black and in immaculate condition, this is a standout SUV offering exceptional value with long factory cover remaining.\n\nPowered by a 2.0L turbo petrol hybrid system producing approximately 255kW and 648Nm, paired to a smooth 9-speed automatic gearbox and advanced 4x4 system, it delivers effortless performance on-road and outstanding off-road capability.\n\nBalance of 7-year / 150 000km vehicle warranty\nBalance of 8-year hybrid battery warranty\nBalance of 5-year / 75 000km service plan until\n\nFitted with brand new Cooper tyres, enhancing both on-road comfort and off-road grip.\n\nKey Features:\n• Super Luxury specification\n• Advanced 4x4 system with multiple terrain modes\n• Adaptive cruise control\n• 360° camera system\n• Front & rear park distance control\n• Electric leather seats\n• Heated & ventilated front seats\n• Sunroof\n• Premium infotainment with Apple CarPlay & Android Auto\n• Wireless charging\n• Digital instrument cluster\n• Keyless entry & start\n• LED headlights with DRLs\n• Multi-function steering wheel\n\nSafety & Technology:\n• Autonomous emergency braking\n• Traffic sign recognition\n• Driver assistance safety systems\n\nA highly sought-after hybrid 4x4 offering luxury, performance and reliability with full peace of mind.\n\nThe Auto Shed – In Pursuit of Excellence\n\nFinance available. Trade-ins",
+      "description": "Tank 300 HEV Super Luxury Powered by a 2.0L turbo petrol hybrid system producing approximately 255kW and 648Nm, paired to a smooth 9-speed automatic gearbox and advanced 4x4 system, \nBalance of 7-year / 150 000km vehicle warranty\nBalance of 8-year hybrid battery warranty\nBalance of 5-year / 75 000km service plan until\n\nKey Features: Fitted with brand new Cooper tyres, enhancing both on-road comfort and off-road grip.• Super Luxury specification • Advanced 4x4 system with multiple terrain modes • Adaptive cruise control • 360° camera system • Front & rear park distance control • Electric leather seats • Heated & ventilated front seats • Sunroof • Premium infotainment with Apple CarPlay & Android Auto • Wireless charging • Digital instrument cluster • Keyless entry & start • LED headlights with DRLs • Multi-function steering wheel • Autonomous emergency braking • Traffic sign recognition • Driver assistance safety systems",
       "imageUrls": [
         "https://img.autotrader.co.za/46641030",
         "https://img.autotrader.co.za/46577187",
@@ -1831,7 +1818,7 @@
         }
       },
       "created": "2026-04-21T14:02:12.190795+02:00",
-      "updated": "2026-04-23T13:11:15.5354871+02:00"
+      "updated": "2026-05-07T15:20:32.1719419+02:00"
     },
     {
       "id": 28538041,
