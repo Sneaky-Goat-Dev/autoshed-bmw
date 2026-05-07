@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-07T09:06:25.354Z",
+  "lastUpdated": "2026-05-07T10:44:48.252Z",
   "source": "AutoTrader Syndication API",
   "vehicleCount": 26,
   "vehicles": [
@@ -79,7 +79,7 @@
       "newUsed": "Used",
       "year": 2024,
       "mileageInKm": 26700,
-      "price": "534900,0000",
+      "price": "525900,0000",
       "colour": "Green",
       "description": "Stand out with this stunning 2024 Audi Q2 Urban Edition — a refined, late-model SUV that delivers the perfect balance of luxury, performance, and everyday practicality. This is the smart buy: modern Audi quality with low-risk ownership and strong future value.\n\nPowered by a responsive 1.4 TFSI turbo petrol engine (110kW / 250Nm) paired to a smooth automatic transmission, the Q2 offers excellent fuel efficiency with confident, effortless performance both in the city and on the open road.\n\nKey Features:\n• Audi Virtual Cockpit Digital Display\n• Touchscreen Infotainment System\n• Apple CarPlay & Bluetooth Connectivity\n• Electric Sunroof\n• LED Headlights\n• Alloy Wheels\n• Multi-Function Steering Wheel\n• Cruise Control\n• Premium Leather Interior\n• Electric Boot\n\nSafety & Comfort:\n• Park Distance Control\n• Electronic Stability & Traction Control\n• ISOFIX Child Seat Anchors\n\nOwnership Benefits:\n• Balance of Audi Freeway Plan\n• 4 BRAND NEW TYRES\n• Latest Urban Edition styling\n\nThis Q2 is perfectly suited for professionals, couples, or small families looking for premium motoring with everyday usability and standout design.\n\nThe Auto Shed Advantage:\nProfessionally selected, meticulously prepared, and ready for immediate delivery.\n\nFinance available | Trade-ins welcome\n\nPLEASE NOTE: Lic/Reg/Admin/Dekra Roadworthy Fee: R9 990\n\nTHE AUTO SHED – IN PURSUIT OF EXCELLENCE",
       "imageUrls": [
@@ -136,7 +136,7 @@
         }
       },
       "created": "2025-09-02T13:10:31.1105996+02:00",
-      "updated": "2026-05-04T13:11:20.7624357+02:00"
+      "updated": "2026-05-07T12:03:58.219066+02:00"
     },
     {
       "id": 28227569,
@@ -146,7 +146,7 @@
       "newUsed": "Used",
       "year": 2022,
       "mileageInKm": 61500,
-      "price": "699900,0000",
+      "price": "689000,0000",
       "colour": "White",
       "description": "A premium SUV designed for those who appreciate refined luxury, confident performance and effortless long-distance driving. This BMW X3 seamlessly blends strong diesel torque with outstanding comfort, delivering a smooth, composed and rewarding experience whether commuting daily or travelling far beyond the city. Backed by the balance of BMW’s motor plan, it offers a reassuring level of ownership confidence and peace of mind that discerning buyers expect.\n\nKey Features\n• Low mileage: 61 500 km\n• 2.0 Turbo Diesel engine with excellent fuel efficiency\n• xDrive intelligent all-wheel drive\n• 8-speed automatic transmission\n• M Sport exterior and interior package\n• Full BMW franchise service history\n• Balance of BMW Motor Plan until December km\n• Panoramic glass sunroof\n• 20-inch M Sport alloy wheels\n• Digital instrument cluster\n• Navigation system\n• Apple CarPlay and Android Auto\n• Park Distance Control with rear camera\n• Keyless entry and push-button start\n• Dual-zone climate control\n• Ambient interior lighting\n• Electric tailgate\n• Cruise control and advanced safety systems\n\nDealer Benefits\n• Vehicle mechanically inspected by BMW with a Quality Check to enable the transfer of the Motorplan to the new owner\n• DEKRA Roadworthy\n• Finance available through all major banks\n• Trade-ins welcome\n• Extended warranty and Motorplan options available\n• Nationwide delivery available\n\nThe Auto Shed – In Pursuit of Excellence",
       "imageUrls": [
@@ -209,7 +209,7 @@
         }
       },
       "created": "2025-10-02T12:02:49.0757863+02:00",
-      "updated": "2026-04-23T13:14:26.905708+02:00"
+      "updated": "2026-05-07T12:07:14.085768+02:00"
     },
     {
       "id": 28241017,
@@ -219,7 +219,7 @@
       "newUsed": "Used",
       "year": 2020,
       "mileageInKm": 79500,
-      "price": "359900,0000",
+      "price": "354900,0000",
       "colour": "Silver",
       "description": "Stand out from the ordinary with this beautifully prepared 2020 Audi Q2 Sport, combining Audi luxury, sporty performance and everyday practicality in one premium compact SUV. Professionally detailed the Auto Shed way, this Q2 is ready to drive and enjoy immediately.\n\nPowered by a lively yet efficient 1.4L Turbo Petrol engine (110kW / 250Nm) paired to Audi’s renowned 7-Speed S-Tronic Dual Clutch transmission, it delivers smooth acceleration, excellent fuel economy and effortless driving comfort.\n\nEnjoy complete peace of mind with the Balance of Audi’s 7 Year / 100 000km Maintenance Plan valid until 27 February 2027 — a major value advantage.\n\nKey Features:\n• 17” Alloy Wheels with 4 New Tyres\n• Leather Interior\n• Panoramic Sunroof\n• Automatic Boot\n• Xenon Headlights with Daytime Running Lights\n• Cruise Control & Hill Hold Assist\n• Rear Park Distance Control\n• Climate Control Air Conditioning\n• Bluetooth & USB Connectivity\n• Eco Stop/Start System\n• Electric Windows & Mirrors\n• ISOFIX Child Anchors\n• Space Saver Spare Wheel\n\nA stylish, economical and highly sought-after Audi SUV — ideal for professionals or young families looking for premium without compromise.\n\nThe Auto Shed – In Pursuit of Excellence\nLIC/REG/ADMIN/DEKRA Roadworthy Fee R9 990.",
       "imageUrls": [
@@ -260,9 +260,7 @@
       "stockNumber": "70USD32847",
       "vehicleCategory": "Cars",
       "features": [
-        "Leather upholstery",
-        "Panoramic roof",
-        "Park distance control (PDC) - front"
+        "Sunroof"
       ],
       "dealerContactInformation": {
         "name": "The Auto Shed",
@@ -280,7 +278,7 @@
         }
       },
       "created": "2025-10-10T13:09:23.7088625+02:00",
-      "updated": "2026-05-04T13:10:46.5217271+02:00"
+      "updated": "2026-05-07T12:03:35.9785543+02:00"
     },
     {
       "id": 28241084,
@@ -290,7 +288,7 @@
       "newUsed": "Used",
       "year": 2021,
       "mileageInKm": 70000,
-      "price": "259900,0000",
+      "price": "249900,0000",
       "colour": "Blue",
       "description": "A beautifully maintained, high-value SUV offering style, comfort, and everyday practicality. With only 70 000km, this 3008 delivers a refined driving experience with excellent efficiency — the perfect balance for family or lifestyle use.\n\nRecently Serviced .\n\nRecently fitted with 4 BRAND NEW TYRES, this vehicle is ready to go.\n\nPerformance:\n• 1.6L Turbo Petrol (121kW / 240Nm)\n• Smooth 6-Speed Automatic\n• Strong performance with great fuel economy\n\nFeatures:\n• 17” Alloy Wheels\n• Rear Park Distance Control\n• Climate Control\n• Cruise Control\n• Paddle Shift Gears\n• 8” Infotainment System\n• Apple CarPlay & MirrorLink\n• Bluetooth & Voice Control\n• Daytime Running Lights & Fog Lights\n• Electric Windows & Mirrors\n\nSafety:\n• Lane Departure Warning\n• Traffic Sign Recognition\n• Hill Start Assist\n• ISOFIX Child Anchors\n\nWhy This 3008:\n• Excellent condition & well maintained\n• Low mileage for the year\n• Full peace-of-mind motoring\n• Exceptional value vs new\n\nThe Auto Shed Advantage:\nProfessionally selected, inspected, and prepared to our exacting standards.\n\nFinance available | Trade-ins welcome | Extended warranties optional\n\nPLEASE NOTE: Lic/Reg/Admin/Dekra Roadworthy Fee: R9 990\n\nTHE AUTO SHED – IN PURSUIT OF EXCELLENCE",
       "imageUrls": [
@@ -349,7 +347,7 @@
         }
       },
       "created": "2025-10-10T13:32:32.0127691+02:00",
-      "updated": "2026-05-07T11:02:10.9227981+02:00"
+      "updated": "2026-05-07T12:04:23.2050182+02:00"
     },
     {
       "id": 28282751,
@@ -432,7 +430,7 @@
       "newUsed": "Used",
       "year": 2023,
       "mileageInKm": 7500,
-      "price": "565900,0000",
+      "price": "539900,0000",
       "colour": "Red",
       "description": "Exceptional example of the 2023 Hyundai Tucson 2.0D Elite finished in striking red with only ~ 7 500 km — superb condition and ready to impress.\n\nPowered by a 2.0 litre turbo diesel engine delivering 137 kW and 416 Nm, mated to an 8-speed automatic transmission and front-wheel drive, this Tucson blends strong performance with excellent fuel economy — perfect for daily commuting, family trips and long-distance travel.\n\nStand-out features include:\n• Panoramic sunroof\n• Blind-spot assist & forward collision assist\n• Adaptive cruise control + lane keep assist\n• Heated & ventilated seats + heated steering wheel\n• 19” alloy wheels\n• Apple CarPlay & Android Auto\n• Park distance control front & rear with reverse camera\n• Wireless charging pad\n• Keyless entry & start\n• Auto LED with high beam assist\n• Hill descent & multiple drive modes\n\nBalance of 6-year/90 000 km service plan and 7-year/200 000 km warranty included for peace of mind.\n\nA stylish, safe and feature-packed SUV at a strong value price point.\n\nTrade-ins welcome | Finance available | Nationwide delivery arranged\n\n The Auto Shed – In Pursuit of Excellence\n\nPLEASE NOTE THAT OUR LIC/REG/ADMIN/DEKRA ROADWORTHY IS R9 990",
       "imageUrls": [
@@ -492,7 +490,7 @@
         }
       },
       "created": "2025-11-25T14:16:05.8010091+02:00",
-      "updated": "2026-05-07T10:47:03.412346+02:00"
+      "updated": "2026-05-07T12:05:56.0062264+02:00"
     },
     {
       "id": 28327660,
@@ -502,7 +500,7 @@
       "newUsed": "Used",
       "year": 2025,
       "mileageInKm": 10650,
-      "price": "1465900,0000",
+      "price": "1449900,0000",
       "colour": "Silver",
       "description": "This 2025 Lexus RX 500h F-Sport AWD represents the pinnacle of performance hybrid luxury in the RX range, offering exceptional refinement, power and advanced technology.\n\nPowered by a 2.4-litre turbo hybrid drivetrain producing 273 kW and 460 Nm, paired with a smooth automatic transmission and AWD, the RX 500h delivers effortless acceleration, excellent fuel efficiency and superb on-road stability.\n\nKey features include:\n• F-Sport exterior & interior styling\n• Mark Levinson premium sound system\n• Heads-Up Display (HUD)\n• 360-degree surround-view camera\n• Adaptive cruise control\n• Blind-spot monitoring & lane assist\n• Heated & ventilated electric memory seats\n• Wireless Apple CarPlay & Android Auto\n• Keyless entry & push-button start\n• Electric tailgate & wireless charging\n\nThe vehicle has very low mileage, a full franchise service history, and the balance of Lexus factory service plan, ensuring complete peace of mind.\n\nA rare opportunity to own a flagship Lexus hybrid SUV with performance to rival German competitors — while retaining Lexus reliability and long-term value.\n\nTrade-ins welcome | Finance available | Nationwide delivery arranged\n\n The Auto Shed – In Pursuit of Excellence",
       "imageUrls": [
@@ -566,7 +564,7 @@
         }
       },
       "created": "2025-12-08T14:34:18.6947804+02:00",
-      "updated": "2026-05-07T10:44:49.5073843+02:00"
+      "updated": "2026-05-07T12:06:14.1005577+02:00"
     },
     {
       "id": 28344154,
@@ -651,7 +649,7 @@
       "newUsed": "Used",
       "year": 2021,
       "mileageInKm": 64500,
-      "price": "1095900,0000",
+      "price": "1089900,0000",
       "colour": "Silver",
       "description": "Iconic, bold and engineered to perform, this Defender 110 D240 X-Dynamic SE delivers legendary Land Rover capability combined with modern comfort and advanced safety technology. Designed to handle long-distance touring, daily driving and serious adventure with equal confidence.\n\nThis example stands out with an exceptionally strong specification, the balance of Land Rover’s 5-Year / 100 000 km Maintenance Plan valid until 20 May 2026, and 19” alloy wheels fitted with 5 brand-new tyres, offering immediate peace of mind and excellent ownership value.\n\nKey Features\n\t•\t19″ Alloy Wheels with 5 New Tyres\n\t•\tPanoramic Sunroof\n\t•\tBalance of 5-Year / 100 000 km Maintenance Plan (to 20 May 2026)\n\t•\tDual Battery System\n\t•\tSpare Wheel Cover\n\t•\tPark Distance Control Front & Rear with Reverse Camera\n\t•\t360° Camera\n\t•\tBlind Spot Assist\n\t•\tCruise Control\n\t•\tEmergency Lane Keep Assist\n\t•\tCollision Avoidance Assist\n\t•\tAutomatic High Beam\n\t•\tElectric Tow Bar\n\t•\tWade Sensing\n\t•\tWireless Apple CarPlay & Android Auto\n\t•\tBluetooth & Voice Control\n\t•\tMeridian Sound System\n\t•\tElectric Memory Seats\n\t•\tElectric Air Suspension\n\t•\tNavigation\n\t•\tClimate Control\n\t•\tLow Traction Launch\n\t•\tEco Stop/Start\n\t•\tKeyless Entry & Push-Button Start\n\nThe Auto Shed Advantage\n\t•\tHand-selected premium vehicles\n\t•\tThorough inspection and professional preparation\n\t•\tTrade-ins welcome\n\t•\tFinance available\n\t•\tNationwide delivery\n\nA rare opportunity to own a Defender with this level of specification and value.",
       "imageUrls": [
@@ -714,7 +712,7 @@
         }
       },
       "created": "2025-12-19T15:41:06.1679427+02:00",
-      "updated": "2026-04-23T13:03:58.4592533+02:00"
+      "updated": "2026-05-07T12:09:51.587648+02:00"
     },
     {
       "id": 28355807,
@@ -797,7 +795,7 @@
       "newUsed": "Used",
       "year": 2025,
       "mileageInKm": 2350,
-      "price": "274900,0000",
+      "price": "269900,0000",
       "colour": "White",
       "description": "Virtually brand new and beautifully finished in crisp Pure White, this top-spec GLX Swift delivers modern design, efficiency, and everyday comfort in one of SA’s most sought-after hatchbacks. This is the smart buy — avoid new car depreciation and step straight into value.\n\nBalance of Service Plan: 2 Year / 30 000km (ends 09 Jan 2027)\nBalance of Warranty: 5 Year / 200 000km (ends 09 Jan 2030)\n\nKey Highlights:\n• Only 1 900km – As new condition\n• 1.2L 3-Cylinder Petrol (60kW / 112Nm)\n• Smooth CVT Automatic with Paddle Shift\n• Exceptional fuel efficiency & low running costs\n\nPremium Features:\n• 15” Alloy Wheels\n• LED Headlights with Daytime Running Lights\n• Front Fog Lights\n• Keyless Entry & Push Start\n• Wireless Apple CarPlay & Android Auto\n• Bluetooth & Voice Control\n• Cruise Control\n• Reverse Camera with Rear Park Distance Control\n• Multi-Function Steering Wheel\n• Electric Windows & Mirrors (Folding)\n• Air Conditioning\n\nSafety & Convenience:\n• Hill Hold Assist\n• ISOFIX Child Seat Anchors\n• 6 Airbags\n• 37L Fuel Tank\n\nThe Auto Shed Advantage:\nMeticulously inspected and prepared to our exacting standards. We pride ourselves on offering only the finest vehicles, ensuring complete peace of mind and an effortless buying experience.\n\nFinance available | Trade-ins welcome\n\nPlease note: Lic/Reg/Admin/Dekra Roadworthy Fee: R9 990\n\nThe Auto Shed – In Pursuit of Excellence",
       "imageUrls": [
@@ -858,7 +856,7 @@
         }
       },
       "created": "2026-01-06T12:30:24.6132496+02:00",
-      "updated": "2026-04-23T13:08:47.2333079+02:00"
+      "updated": "2026-05-07T12:09:08.1943907+02:00"
     },
     {
       "id": 28376690,
@@ -868,7 +866,7 @@
       "newUsed": "Used",
       "year": 2021,
       "mileageInKm": 34100,
-      "price": "1379900,0000",
+      "price": "1349900,0000",
       "colour": "White",
       "description": "This is not just an SUV — it’s a Porsche. And opportunities like this don’t last.\n\nFinished in iconic Carrera White, this Macan S delivers the perfect fusion of everyday usability and true performance DNA. With limited availability in this spec and condition, this is a high-demand, high-desirability vehicle.\n\nPerformance That Moves You:\n• 3.0L V6 Turbo (260kW / 480Nm)\n• 0–100 km/h in just 5.3 seconds\n• PDK Automatic Transmission\n• Intelligent All-Wheel Drive\n• Porsche Active Suspension Management (PASM)\n\nWhether in traffic or on the open road, the Macan S delivers precision, confidence, and unmistakable Porsche feel.\n\nPremium Features:\n• Wireless Apple CarPlay\n• Keyless Entry & Start\n• Heated Front Seats\n• Adaptive LED Headlights\n• Park Distance Control with Reverse Camera\n• Lane Change Assist\n• Multi-Function Steering Controls\n\nOwnership Advantage:\n• Porsche Annual Service just completed\n• Exceptional condition throughout\n• Highly sought-after specification\n\nThis is the smart buy — avoid new car depreciation while securing a rare, performance-driven SUV that stands above the rest.\n\nThe Auto Shed Advantage:\nCarefully selected, professionally prepared, and ready for immediate delivery. Vehicles like this don’t sit — act quickly.\n\nFinance available | Trade-ins welcome | Extended warranties available\n\nPlease note: Lic/Reg/Admin/Dekra Roadworthy Fee: R9 990\n\nTHE AUTO SHED – IN PURSUIT OF EXCELLENCE",
       "imageUrls": [
@@ -933,7 +931,7 @@
         }
       },
       "created": "2026-01-20T12:58:00.4913698+02:00",
-      "updated": "2026-04-23T13:13:43.2793996+02:00"
+      "updated": "2026-05-07T12:07:44.3378932+02:00"
     },
     {
       "id": 28383384,
@@ -943,7 +941,7 @@
       "newUsed": "Used",
       "year": 2021,
       "mileageInKm": 81000,
-      "price": "999900,0000",
+      "price": "989900,0000",
       "colour": "Silver",
       "description": "Bold design. Serious performance. Unmistakable presence.\n\nThis exceptional 2021 Land Rover Defender 90 P400 X-Dynamic SE is finished in the sought-after Indus Grey Metallic and offers the ultimate blend of luxury, power and legendary Land Rover capability.\n\nPowered by the impressive 3.0 P400 turbocharged mild-hybrid petrol engine, this Defender delivers effortless performance with refined on-road comfort and outstanding off-road ability.\n\nThe vehicle is presented in incredible condition and has just been serviced, including new brake pads and discs. It is fitted with 20-inch alloy wheels with four brand-new tyres and features a factory sunroof.\n\nFor added peace of mind, it comes with the balance of the factory maintenance plan until the end of July 2026.\n\nKey Features Include:\n• P400 3.0 mild-hybrid petrol engine\n• X-Dynamic SE specification\n• Permanent all-wheel drive\n• Terrain Response system\n• 360-degree surround camera\n• Sunroof\n• Apple CarPlay & Android Auto\n• Touchscreen infotainment system\n• Digital driver display\n• Front & rear parking sensors\n• Cruise control\n• Climate control\n• LED headlights\n• 20-inch alloy wheels\n• Multiple airbags & advanced safety systems\n\nThe Defender 90 remains one of the most desirable modern SUVs, offering strong resale value and timeless appeal.\n\nTrade-ins welcome.\nFinance available through all major banks.\nNationwide delivery arranged.\n\nPrepared in keeping with our pursuit of excellence.\n\nThe Auto Shed – In Pursuit of Excellence",
       "imageUrls": [
@@ -989,9 +987,7 @@
       "serviceHistory": "FullByFranchise",
       "stockNumber": "FCD60886",
       "vehicleCategory": "Cars",
-      "features": [
-        "Sunroof"
-      ],
+      "features": [],
       "dealerContactInformation": {
         "name": "The Auto Shed",
         "emailAddress": "sales2@theautoshed.co.za",
@@ -1008,7 +1004,7 @@
         }
       },
       "created": "2026-01-23T16:11:50.4952074+02:00",
-      "updated": "2026-04-24T09:01:42.8342628+02:00"
+      "updated": "2026-05-07T12:03:21.5253298+02:00"
     },
     {
       "id": 28398570,
@@ -1171,7 +1167,7 @@
       "newUsed": "Used",
       "year": 2023,
       "mileageInKm": 14300,
-      "price": "454900,0000",
+      "price": "449900,0000",
       "colour": "Silver",
       "description": "Stand out from the ordinary with this immaculate 2023 VW Taigo R-Line, finished in sought-after Reflex Silver Metallic and presented in exceptional showroom condition. A perfect blend of sporty coupe styling, German engineering and everyday practicality, this Taigo delivers premium comfort with outstanding efficiency.\n\nPowered by Volkswagen’s responsive 1.0 TSI turbo engine paired to the smooth DSG automatic transmission, it offers effortless performance with excellent fuel economy — ideal for city and highway driving alike.\n\nFactory & Optional Extras Include:\n• R-Line styling package\n• Tilting & Sliding Glass Panoramic Sunroof\n• Heated Front Seats\n• Comfort Package with Rear View Camera\n• Composition Media Infotainment System\n• Removable Towbar\n• Smash & Grab Safety Film\n• Headlamp Protection\n• Reflex Silver Metallic Paint\n\nEnjoy total peace of mind with the Balance of Volkswagen’s 5-Year / 60 000km Full Maintenance Plan valid until.\n\nThis vehicle has been meticulously cared for and represents exceptional value for buyers wanting a near-new premium crossover without the new-car price tag.\n\nProfessionally prepared to The Auto Shed standard — In Pursuit of Excellence.\n\nFinance available | Trade-ins welcome | Nationwide delivery.",
       "imageUrls": [
@@ -1239,7 +1235,7 @@
         }
       },
       "created": "2026-02-27T15:13:55.8854449+02:00",
-      "updated": "2026-04-23T13:12:10.3180595+02:00"
+      "updated": "2026-05-07T12:08:39.5987945+02:00"
     },
     {
       "id": 28461784,
@@ -1251,7 +1247,7 @@
       "mileageInKm": 134000,
       "price": "689900,0000",
       "colour": "White",
-      "description": "2019 Porsche Macan Automatic, finished in White with Black Leather interior. With 134,000km,  fitted with brand new 19-inch tyres, \n\nFeatures Include:\n• Panoramic Sunroof  • Black Leather Interior  • 19” Alloy Wheels with Brand New Tyres • Full Porsche Service History • Recently Serviced • Park Distance Control • Multi-Function Steering Wheel • Bluetooth Connectivity • Climate Control • Electric Windows & Mirrors\n\nPlease Note : Lic/Reg/Admin/Dekra Roadworthy Fee is R9 990",
+      "description": "Experience the perfect blend of performance, luxury and everyday practicality with this 2019 Porsche Macan Automatic, finished in White with Black Leather interior. With 134,000km, this vehicle has been meticulously maintained with a Full Porsche Service History and has recently been serviced, ensuring peace of mind for its next owner.\n\nThe Macan delivers the unmistakable Porsche driving experience with sharp handling, excellent balance and refined comfort, making it one of the most desirable luxury SUVs on the road.\n\nThis example has been fitted with brand new 19-inch tyres, ensuring superb road holding and a confident driving experience.\n\nFeatures Include:\n• Panoramic Sunroof\n• Black Leather Interior\n• 19” Alloy Wheels with Brand New Tyres\n• Full Porsche Service History\n• Recently Serviced\n• Park Distance Control\n• Multi-Function Steering Wheel\n• Bluetooth Connectivity\n• Climate Control\n• Electric Windows & Mirrors\n\nWell cared for and competitively priced, this Macan offers exceptional value for those wanting to step into the Porsche brand without compromise.\n\nA superb combination of performance, luxury and everyday usability.\n\nAvailable now at The Auto Shed – In Pursuit of Excellence.",
       "imageUrls": [
         "https://img.autotrader.co.za/46641338",
         "https://img.autotrader.co.za/46035297",
@@ -1315,7 +1311,7 @@
         }
       },
       "created": "2026-03-11T21:05:02.7601525+02:00",
-      "updated": "2026-05-07T11:05:09.6667115+02:00"
+      "updated": "2026-05-07T11:06:31.4999858+02:00"
     },
     {
       "id": 28461789,
@@ -1325,7 +1321,7 @@
       "newUsed": "Used",
       "year": 2019,
       "mileageInKm": 52000,
-      "price": "565900,0000",
+      "price": "549900,0000",
       "colour": "White",
       "description": "Discover the perfect balance of performance, luxury and practicality with this 2019 BMW X3 xDrive20d M Sport, finished in Alpine White with Black Leather interior. With only 52,000km, this vehicle is exceptionally well cared for and presents in superb condition.\n\nPowered by BMW’s renowned 2.0L turbo diesel engine paired with the smooth Steptronic automatic transmission and xDrive all-wheel drive, the X3 delivers impressive performance together with excellent fuel efficiency and confident handling in all conditions.\n\nThis example benefits from the balance of BMW’s 7 year / 100,000km Motorplan until 07 May 2026, offering valuable peace of mind and reduced ownership costs.\n\nKey Features Include:\n• M Sport Package\n• Alpine White with Black Leather Interior\n• Brand New Tyres\n• Balance of 7yr/100,000km Motorplan until 07 May 2026\n• Electric Seats with Driver Memory\n• Panoramic Sunroof\n• Electric Tailgate\n• Park Distance Control\n• BMW iDrive Infotainment System\n• Multi-Function M Sport Steering Wheel\n• Climate Control\n• LED Headlights\n\nThis vehicle has been fully quality checked and represents exceptional value for a premium luxury SUV with low mileage and factory maintenance coverage.\n\nA superb combination of performance, comfort and practicality, ready for its next owner.\n\nAvailable now at The Auto Shed – In Pursuit of Excellence.",
       "imageUrls": [
@@ -1389,7 +1385,7 @@
         }
       },
       "created": "2026-03-11T21:18:16.4517414+02:00",
-      "updated": "2026-05-07T10:52:17.7639854+02:00"
+      "updated": "2026-05-07T12:04:59.6607729+02:00"
     },
     {
       "id": 28461794,
@@ -1399,7 +1395,7 @@
       "newUsed": "Used",
       "year": 2021,
       "mileageInKm": 65000,
-      "price": "269900,0000",
+      "price": "249900,0000",
       "colour": "White",
       "description": "Enjoy comfort, practicality and turbocharged performance with this 2021 Opel Grandland X 1.6T Enjoy, finished in White with 65,000km. This vehicle is in great condition and has been well maintained with a Full Agents Service History, giving added peace of mind.\n\nPowered by Opel’s 1.6L turbocharged petrol engine, the Grandland X delivers smooth performance with excellent efficiency, making it an ideal family SUV for both city driving and long-distance travel.\n\nThe Grandland X is known for its comfortable ride, spacious interior and modern technology, offering a superb balance of practicality and style.\n\nFeatures Include:\n• Full Agents Service History\n• Touchscreen Infotainment System\n• Apple CarPlay & Android Auto\n• Park Distance Control\n• Multi-Function Steering Wheel\n• Cruise Control\n• Air Conditioning\n• Electric Windows & Mirrors\n• Alloy Wheels\n• Bluetooth Connectivity\n\nWith its excellent condition, strong specification and well-documented service history, this Grandland X represents great value in the popular midsize SUV segment.\n\nA practical, comfortable and economical SUV ready for its next owner.\n\nAvailable now at The Auto Shed – In Pursuit of Excellence.",
       "imageUrls": [
@@ -1464,7 +1460,7 @@
         }
       },
       "created": "2026-03-11T21:27:04.8903461+02:00",
-      "updated": "2026-05-07T10:36:25.3914613+02:00"
+      "updated": "2026-05-07T12:06:35.0070947+02:00"
     },
     {
       "id": 28493050,
@@ -1474,7 +1470,7 @@
       "newUsed": "Used",
       "year": 2024,
       "mileageInKm": 29000,
-      "price": "282900,0000",
+      "price": "279900,0000",
       "colour": "Red",
       "description": "Stand out in this top-spec Baleno GLX finished in Suzuki’s Metallic Luxe Red – a striking, modern finish that perfectly complements its sleek design. Low mileage, high spec, and exceptional value make this one of the smartest buys in its class.\n\nKey Features & Highlights:\n• 1.5L Petrol Engine (77kW / 138Nm) – smooth & fuel efficient\n• Automatic Transmission – effortless daily driving\n• Touchscreen Infotainment System\n• Apple CarPlay & Android Auto\n• Reverse Camera\n• Park Distance Control\n• Heads-Up Display\n• Keyless Entry & Push Start\n• LED Headlights & Daytime Running Lights\n• Multi-Function Steering Wheel\n• Climate Control Air Conditioning\n• Electric Windows & Mirrors\n• Alloy Wheels\n• ISOFIX Child Seat Anchors\n\nBalance of Plans:\n• Balance of 4 Year / 60 000km Service Plan\n• Balance of 5 Year / 200 000km Warranty\n\nThis Baleno GLX offers premium comfort, advanced tech, and renowned Suzuki reliability – all wrapped in a stylish, economical package ideal for city and long-distance driving alike.\n\nMeticulously prepared to The Auto Shed standard.\n\nFinance available. Trade-ins welcome. Nationwide delivery.\n\nThe Auto Shed – In Pursuit of Excellence\n\nPlease note: Lic/Reg/Admin/Dekra Roadworthy is R9 990",
       "imageUrls": [
@@ -1535,7 +1531,7 @@
         }
       },
       "created": "2026-04-01T15:23:52.9828732+02:00",
-      "updated": "2026-05-07T10:49:38.065737+02:00"
+      "updated": "2026-05-07T12:05:21.1298959+02:00"
     },
     {
       "id": 28493062,
@@ -1696,7 +1692,7 @@
       "newUsed": "Used",
       "year": 2023,
       "mileageInKm": 54000,
-      "price": "489900,0000",
+      "price": "469900,0000",
       "colour": "Silver",
       "description": "Elevate every journey with this striking 2023 Peugeot 5008 GT finished in sophisticated Artense Grey with black leather interior. With just 56 000 km, this premium 7-seater SUV offers the perfect blend of space, performance and modern French design.\n\nPowered by a refined 1.6 Turbo Petrol engine, delivering strong performance with excellent efficiency, paired to a smooth automatic gearbox for effortless driving.\n\nKey Features & Highlights:\n• Panoramic Glass Sunroof\n• Full Black Leather Interior\n• Digital i-Cockpit Display\n• Touchscreen Infotainment System\n• Apple CarPlay & Android Auto\n• Navigation System\n• Reverse Camera with Front & Rear Park Distance Control\n• Keyless Entry & Start\n• Electric Tailgate\n• Multi-Zone Climate Control\n• Cruise Control\n• LED Headlights & Daytime Running Lights\n• 18” Alloy Wheels\n\nSafety & Practicality:\n• 7-Seater Versatility\n• Multiple Airbags & ISOFIX\n• Lane Assist & Driver Assistance Systems\n• Large Boot Capacity with Fold-Flat Seats\n\nImmaculate condition inside and out, meticulously prepared in The Auto Shed way – offering exceptional value in a luxury family SUV.\n\nFinance available | Trade-ins welcome\n\nPlease note our Lic/Reg/Admin/Dekra Roadworthy fee is R9 990",
       "imageUrls": [
@@ -1763,7 +1759,7 @@
         }
       },
       "created": "2026-04-06T21:05:53.6539294+02:00",
-      "updated": "2026-04-23T13:15:08.4845507+02:00"
+      "updated": "2026-05-07T12:08:10.2376477+02:00"
     },
     {
       "id": 28520042,
