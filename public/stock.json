@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2026-05-07T14:56:08.154Z",
+  "lastUpdated": "2026-05-07T15:50:45.349Z",
   "source": "AutoTrader Syndication API",
-  "vehicleCount": 26,
+  "vehicleCount": 27,
   "vehicles": [
     {
       "id": 28168394,
@@ -136,7 +136,7 @@
         }
       },
       "created": "2025-09-02T13:10:31.1105996+02:00",
-      "updated": "2026-05-07T12:03:58.219066+02:00"
+      "updated": "2026-05-07T16:57:07.5513203+02:00"
     },
     {
       "id": 28227569,
@@ -1725,9 +1725,7 @@
       "serviceHistory": "FullByFranchise",
       "stockNumber": "FCD34412",
       "vehicleCategory": "Cars",
-      "features": [
-        "Panoramic roof"
-      ],
+      "features": [],
       "dealerContactInformation": {
         "name": "The Auto Shed",
         "emailAddress": "sales2@theautoshed.co.za",
@@ -1744,7 +1742,7 @@
         }
       },
       "created": "2026-04-06T21:05:53.6539294+02:00",
-      "updated": "2026-05-07T12:08:10.2376477+02:00"
+      "updated": "2026-05-07T17:00:41.3104078+02:00"
     },
     {
       "id": 28520042,
@@ -1892,6 +1890,81 @@
       },
       "created": "2026-05-05T14:24:06.8388931+02:00",
       "updated": "2026-05-07T10:57:21.8460171+02:00"
+    },
+    {
+      "id": 28543174,
+      "make": "Peugeot",
+      "model": "5008",
+      "variant": "1.6T GT",
+      "newUsed": "Used",
+      "year": 2022,
+      "mileageInKm": 52500,
+      "price": "419900,0000",
+      "colour": "White",
+      "description": "2022 Peugeot 5008 GT finished in stunning Pearl White Metallic with only 52 500km. A beautifully designed premium 7-Seater SUV that combines luxury, comfort, practicality and advanced French engineering in one exceptional package.\n\nPowered by Peugeot’s refined and efficient turbocharged drivetrain, the 5008 GT offers smooth performance, impressive fuel economy and a truly premium driving experience.\n\nLoaded with factory extras and premium features including:\n\n* Full Digital Instrument Cluster\n* Apple CarPlay & Android Auto\n* 360 Camera\n* Front & Rear Park Distance Control\n* Adaptive Cruise Control\n* Blind Spot Monitoring\n* Lane Keep Assist\n* Electric Tailgate\n* Keyless Entry & Start\n* Wireless Charging\n* LED Headlights\n* Climate Control Air Conditioning\n* Multi-Function Steering Wheel\n* 7 Seater Configuration\n* GT Alloy Wheels\n\nExceptionally spacious, versatile and comfortable, making it the perfect family SUV while still offering executive styling and road presence.\n\nFull Agents Service History.\n\nBalance of 5yr/100 000km Service Plan and Warranty until for complete peace of mind.\n\nA rare opportunity to own one of the most stylish and luxurious SUVs in its class.\n\nPlease note our Lic/Reg/Admin/Dekra Roadworthy Fee is R9 990.",
+      "imageUrls": [
+        "https://img.autotrader.co.za/46944083",
+        "https://img.autotrader.co.za/46944089",
+        "https://img.autotrader.co.za/46944107",
+        "https://img.autotrader.co.za/46944116",
+        "https://img.autotrader.co.za/46944087",
+        "https://img.autotrader.co.za/46944088",
+        "https://img.autotrader.co.za/46944096",
+        "https://img.autotrader.co.za/46944111",
+        "https://img.autotrader.co.za/21863380",
+        "https://img.autotrader.co.za/46944114",
+        "https://img.autotrader.co.za/46944117",
+        "https://img.autotrader.co.za/46944124",
+        "https://img.autotrader.co.za/46944132",
+        "https://img.autotrader.co.za/46944137",
+        "https://img.autotrader.co.za/46944141",
+        "https://img.autotrader.co.za/46944145",
+        "https://img.autotrader.co.za/46944151",
+        "https://img.autotrader.co.za/46944106",
+        "https://img.autotrader.co.za/40651865",
+        "https://img.autotrader.co.za/46944091",
+        "https://img.autotrader.co.za/46944094",
+        "https://img.autotrader.co.za/46944097",
+        "https://img.autotrader.co.za/46944100",
+        "https://img.autotrader.co.za/46944102",
+        "https://img.autotrader.co.za/46944119",
+        "https://img.autotrader.co.za/46944120",
+        "https://img.autotrader.co.za/46944128",
+        "https://img.autotrader.co.za/46944135",
+        "https://img.autotrader.co.za/46944140",
+        "https://img.autotrader.co.za/22024143"
+      ],
+      "bodyType": "SportsUtilityVehicle",
+      "doors": 5,
+      "engineCapacityInCc": 1598,
+      "fuelType": "Petrol",
+      "transmissionDrive": "FrontWheelDrive",
+      "transmission": "Automatic",
+      "dealerId": 369,
+      "dealerLogoUrl": "https://img.autotrader.co.za/20764250",
+      "tummCode": 50045131,
+      "registrationNumber": "KS87YBGP",
+      "serviceHistory": "FullByFranchise",
+      "stockNumber": "TAS47930",
+      "vehicleCategory": "Cars",
+      "features": [],
+      "dealerContactInformation": {
+        "name": "The Auto Shed",
+        "emailAddress": "sales2@theautoshed.co.za",
+        "contactNumber": "010 590 9898",
+        "latitude": -25.864466,
+        "longitude": 28.191956,
+        "address": {
+          "line1": "31 Kwartsiet Street",
+          "line2": "Centurion",
+          "postalCode": "0157",
+          "suburb": "Zwartkops Ext 15",
+          "city": "Centurion",
+          "province": "Gauteng"
+        }
+      },
+      "created": "2026-05-07T16:58:55.226966+02:00",
+      "updated": "2026-05-07T17:04:55.6046709+02:00"
     }
   ]
 }
