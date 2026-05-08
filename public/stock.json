@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2026-05-08T13:33:23.320Z",
+  "lastUpdated": "2026-05-08T14:35:54.140Z",
   "source": "AutoTrader Syndication API",
-  "vehicleCount": 28,
+  "vehicleCount": 29,
   "vehicles": [
     {
       "id": 28168394,
@@ -2030,6 +2030,78 @@
       },
       "created": "2026-05-08T12:40:54.2935122+02:00",
       "updated": "2026-05-08T12:57:30.3495951+02:00"
+    },
+    {
+      "id": 28544521,
+      "make": "Volkswagen",
+      "model": "Amarok",
+      "variant": "2.0BiTDI Double Cab Highline 4Motion Auto",
+      "newUsed": "Used",
+      "year": 2014,
+      "mileageInKm": 169500,
+      "price": "319900,0000",
+      "colour": "White",
+      "description": "The Auto Shed proudly presents this exceptionally well maintained 2014 Volkswagen Amarok Highline Double Cab 2.0TDI 132kW 4Motion Auto with 169 000km and a Full Service History. Just serviced at Volkswagen for complete peace of mind.\n\nPowered by Volkswagen’s legendary 2.0L Bi-Turbo Diesel engine producing 132kW and 400Nm, paired to a smooth automatic gearbox and 4Motion drivetrain, this Amarok delivers outstanding performance, comfort and capability both on and off the road. The large 80L fuel tank makes it an excellent long-distance touring or business vehicle.\n\nThis example presents exceptionally well with the sought after pre-facelift styling upgraded with a facelift front bumper.\n\nFeatures include:\n* Leather Seats\n* Securi-Lid Roller Shutter\n* Roll Bar\n* 18” All Terrain Tyres\n* Facelift Front Bumper Upgrade\n* Front & Rear Park Distance Control\n* Side Steps\n* Fog Lights\n* Electric Windows & Mirrors\n* Multifunction Steering Wheel\n* Bluetooth Connectivity\n* Cruise Control\n* Diff Lock & Off Road Button\n* Climate Control\n* Radio/CD Player\n* 6 Airbags\n\nA premium lifestyle bakkie offering legendary Amarok comfort, refinement and durability with excellent load and towing capability. Professionally prepared to The Auto Shed standard and ready for immediate delivery.\n\nPlease note our Lic/Reg/Admin/Dekra Roadworthy Fee is R9 990.\n\nThe Auto Shed\nIn Pursuit of Excellence.",
+      "imageUrls": [
+        "https://img.autotrader.co.za/46972941",
+        "https://img.autotrader.co.za/46972949",
+        "https://img.autotrader.co.za/46972974",
+        "https://img.autotrader.co.za/46972955",
+        "https://img.autotrader.co.za/46972953",
+        "https://img.autotrader.co.za/46972960",
+        "https://img.autotrader.co.za/46972946",
+        "https://img.autotrader.co.za/46972948",
+        "https://img.autotrader.co.za/46972970",
+        "https://img.autotrader.co.za/21863380",
+        "https://img.autotrader.co.za/46972963",
+        "https://img.autotrader.co.za/46972950",
+        "https://img.autotrader.co.za/46972994",
+        "https://img.autotrader.co.za/46972983",
+        "https://img.autotrader.co.za/46972972",
+        "https://img.autotrader.co.za/40651865",
+        "https://img.autotrader.co.za/46973001",
+        "https://img.autotrader.co.za/46972969",
+        "https://img.autotrader.co.za/46972962",
+        "https://img.autotrader.co.za/46972958",
+        "https://img.autotrader.co.za/46972990",
+        "https://img.autotrader.co.za/46972986",
+        "https://img.autotrader.co.za/46972995",
+        "https://img.autotrader.co.za/46972979",
+        "https://img.autotrader.co.za/46972978",
+        "https://img.autotrader.co.za/46972998",
+        "https://img.autotrader.co.za/22024143"
+      ],
+      "bodyType": "DoubleCab",
+      "doors": 4,
+      "engineCapacityInCc": 1968,
+      "fuelType": "Diesel",
+      "transmissionDrive": "_4x4",
+      "transmission": "Automatic",
+      "dealerId": 369,
+      "dealerLogoUrl": "https://img.autotrader.co.za/20764250",
+      "tummCode": 64072445,
+      "registrationNumber": "FS82FRGP",
+      "serviceHistory": "Full",
+      "stockNumber": "TAS50521",
+      "vehicleCategory": "Cars",
+      "features": [],
+      "dealerContactInformation": {
+        "name": "The Auto Shed",
+        "emailAddress": "sales2@theautoshed.co.za",
+        "contactNumber": "010 590 9898",
+        "latitude": -25.864466,
+        "longitude": 28.191956,
+        "address": {
+          "line1": "31 Kwartsiet Street",
+          "line2": "Centurion",
+          "postalCode": "0157",
+          "suburb": "Zwartkops Ext 15",
+          "city": "Centurion",
+          "province": "Gauteng"
+        }
+      },
+      "created": "2026-05-08T13:05:54.465208+02:00",
+      "updated": "2026-05-08T16:01:40.27369+02:00"
     }
   ]
 }
