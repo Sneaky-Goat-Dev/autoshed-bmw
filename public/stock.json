@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-08T05:00:57.132Z",
+  "lastUpdated": "2026-05-08T06:35:17.167Z",
   "source": "AutoTrader Syndication API",
   "vehicleCount": 27,
   "vehicles": [
@@ -256,9 +256,7 @@
       "serviceHistory": "FullByFranchise",
       "stockNumber": "70USD32847",
       "vehicleCategory": "Cars",
-      "features": [
-        "Sunroof"
-      ],
+      "features": [],
       "dealerContactInformation": {
         "name": "The Auto Shed",
         "emailAddress": "sales2@theautoshed.co.za",
@@ -275,7 +273,7 @@
         }
       },
       "created": "2025-10-10T13:09:23.7088625+02:00",
-      "updated": "2026-05-07T12:03:35.9785543+02:00"
+      "updated": "2026-05-08T08:27:52.1240994+02:00"
     },
     {
       "id": 28241084,
@@ -344,7 +342,7 @@
         }
       },
       "created": "2025-10-10T13:32:32.0127691+02:00",
-      "updated": "2026-05-07T12:04:23.2050182+02:00"
+      "updated": "2026-05-08T08:34:23.0641338+02:00"
     },
     {
       "id": 28282751,
@@ -1199,11 +1197,7 @@
       "serviceHistory": "FullByFranchise",
       "stockNumber": "TAS60864",
       "vehicleCategory": "Cars",
-      "features": [
-        "Heated seats - front",
-        "Panoramic roof",
-        "Sunroof"
-      ],
+      "features": [],
       "dealerContactInformation": {
         "name": "The Auto Shed",
         "emailAddress": "sales2@theautoshed.co.za",
@@ -1220,7 +1214,7 @@
         }
       },
       "created": "2026-02-27T15:13:55.8854449+02:00",
-      "updated": "2026-05-07T12:08:39.5987945+02:00"
+      "updated": "2026-05-08T08:18:51.5096045+02:00"
     },
     {
       "id": 28461784,
@@ -1516,7 +1510,7 @@
         }
       },
       "created": "2026-04-01T15:23:52.9828732+02:00",
-      "updated": "2026-05-07T12:05:21.1298959+02:00"
+      "updated": "2026-05-08T08:30:17.6874822+02:00"
     },
     {
       "id": 28493062,
@@ -1647,10 +1641,7 @@
       "serviceHistory": "FullByFranchise",
       "stockNumber": "70USD021157",
       "vehicleCategory": "Cars",
-      "features": [
-        "Navigation",
-        "Panoramic roof"
-      ],
+      "features": [],
       "dealerContactInformation": {
         "name": "The Auto Shed",
         "emailAddress": "sales2@theautoshed.co.za",
@@ -1667,7 +1658,7 @@
         }
       },
       "created": "2026-04-02T13:11:47.0530534+02:00",
-      "updated": "2026-05-07T10:54:51.7266353+02:00"
+      "updated": "2026-05-08T08:22:51.5750018+02:00"
     },
     {
       "id": 28497083,
@@ -1889,7 +1880,7 @@
         }
       },
       "created": "2026-05-05T14:24:06.8388931+02:00",
-      "updated": "2026-05-07T10:57:21.8460171+02:00"
+      "updated": "2026-05-08T08:25:10.8417428+02:00"
     },
     {
       "id": 28543174,
