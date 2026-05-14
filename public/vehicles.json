@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-14T10:47:56.372Z",
+  "lastUpdated": "2026-05-14T11:34:36.130Z",
   "source": "AutoTrader Syndication API",
   "vehicleCount": 29,
   "vehicles": [
@@ -164,7 +164,7 @@
       "variant": "35TFSI Sport",
       "newUsed": "Used",
       "year": 2020,
-      "price": 354900,
+      "price": 349900,
       "mileage": 79500,
       "transmission": "Automatic",
       "fuelType": "Petrol",
@@ -832,8 +832,10 @@
       "serviceHistory": "Full",
       "stockNumber": "70USD56987",
       "registrationNumber": "HJ81VYGP",
-      "features": [],
-      "description": "An exceptional example of the sought-after Range Rover Velar D300 HSE, finished in timeless White with Black Leather interior. Combining luxury, technology and serious performance, this vehicle delivers the premium driving experience expected from the Range Rover name.\n\nPowered by a 3.0L V6 Turbo Diesel producing 221kW and 700Nm of torque, paired with smooth automatic transmission and Air Suspension for unmatched comfort and road presence.\n\nFull Agents Service History. Includes 1 Year / 1 Service remaining on service plan and Warranty valid until February 2027 — providing outstanding peace of mind.\n\nKey Features:\n21\" Alloy Wheels with 4 Brand New Tyres\nPanoramic Sunroof\nAdaptive Cruise Control\nPark Distance Control Front & Rear with Reverse Camera\nHeated & Massage Electric Seats\nMeridian Premium Sound System\nApple CarPlay & Android Auto with Bluetooth & Voice Control\nBlind Spot Assist & Lane Change Assist\nNavigation System\nKeyless Entry & Start\nElectric Tow Bar\nAuto Boot\nElectric Windows & Folding Mirrors\n\nImmaculate condition, carefully selected and prepared to The Auto Shed standard – In Pursuit of Excellence.\n\nFinance Available | Trade-Ins Welcome | Nationwide Delivery Available.",
+      "features": [
+        "Panoramic roof"
+      ],
+      "description": "2019 Range Rover Velar D300 HSE finished in timeless White with Black Leather Interior. An exceptional example of one of the most desirable luxury SUVs on the market, combining elegant design, advanced technology and effortless performance in true Range Rover fashion. Full Agents Service History, Just Serviced and meticulously maintained throughout. Cambelt Service has also been completed for additional peace of mind.\n\nPowered by a refined 3.0L V6 Turbo Diesel producing an impressive 221kW and 700Nm of torque, paired with smooth automatic transmission and Air Suspension for unmatched comfort, refinement and road presence.\n\nBalance of Warranty valid until February 2027 together with 1 Year / 1 Service remaining on the Service Plan.\n\nFeatures Include:\n* 21 Inch Alloy Wheels\n* 4 Brand New Tyres\n* Panoramic Sunroof\n* Heated & Massage Electric Seats\n* Meridian Premium Sound System\n* Adaptive Cruise Control\n* Blind Spot Assist & Lane Change Assist\n* Front & Rear Park Distance Control with Reverse Camera\n* Apple CarPlay & Android Auto\n* Navigation System\n* Keyless Entry & Start\n* Electric Towbar\n* Power Tailgate\n* Air Suspension\n\nA beautifully presented Velar offering luxury, performance and sophistication in one striking package. Carefully selected and prepared to The Auto Shed standard.\n\nThe Auto Shed – In Pursuit of Excellence\n\nFinance Available | Trade-Ins Welcome | Nationwide Delivery Available\n\nPlease note our Lic/Reg/Admin/Dekra Roadworthy Fee is R9 990.",
       "images": [
         "https://img.autotrader.co.za/46640378",
         "https://img.autotrader.co.za/45065088",
@@ -877,7 +879,7 @@
       "variant": "1.0TSI R-Line",
       "newUsed": "Used",
       "year": 2023,
-      "price": 449900,
+      "price": 459900,
       "mileage": 14300,
       "transmission": "Automatic",
       "fuelType": "Petrol",

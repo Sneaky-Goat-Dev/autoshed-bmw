@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-14T10:47:56.370Z",
+  "lastUpdated": "2026-05-14T11:34:36.129Z",
   "source": "AutoTrader Syndication API",
   "vehicleCount": 29,
   "vehicles": [
@@ -216,7 +216,7 @@
       "newUsed": "Used",
       "year": 2020,
       "mileageInKm": 79500,
-      "price": "354900,0000",
+      "price": "349900,0000",
       "colour": "Silver",
       "description": "Stand out from the ordinary with this beautifully prepared 2020 Audi Q2 Sport, combining Audi luxury, sporty performance and everyday practicality in one premium compact SUV. Professionally detailed the Auto Shed way, this Q2 is ready to drive and enjoy immediately.\n\nPowered by a lively yet efficient 1.4L Turbo Petrol engine (110kW / 250Nm) paired to Audi’s renowned 7-Speed S-Tronic Dual Clutch transmission, it delivers smooth acceleration, excellent fuel economy and effortless driving comfort.\n\nEnjoy complete peace of mind with the Balance of Audi’s 7 Year / 100 000km Maintenance Plan valid until 27 February 2027 — a major value advantage.\n\nKey Features:\n• 17” Alloy Wheels with 4 New Tyres\n• Leather Interior\n• Panoramic Sunroof\n• Automatic Boot\n• Xenon Headlights with Daytime Running Lights\n• Cruise Control & Hill Hold Assist\n• Rear Park Distance Control\n• Climate Control Air Conditioning\n• Bluetooth & USB Connectivity\n• Eco Stop/Start System\n• Electric Windows & Mirrors\n• ISOFIX Child Anchors\n• Space Saver Spare Wheel\n\nA stylish, economical and highly sought-after Audi SUV — ideal for professionals or young families looking for premium without compromise.\n\nThe Auto Shed – In Pursuit of Excellence\nLIC/REG/ADMIN/DEKRA Roadworthy Fee R9 990.",
       "imageUrls": [
@@ -273,7 +273,7 @@
         }
       },
       "created": "2025-10-10T13:09:23.7088625+02:00",
-      "updated": "2026-05-09T05:11:20.4490917+02:00"
+      "updated": "2026-05-14T12:49:05.4461093+02:00"
     },
     {
       "id": 28241084,
@@ -1078,7 +1078,7 @@
       "mileageInKm": 69900,
       "price": "769900,0000",
       "colour": "White",
-      "description": "An exceptional example of the sought-after Range Rover Velar D300 HSE, finished in timeless White with Black Leather interior. Combining luxury, technology and serious performance, this vehicle delivers the premium driving experience expected from the Range Rover name.\n\nPowered by a 3.0L V6 Turbo Diesel producing 221kW and 700Nm of torque, paired with smooth automatic transmission and Air Suspension for unmatched comfort and road presence.\n\nFull Agents Service History. Includes 1 Year / 1 Service remaining on service plan and Warranty valid until February 2027 — providing outstanding peace of mind.\n\nKey Features:\n21\" Alloy Wheels with 4 Brand New Tyres\nPanoramic Sunroof\nAdaptive Cruise Control\nPark Distance Control Front & Rear with Reverse Camera\nHeated & Massage Electric Seats\nMeridian Premium Sound System\nApple CarPlay & Android Auto with Bluetooth & Voice Control\nBlind Spot Assist & Lane Change Assist\nNavigation System\nKeyless Entry & Start\nElectric Tow Bar\nAuto Boot\nElectric Windows & Folding Mirrors\n\nImmaculate condition, carefully selected and prepared to The Auto Shed standard – In Pursuit of Excellence.\n\nFinance Available | Trade-Ins Welcome | Nationwide Delivery Available.",
+      "description": "2019 Range Rover Velar D300 HSE finished in timeless White with Black Leather Interior. An exceptional example of one of the most desirable luxury SUVs on the market, combining elegant design, advanced technology and effortless performance in true Range Rover fashion. Full Agents Service History, Just Serviced and meticulously maintained throughout. Cambelt Service has also been completed for additional peace of mind.\n\nPowered by a refined 3.0L V6 Turbo Diesel producing an impressive 221kW and 700Nm of torque, paired with smooth automatic transmission and Air Suspension for unmatched comfort, refinement and road presence.\n\nBalance of Warranty valid until February 2027 together with 1 Year / 1 Service remaining on the Service Plan.\n\nFeatures Include:\n* 21 Inch Alloy Wheels\n* 4 Brand New Tyres\n* Panoramic Sunroof\n* Heated & Massage Electric Seats\n* Meridian Premium Sound System\n* Adaptive Cruise Control\n* Blind Spot Assist & Lane Change Assist\n* Front & Rear Park Distance Control with Reverse Camera\n* Apple CarPlay & Android Auto\n* Navigation System\n* Keyless Entry & Start\n* Electric Towbar\n* Power Tailgate\n* Air Suspension\n\nA beautifully presented Velar offering luxury, performance and sophistication in one striking package. Carefully selected and prepared to The Auto Shed standard.\n\nThe Auto Shed – In Pursuit of Excellence\n\nFinance Available | Trade-Ins Welcome | Nationwide Delivery Available\n\nPlease note our Lic/Reg/Admin/Dekra Roadworthy Fee is R9 990.",
       "imageUrls": [
         "https://img.autotrader.co.za/46640378",
         "https://img.autotrader.co.za/45065088",
@@ -1123,7 +1123,9 @@
       "serviceHistory": "Full",
       "stockNumber": "70USD56987",
       "vehicleCategory": "Cars",
-      "features": [],
+      "features": [
+        "Panoramic roof"
+      ],
       "dealerContactInformation": {
         "name": "The Auto Shed",
         "emailAddress": "sales2@theautoshed.co.za",
@@ -1140,7 +1142,7 @@
         }
       },
       "created": "2026-02-19T16:56:26.4730788+02:00",
-      "updated": "2026-05-07T15:07:25.428373+02:00"
+      "updated": "2026-05-14T13:04:15.3247187+02:00"
     },
     {
       "id": 28441413,
@@ -1150,7 +1152,7 @@
       "newUsed": "Used",
       "year": 2023,
       "mileageInKm": 14300,
-      "price": "449900,0000",
+      "price": "459900,0000",
       "colour": "Silver",
       "description": "Stand out from the ordinary with this immaculate 2023 VW Taigo R-Line, finished in sought-after Reflex Silver Metallic and presented in exceptional showroom condition. A perfect blend of sporty coupe styling, German engineering and everyday practicality, this Taigo delivers premium comfort with outstanding efficiency.\n\nPowered by Volkswagen’s responsive 1.0 TSI turbo engine paired to the smooth DSG automatic transmission, it offers effortless performance with excellent fuel economy — ideal for city and highway driving alike.\n\nFactory & Optional Extras Include:\n• R-Line styling package\n• Tilting & Sliding Glass Panoramic Sunroof\n• Heated Front Seats\n• Comfort Package with Rear View Camera\n• Composition Media Infotainment System\n• Removable Towbar\n• Smash & Grab Safety Film\n• Headlamp Protection\n• Reflex Silver Metallic Paint\n\nEnjoy total peace of mind with the Balance of Volkswagen’s 5-Year / 60 000km Full Maintenance Plan valid until.\n\nThis vehicle has been meticulously cared for and represents exceptional value for buyers wanting a near-new premium crossover without the new-car price tag.\n\nProfessionally prepared to The Auto Shed standard — In Pursuit of Excellence.\n\nFinance available | Trade-ins welcome | Nationwide delivery.",
       "imageUrls": [
@@ -1214,7 +1216,7 @@
         }
       },
       "created": "2026-02-27T15:13:55.8854449+02:00",
-      "updated": "2026-05-08T08:18:51.5096045+02:00"
+      "updated": "2026-05-14T13:12:02.4267759+02:00"
     },
     {
       "id": 28461784,
