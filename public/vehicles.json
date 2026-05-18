@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-18T05:22:39.806Z",
+  "lastUpdated": "2026-05-18T07:20:56.504Z",
   "source": "AutoTrader Syndication API",
   "vehicleCount": 31,
   "vehicles": [
@@ -215,7 +215,7 @@
       "newUsed": "Used",
       "year": 2021,
       "price": 249900,
-      "mileage": 70000,
+      "mileage": 72000,
       "transmission": "Automatic",
       "fuelType": "Petrol",
       "engineCapacity": "1,598 cc",
