@@ -1,60 +1,17 @@
-'use client';
-
-import { useState } from 'react';
 import { autoshedData } from '@/data/autoshed-data';
 import SectionHeading from '@/components/SectionHeading';
 import Button from '@/components/Button';
-import { SellCarFormData } from '@/types';
+
+const AUTOBID_URL = 'https://www.autobid.co.za/guesstimate/step1customerhca.php?nc=2375189604&dID=1976&userid=101232';
 
 export default function SellYourCarPage() {
-  const { business, sellCarRequirements, brands } = autoshedData;
-
-  const currentYear = new Date().getFullYear();
-  const years = Array.from({ length: 15 }, (_, i) => currentYear - i);
-
-  const [formData, setFormData] = useState<SellCarFormData>({
-    name: '',
-    email: '',
-    phone: '',
-    vehicleMake: '',
-    vehicleModel: '',
-    vehicleYear: '',
-    mileage: '',
-    condition: '',
-    askingPrice: '',
-    message: '',
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
-
-  const inputClasses =
-    'w-full px-4 py-3 border border-gray-200 text-sm focus:border-gold focus:ring-0 focus:outline-none bg-white';
-  const labelClasses = 'block text-sm font-medium text-near-black mb-2';
+  const { sellCarRequirements } = autoshedData;
 
   const processSteps = [
     {
       number: '01',
-      title: 'Submit Details',
-      description: 'Fill out the form with your vehicle information and contact details.',
+      title: 'Get a Valuation',
+      description: 'Use our online valuation tool to submit your vehicle details in minutes.',
     },
     {
       number: '02',
@@ -222,263 +179,41 @@ export default function SellYourCarPage() {
         </div>
       </section>
 
-      {/* Submission Form Section */}
+      {/* Valuation CTA Section */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="heading-display text-3xl sm:text-4xl text-near-black mb-4">
-                Get Your Valuation
-              </h2>
-              <p className="text-meta-gray">
-                Complete the form below with your vehicle details and we will get back to you with
-                a valuation.
-              </p>
-            </div>
-
-            {isSubmitted ? (
-              <div className="text-center py-12 bg-gray-50">
-                <div className="w-16 h-16 bg-gold mx-auto flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-near-black mb-2">Submission Received</h3>
-                <p className="text-meta-gray mb-6 max-w-md mx-auto">
-                  Thank you for submitting your vehicle details. Our team will review your
-                  information and contact you within 24-48 hours with a valuation.
-                </p>
-                <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <Button href="/vehicles" variant="primary">
-                    Browse Our Inventory
-                  </Button>
-                  <Button
-                    onClick={() => {
-                      setIsSubmitted(false);
-                      setFormData({
-                        name: '',
-                        email: '',
-                        phone: '',
-                        vehicleMake: '',
-                        vehicleModel: '',
-                        vehicleYear: '',
-                        mileage: '',
-                        condition: '',
-                        askingPrice: '',
-                        message: '',
-                      });
-                    }}
-                    variant="outline"
-                  >
-                    Submit Another Vehicle
-                  </Button>
-                </div>
+            <div className="bg-gray-50 p-10 lg:p-14 text-center">
+              <div className="w-16 h-16 bg-gold mx-auto flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="bg-gray-50 p-8 space-y-6">
-                {/* Contact Information */}
-                <div>
-                  <h3 className="text-lg font-bold text-near-black mb-4 pb-2 border-b border-gray-200">
-                    Your Details
-                  </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div className="sm:col-span-2">
-                      <label htmlFor="name" className={labelClasses}>
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className={inputClasses}
-                        placeholder="John Doe"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className={labelClasses}>
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className={inputClasses}
-                        placeholder="john@example.com"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="phone" className={labelClasses}>
-                        Phone Number *
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        required
-                        className={inputClasses}
-                        placeholder="012 345 6789"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Vehicle Information */}
-                <div>
-                  <h3 className="text-lg font-bold text-near-black mb-4 pb-2 border-b border-gray-200">
-                    Vehicle Information
-                  </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="vehicleMake" className={labelClasses}>
-                        Make *
-                      </label>
-                      <select
-                        id="vehicleMake"
-                        name="vehicleMake"
-                        value={formData.vehicleMake}
-                        onChange={handleInputChange}
-                        required
-                        className={inputClasses}
-                      >
-                        <option value="">Select make</option>
-                        {brands.map((brand) => (
-                          <option key={brand} value={brand}>
-                            {brand}
-                          </option>
-                        ))}
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label htmlFor="vehicleModel" className={labelClasses}>
-                        Model *
-                      </label>
-                      <input
-                        type="text"
-                        id="vehicleModel"
-                        name="vehicleModel"
-                        value={formData.vehicleModel}
-                        onChange={handleInputChange}
-                        required
-                        className={inputClasses}
-                        placeholder="e.g., X5, C-Class, Macan"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="vehicleYear" className={labelClasses}>
-                        Year *
-                      </label>
-                      <select
-                        id="vehicleYear"
-                        name="vehicleYear"
-                        value={formData.vehicleYear}
-                        onChange={handleInputChange}
-                        required
-                        className={inputClasses}
-                      >
-                        <option value="">Select year</option>
-                        {years.map((year) => (
-                          <option key={year} value={year}>
-                            {year}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label htmlFor="mileage" className={labelClasses}>
-                        Mileage (km) *
-                      </label>
-                      <input
-                        type="number"
-                        id="mileage"
-                        name="mileage"
-                        value={formData.mileage}
-                        onChange={handleInputChange}
-                        required
-                        min="0"
-                        className={inputClasses}
-                        placeholder="e.g., 50000"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="condition" className={labelClasses}>
-                        Condition *
-                      </label>
-                      <select
-                        id="condition"
-                        name="condition"
-                        value={formData.condition}
-                        onChange={handleInputChange}
-                        required
-                        className={inputClasses}
-                      >
-                        <option value="">Select condition</option>
-                        <option value="excellent">Excellent - Like new, no issues</option>
-                        <option value="good">Good - Minor wear, well maintained</option>
-                        <option value="fair">Fair - Some cosmetic or mechanical issues</option>
-                        <option value="poor">Poor - Significant issues present</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label htmlFor="askingPrice" className={labelClasses}>
-                        Asking Price (optional)
-                      </label>
-                      <input
-                        type="text"
-                        id="askingPrice"
-                        name="askingPrice"
-                        value={formData.askingPrice}
-                        onChange={handleInputChange}
-                        className={inputClasses}
-                        placeholder="R 000,000"
-                      />
-                    </div>
-                    <div className="sm:col-span-2">
-                      <label htmlFor="message" className={labelClasses}>
-                        Additional Details
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        rows={4}
-                        className={inputClasses}
-                        placeholder="Tell us more about your vehicle - service history, modifications, any issues, etc."
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Disclaimer */}
-                <div className="bg-white p-4 border border-gray-200 text-xs text-meta-gray">
-                  <p>
-                    By submitting this form, you consent to {business.name} contacting you regarding
-                    your vehicle valuation. The valuation provided is an estimate and may vary upon
-                    physical inspection of the vehicle. Your personal information will be handled
-                    in accordance with POPIA regulations.
-                  </p>
-                </div>
-
+              <h2 className="heading-display text-3xl sm:text-4xl text-near-black mb-4">
+                Get Your Instant Valuation
+              </h2>
+              <p className="text-meta-gray max-w-lg mx-auto mb-8 leading-relaxed">
+                Use our online valuation tool to get a competitive estimate for your vehicle in minutes.
+                No obligations — just an honest market price.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
                 <Button
-                  type="submit"
+                  href={AUTOBID_URL}
+                  external
                   variant="primary"
                   size="lg"
-                  fullWidth
-                  disabled={isSubmitting}
                 >
-                  {isSubmitting ? 'Submitting...' : 'Request Valuation'}
+                  Start My Valuation
                 </Button>
-              </form>
-            )}
+                <Button href="/contact" variant="outline" size="lg">
+                  Speak to Us First
+                </Button>
+              </div>
+              <p className="text-xs text-meta-gray">
+                You will be taken to our secure valuation partner. Your information is handled in
+                accordance with POPIA regulations.
+              </p>
+            </div>
           </div>
         </div>
       </section>

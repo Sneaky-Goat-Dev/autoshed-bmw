@@ -4,6 +4,7 @@ import { ReactNode } from 'react';
 interface ButtonProps {
   children: ReactNode;
   href?: string;
+  external?: boolean;
   variant?: 'primary' | 'secondary' | 'outline' | 'outlineLight';
   size?: 'sm' | 'md' | 'lg';
   type?: 'button' | 'submit' | 'reset';
@@ -16,6 +17,7 @@ interface ButtonProps {
 export default function Button({
   children,
   href,
+  external = false,
   variant = 'primary',
   size = 'md',
   type = 'button',
@@ -43,6 +45,14 @@ export default function Button({
   const widthStyles = fullWidth ? 'w-full' : '';
 
   const combinedStyles = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${disabledStyles} ${widthStyles} ${className}`;
+
+  if (href && external) {
+    return (
+      <a href={href} className={combinedStyles} target="_blank" rel="noopener noreferrer">
+        {children}
+      </a>
+    );
+  }
 
   if (href) {
     return (
