@@ -110,8 +110,15 @@ async function fetchAutoTraderListings(): Promise<AutoTraderListing[] | null> {
 
 function formatEngineCapacity(ccValue?: number): string | undefined {
   if (!ccValue) return undefined;
-  // Convert cc to formatted string (e.g., 1999 -> "1,999 cc")
   return `${ccValue.toLocaleString()} cc`;
+}
+
+function extractFeaturesFromDescription(description: string): string[] {
+  return description
+    .split('\n')
+    .filter(line => line.trim().startsWith('•'))
+    .map(line => line.trim().replace(/^•\s*/, '').trim())
+    .filter(Boolean);
 }
 
 function parsePrice(priceString: string): number {
@@ -140,7 +147,9 @@ function transformListingToVehicle(listing: AutoTraderListing) {
     serviceHistory: listing.serviceHistory,
     stockNumber: listing.stockNumber,
     registrationNumber: listing.registrationNumber,
-    features: listing.features || [],
+    features: listing.features?.length > 0
+      ? listing.features
+      : extractFeaturesFromDescription(listing.description || ''),
     description: listing.description || '',
     images: listing.imageUrls || [],
     bodyType: listing.bodyType,

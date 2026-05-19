@@ -4,12 +4,12 @@ import { useState, use } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import { useForm, ValidationError } from '@formspree/react';
 import { autoshedData } from '@/data/autoshed-data';
 import Button from '@/components/Button';
 import FinanceCalculator from '@/components/FinanceCalculator';
 import VehicleCard from '@/components/VehicleCard';
 import { formatPrice, formatMileage } from '@/utils/format';
-import { EnquiryFormData } from '@/types';
 
 interface VehicleDetailPageProps {
   params: Promise<{ id: string }>;
@@ -17,44 +17,19 @@ interface VehicleDetailPageProps {
 
 export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
   const { id } = use(params);
-  const { vehicles, contact, business } = autoshedData;
+  const { vehicles, contact } = autoshedData;
 
   const vehicle = vehicles.find((v) => v.id === id);
 
   const [activeTab, setActiveTab] = useState<'overview' | 'features' | 'finance'>('overview');
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const vehicleImages = vehicle?.images || [];
-  const [formData, setFormData] = useState<EnquiryFormData>({
-    name: '',
-    email: '',
-    phone: '',
-    message: `I am interested in the ${vehicle?.year} ${vehicle?.make} ${vehicle?.model} ${vehicle?.variant}. Please contact me with more information.`,
-    vehicleId: id,
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const [state, handleSubmit] = useForm('vehicleEnquiry');
 
   if (!vehicle) {
     notFound();
   }
-
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
 
   const inputClasses =
     'w-full px-4 py-3 border border-gray-200 text-sm focus:border-gold focus:ring-0 focus:outline-none bg-white';
@@ -64,6 +39,8 @@ export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
   const similarVehicles = vehicles
     .filter((v) => v.make === vehicle.make && v.id !== vehicle.id)
     .slice(0, 3);
+
+  const defaultMessage = `I am interested in the ${vehicle.year} ${vehicle.make} ${vehicle.model} ${vehicle.variant}. Please contact me with more information.`;
 
   return (
     <>
@@ -270,7 +247,37 @@ export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
               {activeTab === 'overview' && (
                 <div className="bg-white p-8">
                   <h2 className="text-2xl font-bold text-near-black mb-6">Vehicle Overview</h2>
-                  <p className="text-meta-gray leading-relaxed mb-8">{vehicle.description}</p>
+                  <div className="text-meta-gray leading-relaxed mb-8 space-y-4">
+                    {vehicle.description.split('\n\n').map((block, i) => {
+                      const lines = block.split('\n');
+                      const hasBullets = lines.some(l => l.trim().startsWith('•'));
+                      const headerLine = hasBullets && !lines[0].trim().startsWith('•') ? lines[0] : null;
+                      const bulletLines = lines.filter(l => l.trim().startsWith('•'));
+                      const textLines = lines.filter(l => !l.trim().startsWith('•') && l !== headerLine);
+
+                      if (hasBullets) {
+                        return (
+                          <div key={i}>
+                            {headerLine && (
+                              <p className="font-semibold text-near-black mb-2">{headerLine}</p>
+                            )}
+                            {textLines.length > 0 && (
+                              <p className="mb-2">{textLines.join(' ')}</p>
+                            )}
+                            <ul className="space-y-1">
+                              {bulletLines.map((line, j) => (
+                                <li key={j} className="flex items-start gap-2">
+                                  <span className="text-gold mt-1.5 flex-shrink-0">•</span>
+                                  <span>{line.trim().replace(/^•\s*/, '')}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        );
+                      }
+                      return <p key={i}>{block}</p>;
+                    })}
+                  </div>
 
                   {/* Specifications */}
                   <h3 className="text-lg font-bold text-near-black mb-4">Specifications</h3>
@@ -341,18 +348,22 @@ export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
               {activeTab === 'features' && (
                 <div className="bg-white p-8">
                   <h2 className="text-2xl font-bold text-near-black mb-6">Features & Equipment</h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {vehicle.features.map((feature, index) => (
-                      <div key={index} className="flex items-center gap-3 py-2">
-                        <div className="w-6 h-6 bg-gold flex-shrink-0 flex items-center justify-center">
-                          <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
+                  {vehicle.features.length > 0 ? (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {vehicle.features.map((feature, index) => (
+                        <div key={index} className="flex items-start gap-3 py-2 border-b border-gray-50">
+                          <div className="w-5 h-5 bg-gold flex-shrink-0 flex items-center justify-center mt-0.5">
+                            <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                          <span className="text-near-black text-sm">{feature}</span>
                         </div>
-                        <span className="text-near-black">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="text-meta-gray">Feature details are included in the vehicle overview.</p>
+                  )}
                 </div>
               )}
 
@@ -369,7 +380,7 @@ export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
               <div className="bg-white p-6 sticky top-24">
                 <h3 className="text-lg font-bold text-near-black mb-6">Enquire About This Vehicle</h3>
 
-                {isSubmitted ? (
+                {state.succeeded ? (
                   <div className="text-center py-8">
                     <div className="w-12 h-12 bg-gold mx-auto flex items-center justify-center mb-4">
                       <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -381,7 +392,7 @@ export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
                       Thank you! We will contact you shortly.
                     </p>
                     <Button
-                      onClick={() => setIsSubmitted(false)}
+                      onClick={() => window.location.reload()}
                       variant="outline"
                       size="sm"
                     >
@@ -390,6 +401,12 @@ export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
+                    {/* Hidden vehicle fields */}
+                    <input type="hidden" name="vehicleId" value={id} />
+                    <input type="hidden" name="vehicleName" value={`${vehicle.year} ${vehicle.make} ${vehicle.model} ${vehicle.variant}`} />
+                    <input type="hidden" name="vehiclePrice" value={formatPrice(vehicle.price)} />
+                    <input type="hidden" name="stockNumber" value={vehicle.stockNumber || `Stock #${vehicle.id}`} />
+
                     <div>
                       <label htmlFor="name" className={labelClasses}>
                         Full Name *
@@ -398,12 +415,11 @@ export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
                         type="text"
                         id="name"
                         name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
                         required
                         className={inputClasses}
                         placeholder="John Doe"
                       />
+                      <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-500 text-sm mt-1" />
                     </div>
                     <div>
                       <label htmlFor="email" className={labelClasses}>
@@ -413,12 +429,11 @@ export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
                         type="email"
                         id="email"
                         name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
                         required
                         className={inputClasses}
                         placeholder="john@example.com"
                       />
+                      <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-500 text-sm mt-1" />
                     </div>
                     <div>
                       <label htmlFor="phone" className={labelClasses}>
@@ -428,12 +443,11 @@ export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
                         type="tel"
                         id="phone"
                         name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
                         required
                         className={inputClasses}
                         placeholder="012 345 6789"
                       />
+                      <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-red-500 text-sm mt-1" />
                     </div>
                     <div>
                       <label htmlFor="message" className={labelClasses}>
@@ -442,8 +456,7 @@ export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
                       <textarea
                         id="message"
                         name="message"
-                        value={formData.message}
-                        onChange={handleInputChange}
+                        defaultValue={defaultMessage}
                         rows={4}
                         className={inputClasses}
                       />
@@ -452,9 +465,9 @@ export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
                       type="submit"
                       variant="primary"
                       fullWidth
-                      disabled={isSubmitting}
+                      disabled={state.submitting}
                     >
-                      {isSubmitting ? 'Sending...' : 'Send Enquiry'}
+                      {state.submitting ? 'Sending...' : 'Send Enquiry'}
                     </Button>
                   </form>
                 )}
