@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-21T09:18:29.629Z",
+  "lastUpdated": "2026-05-21T10:35:38.904Z",
   "source": "AutoTrader Syndication API",
   "vehicleCount": 29,
   "vehicles": [
@@ -669,7 +669,7 @@
       "variant": "N",
       "newUsed": "Used",
       "year": 2025,
-      "price": 764900,
+      "price": 787900,
       "mileage": 4200,
       "transmission": "Automatic",
       "fuelType": "Petrol",
