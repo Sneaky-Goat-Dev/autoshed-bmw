@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-30T09:01:19.418Z",
+  "lastUpdated": "2026-05-30T09:47:07.246Z",
   "source": "AutoTrader Syndication API",
   "vehicleCount": 27,
   "vehicles": [
@@ -1888,7 +1888,8 @@
       "stockNumber": "TAS01582",
       "vehicleCategory": "Cars",
       "features": [
-        "On-board computer / multi-information display"
+        "On-board computer / multi-information display",
+        "Voice control"
       ],
       "dealerContactInformation": {
         "name": "The Auto Shed",
@@ -1906,7 +1907,7 @@
         }
       },
       "created": "2026-05-24T16:14:35.3572138+02:00",
-      "updated": "2026-05-25T15:00:42.4273415+02:00"
+      "updated": "2026-05-30T11:34:56.2557082+02:00"
     },
     {
       "id": 28569458,
