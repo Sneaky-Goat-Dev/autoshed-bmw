@@ -53,8 +53,47 @@ export default function SellYourCarPage() {
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* Valuation CTA Section */}
       <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-gray-50 p-10 lg:p-14 text-center">
+              <div className="w-16 h-16 bg-gold mx-auto flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h2 className="heading-display text-3xl sm:text-4xl text-near-black mb-4">
+                Get Your Instant Valuation
+              </h2>
+              <p className="text-meta-gray max-w-lg mx-auto mb-8 leading-relaxed">
+                Use our online valuation tool to get a competitive estimate for your vehicle in minutes.
+                No obligations — just an honest market price.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+                <Button
+                  href={AUTOBID_URL}
+                  external
+                  variant="primary"
+                  size="lg"
+                >
+                  Start My Valuation
+                </Button>
+                <Button href="/contact" variant="outline" size="lg">
+                  Speak to Us First
+                </Button>
+              </div>
+              <p className="text-xs text-meta-gray">
+                You will be taken to our secure valuation partner. Your information is handled in
+                accordance with POPIA regulations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-16 lg:py-24 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="How It Works"
@@ -68,7 +107,7 @@ export default function SellYourCarPage() {
                 {index < processSteps.length - 1 && (
                   <div className="hidden lg:block absolute top-8 left-1/2 w-full h-0.5 bg-gray-200" />
                 )}
-                <div className="relative bg-white text-center">
+                <div className="relative text-center">
                   <div className="w-16 h-16 bg-gold mx-auto flex items-center justify-center mb-6 relative z-10">
                     <span className="text-white text-xl font-bold">{step.number}</span>
                   </div>
@@ -82,7 +121,7 @@ export default function SellYourCarPage() {
       </section>
 
       {/* Why Sell To Us Section */}
-      <section className="py-16 lg:py-24 bg-gray-50">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
@@ -175,45 +214,6 @@ export default function SellYourCarPage() {
                 <span className="text-white text-sm">{requirement}</span>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Valuation CTA Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-gray-50 p-10 lg:p-14 text-center">
-              <div className="w-16 h-16 bg-gold mx-auto flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <h2 className="heading-display text-3xl sm:text-4xl text-near-black mb-4">
-                Get Your Instant Valuation
-              </h2>
-              <p className="text-meta-gray max-w-lg mx-auto mb-8 leading-relaxed">
-                Use our online valuation tool to get a competitive estimate for your vehicle in minutes.
-                No obligations — just an honest market price.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-                <Button
-                  href={AUTOBID_URL}
-                  external
-                  variant="primary"
-                  size="lg"
-                >
-                  Start My Valuation
-                </Button>
-                <Button href="/contact" variant="outline" size="lg">
-                  Speak to Us First
-                </Button>
-              </div>
-              <p className="text-xs text-meta-gray">
-                You will be taken to our secure valuation partner. Your information is handled in
-                accordance with POPIA regulations.
-              </p>
-            </div>
           </div>
         </div>
       </section>

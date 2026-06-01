@@ -48,8 +48,39 @@ function FinancePageContent() {
         </div>
       </section>
 
-      {/* Finance Overview Section */}
+      {/* Application Form Section */}
       <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="heading-display text-3xl sm:text-4xl text-near-black mb-4">
+                Finance Application
+              </h2>
+              <p className="text-meta-gray">
+                Complete the form below to start your finance application. Your application will be
+                submitted directly to our finance partners for assessment.
+              </p>
+            </div>
+
+            {selectedVehicle && (
+              <div className="mb-8 p-4 bg-gold/10 border border-gold/20">
+                <p className="text-sm text-meta-gray mb-1">Applying for finance on:</p>
+                <p className="font-bold text-near-black">
+                  {selectedVehicle.year} {selectedVehicle.make} {selectedVehicle.model} {selectedVehicle.variant}
+                </p>
+                <p className="text-gold font-bold">
+                  R{selectedVehicle.price.toLocaleString()}
+                </p>
+              </div>
+            )}
+
+            <SignioFinanceForm vehicle={selectedVehicle} />
+          </div>
+        </div>
+      </section>
+
+      {/* Finance Overview Section */}
+      <section className="py-16 lg:py-24 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
@@ -76,19 +107,19 @@ function FinancePageContent() {
 
               {/* Finance Benefits */}
               <div className="grid grid-cols-2 gap-4">
-                <div className="p-4 bg-gray-50 border-l-2 border-gold">
+                <div className="p-4 bg-white border-l-2 border-gold">
                   <h4 className="font-bold text-near-black mb-1">Competitive Rates</h4>
                   <p className="text-sm text-meta-gray">Access to prime interest rates</p>
                 </div>
-                <div className="p-4 bg-gray-50 border-l-2 border-gold">
+                <div className="p-4 bg-white border-l-2 border-gold">
                   <h4 className="font-bold text-near-black mb-1">Flexible Terms</h4>
                   <p className="text-sm text-meta-gray">24 to 84 month options</p>
                 </div>
-                <div className="p-4 bg-gray-50 border-l-2 border-gold">
+                <div className="p-4 bg-white border-l-2 border-gold">
                   <h4 className="font-bold text-near-black mb-1">Quick Approval</h4>
                   <p className="text-sm text-meta-gray">Fast turnaround times</p>
                 </div>
-                <div className="p-4 bg-gray-50 border-l-2 border-gold">
+                <div className="p-4 bg-white border-l-2 border-gold">
                   <h4 className="font-bold text-near-black mb-1">Expert Guidance</h4>
                   <p className="text-sm text-meta-gray">Personalized assistance</p>
                 </div>
@@ -104,7 +135,7 @@ function FinancePageContent() {
       </section>
 
       {/* Finance Partners Section */}
-      <section className="py-16 lg:py-24 bg-gray-50">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Our Finance Partners"
@@ -115,7 +146,7 @@ function FinancePageContent() {
             {financePartners.map((partner, index) => (
               <div
                 key={index}
-                className="bg-white p-6 flex items-center justify-center text-center border border-gray-200"
+                className="bg-gray-50 p-6 flex items-center justify-center text-center border border-gray-200"
               >
                 <span className="text-sm font-bold text-near-black uppercase tracking-wider">
                   {partner}
@@ -146,37 +177,6 @@ function FinancePageContent() {
                 <span className="text-white text-sm">{requirement}</span>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Application Form Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="heading-display text-3xl sm:text-4xl text-near-black mb-4">
-                Finance Application
-              </h2>
-              <p className="text-meta-gray">
-                Complete the form below to start your finance application. Your application will be
-                submitted directly to our finance partners for assessment.
-              </p>
-            </div>
-
-            {selectedVehicle && (
-              <div className="mb-8 p-4 bg-gold/10 border border-gold/20">
-                <p className="text-sm text-meta-gray mb-1">Applying for finance on:</p>
-                <p className="font-bold text-near-black">
-                  {selectedVehicle.year} {selectedVehicle.make} {selectedVehicle.model} {selectedVehicle.variant}
-                </p>
-                <p className="text-gold font-bold">
-                  R{selectedVehicle.price.toLocaleString()}
-                </p>
-              </div>
-            )}
-
-            <SignioFinanceForm vehicle={selectedVehicle} />
           </div>
         </div>
       </section>

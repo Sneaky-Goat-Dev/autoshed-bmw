@@ -89,31 +89,27 @@ export default function AboutPage() {
       {/* Team Section */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div
-              className="aspect-[4/3] bg-cover bg-center order-2 lg:order-1"
-              style={{
-                backgroundImage: 'url(https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80)',
-              }}
-            />
-            <div className="order-1 lg:order-2">
-              <SectionHeading
-                title="Leadership"
-                subtitle="Experienced professionals dedicated to your satisfaction"
-              />
-              <div className="space-y-6">
-                <div className="border-l-2 border-gold pl-6">
-                  <h3 className="text-xl font-bold text-near-black mb-2">{team.managingDirector}</h3>
-                  <p className="text-sm text-gold font-bold uppercase tracking-wider mb-3">Managing Director</p>
-                  <p className="text-meta-gray leading-relaxed">{team.description}</p>
-                </div>
-                <p className="text-meta-gray leading-relaxed">
-                  Our team shares a passion for premium vehicles and a commitment to delivering
-                  exceptional service. Every member of the Autoshed family understands that our
-                  reputation is built one customer at a time.
-                </p>
+          <SectionHeading
+            title="Leadership"
+            subtitle="Experienced professionals dedicated to your satisfaction"
+            centered
+          />
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-gray-50 border-t-2 border-gold p-8 lg:p-12 text-center">
+              <div className="w-20 h-20 bg-gold mx-auto flex items-center justify-center mb-6">
+                <span className="text-white text-2xl font-bold uppercase tracking-wide">
+                  {team.managingDirector.split(' ').map((name) => name[0]).join('')}
+                </span>
               </div>
+              <h3 className="text-2xl font-bold text-near-black mb-2">{team.managingDirector}</h3>
+              <p className="text-sm text-gold font-bold uppercase tracking-wider mb-4">Managing Director</p>
+              <p className="text-meta-gray leading-relaxed">{team.description}</p>
             </div>
+            <p className="text-meta-gray leading-relaxed text-center mt-8 max-w-2xl mx-auto">
+              Our team shares a passion for premium vehicles and a commitment to delivering
+              exceptional service. Every member of the Autoshed family understands that our
+              reputation is built one customer at a time.
+            </p>
           </div>
         </div>
       </section>
