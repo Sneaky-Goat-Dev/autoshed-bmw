@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-02T14:29:40.657Z",
+  "lastUpdated": "2026-06-02T15:53:26.410Z",
   "source": "AutoTrader Syndication API",
   "vehicleCount": 29,
   "vehicles": [
@@ -629,7 +629,7 @@
       "features": [
         "Adaptive headlights (varying light distribution)",
         "Camera for park distance control",
-        "Heated seats - rear",
+        "Heated seats - front",
         "High-beam assist",
         "Keyless access+start / hands-free key"
       ],
@@ -649,7 +649,7 @@
         }
       },
       "created": "2026-01-20T12:58:00.4913698+02:00",
-      "updated": "2026-05-27T10:35:18.3420219+02:00"
+      "updated": "2026-06-02T16:30:13.4725992+02:00"
     },
     {
       "id": 28383384,
