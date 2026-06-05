@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-05T06:41:04.083Z",
+  "lastUpdated": "2026-06-05T08:12:46.294Z",
   "source": "AutoTrader Syndication API",
   "vehicleCount": 30,
   "vehicles": [
@@ -2097,7 +2097,6 @@
         "https://img.autotrader.co.za/47685068",
         "https://img.autotrader.co.za/47685069",
         "https://img.autotrader.co.za/40651865",
-        "https://img.autotrader.co.za/47685073",
         "https://img.autotrader.co.za/47685077",
         "https://img.autotrader.co.za/47685079",
         "https://img.autotrader.co.za/47685078",
@@ -2140,7 +2139,7 @@
         }
       },
       "created": "2026-06-03T15:16:24.4426473+02:00",
-      "updated": "2026-06-04T16:51:24.4599439+02:00"
+      "updated": "2026-06-05T09:07:17.793924+02:00"
     },
     {
       "id": 28587541,
@@ -2207,7 +2206,7 @@
         }
       },
       "created": "2026-06-04T15:18:07.9560316+02:00",
-      "updated": "2026-06-04T16:51:55.7282131+02:00"
+      "updated": "2026-06-05T09:05:18.3667302+02:00"
     }
   ]
 }
