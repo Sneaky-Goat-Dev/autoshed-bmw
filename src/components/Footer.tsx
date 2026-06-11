@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { autoshedData } from '@/data/autoshed-data';
+import NewsletterForm from '@/components/NewsletterForm';
 
 const footerNavigation = {
   vehicles: [
@@ -126,6 +127,21 @@ export default function Footer() {
                 {contact.address.city}, {contact.address.postalCode}
               </li>
             </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Newsletter */}
+      <div className="border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 lg:py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 lg:items-center">
+            <div>
+              <h3 className="text-sm font-black uppercase tracking-wider mb-2">Stay in the Loop</h3>
+              <p className="text-silver text-sm leading-relaxed max-w-md">
+                Subscribe for new arrivals, exclusive offers and finance specials.
+              </p>
+            </div>
+            <NewsletterForm />
           </div>
         </div>
       </div>
