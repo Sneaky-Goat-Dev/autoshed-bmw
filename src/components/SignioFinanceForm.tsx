@@ -13,6 +13,7 @@ import {
   SIGNIO_RESIDENTIAL_STATUS,
   SIGNIO_BANKS,
   SIGNIO_ACCOUNT_TYPES,
+  SIGNIO_PHONE_TYPES,
   SIGNIO_RELATIVE_RELATIONS,
   SIGNIO_REPAYMENT_PERIODS,
 } from '@/types/signio';
@@ -49,6 +50,7 @@ const initialFormData: FinanceApplicationFormData = {
   mobile: '',
   homePhone: '',
   workPhone: '',
+  workPhoneType: '',
   preferredLanguage: 'English',
 
   // Address
@@ -496,7 +498,7 @@ export default function SignioFinanceForm({ vehicle, onSuccess }: SignioFinanceF
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
         <div>
           <label htmlFor="homePhone" className={labelClasses}>Home Phone</label>
           <input
@@ -516,8 +518,24 @@ export default function SignioFinanceForm({ vehicle, onSuccess }: SignioFinanceF
             name="workPhone"
             value={formData.workPhone}
             onChange={handleInputChange}
+            maxLength={10}
             className={inputClasses}
           />
+        </div>
+        <div>
+          <label htmlFor="workPhoneType" className={labelClasses}>Work Phone Type</label>
+          <select
+            id="workPhoneType"
+            name="workPhoneType"
+            value={formData.workPhoneType}
+            onChange={handleInputChange}
+            className={inputClasses}
+          >
+            <option value="">Select</option>
+            {SIGNIO_PHONE_TYPES.map((t) => (
+              <option key={t} value={t}>{t}</option>
+            ))}
+          </select>
         </div>
       </div>
     </div>

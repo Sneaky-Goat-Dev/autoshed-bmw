@@ -75,8 +75,9 @@ export function buildSignioXML(data: FinanceApplicationFormData, dealerCode: str
   addField('customerMobilePhoneNumber', data.mobile?.replace(/\s/g, ''));
   addField('customerHomePhoneNumber', data.homePhone?.replace(/\s/g, ''));
   addField('customerWorkPhoneNumber', data.workPhone?.replace(/\s/g, ''));
+  addField('customerWorkPhoneNumberType', data.workPhoneType);
   addField('customerPreferredLanguage', data.preferredLanguage || 'English');
-  addField('customerPreferredContactMethod', 'Cell phone');
+  addField('customerPreferredContactMethod', 'Cellphone');
   addField('mobileType', 'Contract');
   addField('customerNationality', 'SOUTH AFRICA');
 

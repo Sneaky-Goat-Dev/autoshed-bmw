@@ -48,11 +48,12 @@ const applicant: FinanceApplicationFormData = {
   idNumber,
   dateOfBirth: '1990-01-01',
   gender: 'Male',
-  maritalStatus: 'Single',
+  maritalStatus: 'Single - Adult',
   email: 'test.applicant@theautoshed.co.za',
   mobile: '082 123 4567',
   homePhone: '',
-  workPhone: '',
+  workPhone: '0114567890',
+  workPhoneType: 'Land line',
   preferredLanguage: 'English',
 
   // Address
@@ -69,9 +70,9 @@ const applicant: FinanceApplicationFormData = {
   // Employment
   employerName: 'Test Employer (Pty) Ltd',
   occupation: 'Software Developer',
-  industryType: 'FINANCIAL SERVICES',
+  industryType: 'FINANCIAL',
   employmentStatus: 'Permanent',
-  employmentLevel: 'Professional',
+  employmentLevel: 'Skilled Worker',
   employerAddress: '1 Office Park',
   employerSuburb: 'Rosebank',
   employerCity: 'Johannesburg',
@@ -117,7 +118,7 @@ const applicant: FinanceApplicationFormData = {
   // Next of Kin
   relativeName: 'Jane',
   relativeSurname: 'Applicant',
-  relativeRelation: 'Spouse',
+  relativeRelation: 'Wife',
   relativePhone: '083 765 4321',
 
   // Consent

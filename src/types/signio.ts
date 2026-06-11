@@ -22,6 +22,7 @@ export interface SignioApplicationData {
   customerMobilePhoneNumber?: string;
   customerHomePhoneNumber?: string;
   customerWorkPhoneNumber?: string;
+  customerWorkPhoneNumberType?: 'Land line' | 'Cell';
 
   // Personal Details
   customerTitle?: string;
@@ -185,6 +186,7 @@ export interface FinanceApplicationFormData {
   mobile: string;
   homePhone: string;
   workPhone: string;
+  workPhoneType: string;
   preferredLanguage: string;
 
   // Address
@@ -261,15 +263,17 @@ export interface FinanceApplicationFormData {
 }
 
 // Reference data for dropdowns
-export const SIGNIO_TITLES = ['Mr', 'Mrs', 'Ms', 'Miss', 'Dr', 'Prof'];
+// NOTE: dropdown values below must match the Signio reference sheets exactly
+// (Signio 3rd Party Integration Spec V1.2). Values that are not in the allowed
+// list are rejected by some Finance Institutions even though the submit succeeds.
+export const SIGNIO_TITLES = ['Mr', 'Mrs', 'Miss', 'Doctor', 'Advocate', 'Reverend', 'Professor'];
 
 export const SIGNIO_MARITAL_STATUS = [
-  'Single',
+  'Single - Adult',
+  'Single - Young',
   'Married',
   'Divorced',
-  'Widowed',
-  'Separated',
-  'Living Together',
+  'Widow/er',
 ];
 
 export const SIGNIO_PROVINCES = [
@@ -286,39 +290,45 @@ export const SIGNIO_PROVINCES = [
 
 export const SIGNIO_EMPLOYMENT_STATUS = [
   'Permanent',
-  'Contract',
-  'Temporary',
-  'Self Employed',
-  'Part Time',
-  'Retired',
+  'Contractual',
+  'Part time',
+  'Student',
+  'Self employed',
+  'Pensioner',
   'Unemployed',
 ];
 
 export const SIGNIO_EMPLOYMENT_LEVELS = [
-  'Management',
   'Senior Management',
-  'Middle Management',
-  'Professional',
-  'Skilled',
-  'Semi-Skilled',
-  'Unskilled',
-  'Self Employed',
+  'Management',
+  'Supervisor',
+  'Skilled Worker',
+  'Semi-Skilled Worker',
+  'Unskilled Worker',
+  'Junior Position',
 ];
 
 export const SIGNIO_INDUSTRY_TYPES = [
-  'GOVERNMENT',
-  'EDUCATION',
-  'MEDICAL',
-  'MINING',
-  'MANUFACTURING',
-  'CONSTRUCTION',
-  'TRANSPORT',
-  'RETAIL',
-  'FINANCIAL SERVICES',
-  'TELECOMMUNICATIONS',
   'AGRICULTURE',
-  'HOSPITALITY',
-  'OTHER',
+  'BUILDING AND CONSTRUCTION',
+  'BUSINESS SERVICES',
+  'COMMERCE',
+  'COMMUNITY SERVICE',
+  'EDUCATIONAL SERVICES - PRIVATE',
+  'ELECTRICITY,GAS AND WATER',
+  'ENTERTAINMENT/SPORTS/RECREATION',
+  'ESCOM',
+  'FINANCIAL',
+  'GOVERNMENT',
+  'MANUFACTURING',
+  'MEDICAL SERVICES - PRIVATE',
+  'MINING',
+  'NON-PROFIT ORGANISATIONS',
+  'PERSONAL SERVICES',
+  'RETAIL',
+  'TELKOM',
+  'TRANSPORT/STORAGE/COMMUNICATION',
+  'UNKNOWN',
 ];
 
 export const SIGNIO_RESIDENTIAL_STATUS = [
@@ -343,14 +353,29 @@ export const SIGNIO_BANKS = [
 
 export const SIGNIO_ACCOUNT_TYPES = ['Cheque', 'Savings', 'Transmission'];
 
+export const SIGNIO_PHONE_TYPES = ['Land line', 'Cell'];
+
 export const SIGNIO_RELATIVE_RELATIONS = [
-  'Parent',
-  'Sibling',
-  'Spouse',
-  'Child',
+  'Aunt',
+  'Brother',
+  'Brother in Law',
   'Cousin',
+  'Daughter',
+  'Father',
+  'Father in Law',
   'Friend',
-  'Other',
+  'Grandfather',
+  'Grandmother',
+  'Husband',
+  'Mother',
+  'Mother in Law',
+  'Sister',
+  'Sister in Law',
+  'Son',
+  'Uncle',
+  'Wife',
 ];
 
-export const SIGNIO_REPAYMENT_PERIODS = ['12', '24', '36', '48', '54', '60', '72', '84'];
+// Signio offers terms up to 72 months (no 84). Values stay numeric — the API
+// accepts them and the UI appends the "months" label.
+export const SIGNIO_REPAYMENT_PERIODS = ['6', '12', '18', '24', '30', '36', '42', '48', '54', '60', '72'];
