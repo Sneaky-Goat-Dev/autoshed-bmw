@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2026-06-12T12:37:08.386Z",
+  "lastUpdated": "2026-06-12T13:46:39.730Z",
   "source": "AutoTrader Syndication API",
-  "vehicleCount": 33,
+  "vehicleCount": 32,
   "vehicles": [
     {
       "id": 28168394,
@@ -83,7 +83,7 @@
       "newUsed": "Used",
       "year": 2024,
       "mileageInKm": 26700,
-      "price": "539900,0000",
+      "price": "509900,0000",
       "colour": "Green",
       "description": "Stand out with this stunning 2024 Audi Q2 Urban Edition — a refined, late-model SUV that delivers the perfect balance of luxury, performance, and everyday practicality. This is the smart buy: modern Audi quality with low-risk ownership and strong future value.\n\nPowered by a responsive 1.4 TFSI turbo petrol engine (110kW / 250Nm) paired to a smooth automatic transmission, the Q2 offers excellent fuel efficiency with confident, effortless performance both in the city and on the open road.\n\nKey Features:\n• Audi Virtual Cockpit Digital Display\n• Touchscreen Infotainment System\n• Apple CarPlay & Bluetooth Connectivity\n• Electric Sunroof\n• LED Headlights\n• Alloy Wheels\n• Multi-Function Steering Wheel\n• Cruise Control\n• Premium Leather Interior\n• Electric Boot\n\nSafety & Comfort:\n• Park Distance Control\n• Electronic Stability & Traction Control\n• ISOFIX Child Seat Anchors\n\nOwnership Benefits:\n• Balance of Audi Freeway Plan\n• 4 BRAND NEW TYRES\n• Latest Urban Edition styling\n\nThis Q2 is perfectly suited for professionals, couples, or small families looking for premium motoring with everyday usability and standout design.\n\nThe Auto Shed Advantage:\nProfessionally selected, meticulously prepared, and ready for immediate delivery.\n\nFinance available | Trade-ins welcome\n\nPLEASE NOTE: Lic/Reg/Admin/Dekra Roadworthy Fee: R9 990\n\nTHE AUTO SHED – IN PURSUIT OF EXCELLENCE",
       "imageUrls": [
@@ -140,7 +140,7 @@
         }
       },
       "created": "2025-09-02T13:10:31.1105996+02:00",
-      "updated": "2026-05-27T10:50:32.0658+02:00"
+      "updated": "2026-06-12T14:47:13.4626284+02:00"
     },
     {
       "id": 28241084,
@@ -150,7 +150,7 @@
       "newUsed": "Used",
       "year": 2021,
       "mileageInKm": 72000,
-      "price": "249900,0000",
+      "price": "239900,0000",
       "colour": "Blue",
       "description": "A beautifully maintained, high-value SUV offering style, comfort, and everyday practicality. With only 70 000km, this 3008 delivers a refined driving experience with excellent efficiency — the perfect balance for family or lifestyle use.\n\nRecently Serviced .\n\nRecently fitted with 4 BRAND NEW TYRES, this vehicle is ready to go.\n\nPerformance:\n• 1.6L Turbo Petrol (121kW / 240Nm)\n• Smooth 6-Speed Automatic\n• Strong performance with great fuel economy\n\nFeatures:\n• 17” Alloy Wheels\n• Rear Park Distance Control\n• Climate Control\n• Cruise Control\n• Paddle Shift Gears\n• 8” Infotainment System\n• Apple CarPlay & MirrorLink\n• Bluetooth & Voice Control\n• Daytime Running Lights & Fog Lights\n• Electric Windows & Mirrors\n\nSafety:\n• Lane Departure Warning\n• Traffic Sign Recognition\n• Hill Start Assist\n• ISOFIX Child Anchors\n\nWhy This 3008:\n• Excellent condition & well maintained\n• Low mileage for the year\n• Full peace-of-mind motoring\n• Exceptional value vs new\n\nThe Auto Shed Advantage:\nProfessionally selected, inspected, and prepared to our exacting standards.\n\nFinance available | Trade-ins welcome | Extended warranties optional\n\nPLEASE NOTE: Lic/Reg/Admin/Dekra Roadworthy Fee: R9 990\n\nTHE AUTO SHED – IN PURSUIT OF EXCELLENCE",
       "imageUrls": [
@@ -209,7 +209,7 @@
         }
       },
       "created": "2025-10-10T13:32:32.0127691+02:00",
-      "updated": "2026-05-18T08:33:09.4098781+02:00"
+      "updated": "2026-06-12T14:48:42.3719415+02:00"
     },
     {
       "id": 28282751,
@@ -364,7 +364,7 @@
       "newUsed": "Used",
       "year": 2022,
       "mileageInKm": 24500,
-      "price": "674900,0000",
+      "price": "669900,0000",
       "colour": "Black",
       "description": "Turn heads and elevate your driving experience with this exceptional A250 Sport — a perfect blend of luxury, performance, and aggressive styling. Presented in absolutely stunning condition with ultra-low mileage, this is the one to own.\n\nFitted with optional 19” AMG alloys and 4 BRAND NEW TYRES, giving it a bold, commanding road presence that stands out instantly.\n\nBalance of 5 Year / 100 000km Full Maintenance Plan valid until 29 August 2027 – enjoy worry-free premium motoring.\n\nPerformance:\n• 2.0L Turbo Petrol (165kW / 350Nm)\n• Smooth 7-Speed Automatic\n• Paddle Shift for a sporty drive\n\nLuxury & Technology:\n• Navigation System\n• Panoramic Glass Sunroof\n• Ambient Lighting\n• LED Headlights with DRLs\n• Front & Rear Park Distance Control + Reverse Camera\n• Keyless Start\n• Cruise Control & Climate Control\n• Apple CarPlay & Android Auto\n• Bluetooth & Voice Control\n• Electric Windows & Mirrors\n\nSafety:\n• 6 Airbags\n• Advanced Mercedes-Benz Safety Systems\n\nMeticulously maintained, one-owner vehicle in outstanding condition — offering serious value versus new while delivering the full premium experience.\n\nThe Auto Shed Advantage:\nHand-selected, fully inspected, and prepared to our exacting standards for complete peace of mind.\n\nFinance available | Trade-ins welcome | Extended warranties available\n\nPlease note: Lic/Reg/Admin/Dekra Roadworthy Fee: R9 990\n\nTHE AUTO SHED – IN PURSUIT OF EXCELLENCE",
       "imageUrls": [
@@ -429,7 +429,7 @@
         }
       },
       "created": "2025-12-19T15:34:22.4081617+02:00",
-      "updated": "2026-05-26T14:54:51.1623355+02:00"
+      "updated": "2026-06-12T14:47:27.8533595+02:00"
     },
     {
       "id": 28344178,
@@ -512,7 +512,7 @@
       "newUsed": "Used",
       "year": 2025,
       "mileageInKm": 4200,
-      "price": "749900,0000",
+      "price": "739900,0000",
       "colour": "White",
       "description": "This is as close to new as it gets. With just 3 900km, this 2025 i30 N delivers the perfect blend of everyday usability and serious performance — built for drivers who want excitement without compromise.\n\nPowered by a 2.0L Turbo petrol engine (206kW / 392Nm) paired to an 8-Speed Dual-Clutch Automatic, this hot hatch offers explosive acceleration, razor-sharp response, and an engaging drive every time.\n\nOwnership Peace of Mind:\n• Balance of 5 Year / 75 000km Service Plan\n• Balance of 5 Year Factory Warranty\n• Additional 2 Year / 50 000km Powertrain Warranty\n• Full Franchise Service History\n\nPerformance & Driving:\n• Drive Mode Select & Paddle Shifts\n• Electronic Limited-Slip Differential\n• Adaptive Cruise Control\n\nFeatures:\n• 19” Alloy Wheels\n• Sunroof\n• Navigation System\n• Apple CarPlay & Android Auto\n• Wireless Charging & Bluetooth\n• Heated Seats & Heated Steering Wheel\n• Electric Memory Seats\n• Keyless Start\n\nSafety & Tech:\n• Reverse Camera + Front & Rear Park Distance Control\n• Blind Spot Assist\n• Lane Keep Assist\n• Forward Collision Assist\n• Rear Cross Traffic Alert\n\nThis is a high-performance hatch that delivers daily comfort, cutting-edge tech, and track-inspired capability — all in one package. Low km examples like this are in high demand.\n\nThe Auto Shed Advantage:\nMeticulously selected and prepared to our exacting standards.\n\nFinance available | Trade-ins welcome\n\nPLEASE NOTE: Lic/Reg/Admin/Dekra Roadworthy Fee: R9 990\n\nTHE AUTO SHED – IN PURSUIT OF EXCELLENCE",
       "imageUrls": [
@@ -575,7 +575,7 @@
         }
       },
       "created": "2026-01-06T11:07:44.2862092+02:00",
-      "updated": "2026-05-26T14:51:48.6903474+02:00"
+      "updated": "2026-06-12T14:47:54.9335178+02:00"
     },
     {
       "id": 28376690,
@@ -959,7 +959,7 @@
       "newUsed": "Used",
       "year": 2019,
       "mileageInKm": 52000,
-      "price": "549900,0000",
+      "price": "539900,0000",
       "colour": "White",
       "description": "Discover the perfect balance of performance, luxury and practicality with this 2019 BMW X3 xDrive20d M Sport, finished in Alpine White with Black Leather interior. With only 52,000km, this vehicle is exceptionally well cared for and presents in superb condition.\n\nPowered by BMW’s renowned 2.0L turbo diesel engine paired with the smooth Steptronic automatic transmission and xDrive all-wheel drive, the X3 delivers impressive performance together with excellent fuel efficiency and confident handling in all conditions.\n\nThis example benefits from the balance of BMW’s 7 year / 100,000km Motorplan until 07 May 2026, offering valuable peace of mind and reduced ownership costs.\n\nKey Features Include:\n• M Sport Package\n• Alpine White with Black Leather Interior\n• Brand New Tyres\n• Balance of 7yr/100,000km Motorplan until 07 May 2026\n• Electric Seats with Driver Memory\n• Panoramic Sunroof\n• Electric Tailgate\n• Park Distance Control\n• BMW iDrive Infotainment System\n• Multi-Function M Sport Steering Wheel\n• Climate Control\n• LED Headlights\n\nThis vehicle has been fully quality checked and represents exceptional value for a premium luxury SUV with low mileage and factory maintenance coverage.\n\nA superb combination of performance, comfort and practicality, ready for its next owner.\n\nAvailable now at The Auto Shed – In Pursuit of Excellence.",
       "imageUrls": [
@@ -1023,7 +1023,7 @@
         }
       },
       "created": "2026-03-11T21:18:16.4517414+02:00",
-      "updated": "2026-05-07T16:06:41.3526136+02:00"
+      "updated": "2026-06-12T14:50:13.827612+02:00"
     },
     {
       "id": 28461794,
@@ -1179,7 +1179,7 @@
       "newUsed": "Used",
       "year": 2023,
       "mileageInKm": 54000,
-      "price": "469900,0000",
+      "price": "464900,0000",
       "colour": "Silver",
       "description": "Elevate every journey with this striking 2023 Peugeot 5008 GT finished in sophisticated Artense Grey with black leather interior. With just 56 000 km, this premium 7-seater SUV offers the perfect blend of space, performance and modern French design.\n\nPowered by a refined 1.6 Turbo Petrol engine, delivering strong performance with excellent efficiency, paired to a smooth automatic gearbox for effortless driving.\n\nKey Features & Highlights:\n• Panoramic Glass Sunroof\n• Full Black Leather Interior\n• Digital i-Cockpit Display\n• Touchscreen Infotainment System\n• Apple CarPlay & Android Auto\n• Navigation System\n• Reverse Camera with Front & Rear Park Distance Control\n• Keyless Entry & Start\n• Electric Tailgate\n• Multi-Zone Climate Control\n• Cruise Control\n• LED Headlights & Daytime Running Lights\n• 18” Alloy Wheels\n\nSafety & Practicality:\n• 7-Seater Versatility\n• Multiple Airbags & ISOFIX\n• Lane Assist & Driver Assistance Systems\n• Large Boot Capacity with Fold-Flat Seats\n\nImmaculate condition inside and out, meticulously prepared in The Auto Shed way – offering exceptional value in a luxury family SUV.\n\nFinance available | Trade-ins welcome\n\nPlease note our Lic/Reg/Admin/Dekra Roadworthy fee is R9 990",
       "imageUrls": [
@@ -1244,7 +1244,7 @@
         }
       },
       "created": "2026-04-06T21:05:53.6539294+02:00",
-      "updated": "2026-05-07T17:00:41.3104078+02:00"
+      "updated": "2026-06-12T14:50:31.6716967+02:00"
     },
     {
       "id": 28520042,
@@ -1326,7 +1326,7 @@
       "newUsed": "Used",
       "year": 2022,
       "mileageInKm": 52500,
-      "price": "419900,0000",
+      "price": "409900,0000",
       "colour": "White",
       "description": "2022 Peugeot 5008 GT finished in stunning Pearl White Metallic with only 52 500km. A beautifully designed premium 7-Seater SUV that combines luxury, comfort, practicality and advanced French engineering in one exceptional package.\n\nPowered by Peugeot’s refined and efficient turbocharged drivetrain, the 5008 GT offers smooth performance, impressive fuel economy and a truly premium driving experience.\n\nLoaded with factory extras and premium features including:\n\n* Full Digital Instrument Cluster\n* Apple CarPlay & Android Auto\n* 360 Camera\n* Front & Rear Park Distance Control\n* Adaptive Cruise Control\n* Blind Spot Monitoring\n* Lane Keep Assist\n* Electric Tailgate\n* Keyless Entry & Start\n* Wireless Charging\n* LED Headlights\n* Climate Control Air Conditioning\n* Multi-Function Steering Wheel\n* 7 Seater Configuration\n* GT Alloy Wheels\n\nExceptionally spacious, versatile and comfortable, making it the perfect family SUV while still offering executive styling and road presence.\n\nFull Agents Service History.\n\nBalance of 5yr/100 000km Service Plan and Warranty until for complete peace of mind.\n\nA rare opportunity to own one of the most stylish and luxurious SUVs in its class.\n\nPlease note our Lic/Reg/Admin/Dekra Roadworthy Fee is R9 990.",
       "imageUrls": [
@@ -1391,7 +1391,7 @@
         }
       },
       "created": "2026-05-07T16:58:55.226966+02:00",
-      "updated": "2026-05-07T17:04:55.6046709+02:00"
+      "updated": "2026-06-12T14:49:49.9193595+02:00"
     },
     {
       "id": 28544445,
@@ -1475,7 +1475,7 @@
       "newUsed": "Used",
       "year": 2014,
       "mileageInKm": 169500,
-      "price": "319900,0000",
+      "price": "309900,0000",
       "colour": "White",
       "description": "The Auto Shed proudly presents this exceptionally well maintained 2014 Volkswagen Amarok Highline Double Cab 2.0TDI 132kW 4Motion Auto with 169 000km and a Full Service History. Just serviced at Volkswagen for complete peace of mind.\n\nPowered by Volkswagen’s legendary 2.0L Bi-Turbo Diesel engine producing 132kW and 400Nm, paired to a smooth automatic gearbox and 4Motion drivetrain, this Amarok delivers outstanding performance, comfort and capability both on and off the road. The large 80L fuel tank makes it an excellent long-distance touring or business vehicle.\n\nThis example presents exceptionally well with the sought after pre-facelift styling upgraded with a facelift front bumper.\n\nFeatures include:\n* Leather Seats\n* Securi-Lid Roller Shutter\n* Roll Bar\n* 18” All Terrain Tyres\n* Facelift Front Bumper Upgrade\n* Front & Rear Park Distance Control\n* Side Steps\n* Fog Lights\n* Electric Windows & Mirrors\n* Multifunction Steering Wheel\n* Bluetooth Connectivity\n* Cruise Control\n* Diff Lock & Off Road Button\n* Climate Control\n* Radio/CD Player\n* 6 Airbags\n\nA premium lifestyle bakkie offering legendary Amarok comfort, refinement and durability with excellent load and towing capability. Professionally prepared to The Auto Shed standard and ready for immediate delivery.\n\nPlease note our Lic/Reg/Admin/Dekra Roadworthy Fee is R9 990.\n\nThe Auto Shed\nIn Pursuit of Excellence.",
       "imageUrls": [
@@ -1537,7 +1537,7 @@
         }
       },
       "created": "2026-05-08T13:05:54.465208+02:00",
-      "updated": "2026-05-08T16:01:40.27369+02:00"
+      "updated": "2026-06-12T14:49:07.9502752+02:00"
     },
     {
       "id": 28549731,
@@ -1842,7 +1842,7 @@
       "newUsed": "Used",
       "year": 2019,
       "mileageInKm": 109500,
-      "price": "689900,0000",
+      "price": "679900,0000",
       "colour": "White",
       "description": "Finished in timeless Alpine White, this exceptional 2019 BMW X3 M40d M Sport combines luxury, cutting-edge technology and breathtaking performance in one of BMW’s most sought-after performance SUVs. Powered by BMW’s legendary 3.0L TwinPower Turbo 6-cylinder diesel engine producing an impressive 240kW and 680Nm, paired with xDrive All-Wheel Drive and smooth automatic transmission, this X3 delivers effortless performance together with remarkable comfort and efficiency.\n\nWith Full BMW Service History and fitted with 4 Brand New Bridgestone Tyres, this vehicle has been meticulously maintained and presents in outstanding condition inside and out.\n\nKey Features:\n\n* Heads-Up Display\n* M Sport Package\n* xDrive All-Wheel Drive\n* 4 Brand New Bridgestone Tyres\n* Electric Memory Seats\n* Leather Interior\n* Navigation System\n* Apple CarPlay\n* Bluetooth Connectivity\n* Reverse Camera\n* Park Distance Control Front & Rear\n* Cruise Control\n* Climate Control Air Conditioning\n* LED Headlights\n* Keyless Entry & Start\n* Electric Tailgate\n* Multifunction M Sport Steering Wheel\n\nThe X3 M40d offers the perfect blend of everyday practicality, executive luxury and true performance SUV capability. Carefully selected and prepared to The Auto Shed standard, this is a premium example not to be missed.\n\nWarranty Options Available.\n\nPlease note our Lic/Reg/Admin & Dekra Roadworthy Fee is R9 990.\n\nThe Auto Shed – In Pursuit of Excellence.",
       "imageUrls": [
@@ -1912,7 +1912,7 @@
         }
       },
       "created": "2026-05-24T17:04:16.85452+02:00",
-      "updated": "2026-05-28T16:48:00.5565207+02:00"
+      "updated": "2026-06-12T14:46:36.3208484+02:00"
     },
     {
       "id": 28577919,
@@ -2065,81 +2065,6 @@
       },
       "created": "2026-06-03T15:16:24.4426473+02:00",
       "updated": "2026-06-05T09:07:17.793924+02:00"
-    },
-    {
-      "id": 28585374,
-      "make": "GWM",
-      "model": "P-Series",
-      "variant": "2.0TD Double Cab LT 4x4",
-      "newUsed": "Used",
-      "year": 2025,
-      "mileageInKm": 26000,
-      "price": "499900,0000",
-      "colour": "White",
-      "description": "2025 GWM P-Series 2.0TD LT 4x4 Double Cab Auto | Pearl White | Only 26 000km\n\nTough, capable and exceptionally well-equipped, this 2025 GWM P-Series 2.0TD LT 4x4 Auto offers incredible value and versatility. Finished in stunning Pearl White and presenting in exceptional condition, this low-mileage example is ready for work, family duties or your next adventure.\n\nPowered by GWM's proven 2.0 Turbo Diesel engine paired to a smooth automatic transmission and selectable 4x4 system, it delivers impressive performance, refinement and capability on any terrain.\n\nFitted with desirable extras including a Nudge Bar, Roll Bar and Tonneau Cover, giving it the perfect blend of style and practicality.\n\nFor complete peace of mind, it includes the balance of the factory 5 Year/100 000km Warranty until 27 November 2029 and the balance of the remarkable 10 Year/100 000km Service Plan until 27 November 2034.\n\nFeatures Include:\n\n* Nudge Bar\n* Roll Bar\n* Tonneau Cover\n* 4x4\n* Automatic Transmission\n* Reverse Camera\n* Park Distance Control\n* Apple CarPlay & Android Auto\n* Cruise Control\n* Climate Control\n* Bluetooth Connectivity\n* Touchscreen Infotainment\n* Multi-Function Steering Wheel\n* Electric Windows & Mirrors\n* Alloy Wheels\n* Side Steps\n\nA fantastic opportunity to own a nearly-new double cab 4x4 with exceptionally low mileage and long factory cover.\n\nFinance Available | Trade-Ins Welcome\n\nPlease note our Lic/Reg/Admin/Dekra Roadworthy Fee is R9 990.\n\nThe Auto Shed – In Pursuit of Excellence.",
-      "imageUrls": [
-        "https://img.autotrader.co.za/47718578",
-        "https://img.autotrader.co.za/47718612",
-        "https://img.autotrader.co.za/47718595",
-        "https://img.autotrader.co.za/47718586",
-        "https://img.autotrader.co.za/47718608",
-        "https://img.autotrader.co.za/47718617",
-        "https://img.autotrader.co.za/47718597",
-        "https://img.autotrader.co.za/47718598",
-        "https://img.autotrader.co.za/47718604",
-        "https://img.autotrader.co.za/21863380",
-        "https://img.autotrader.co.za/47718602",
-        "https://img.autotrader.co.za/47718626",
-        "https://img.autotrader.co.za/47718700",
-        "https://img.autotrader.co.za/47718645",
-        "https://img.autotrader.co.za/47718710",
-        "https://img.autotrader.co.za/40651865",
-        "https://img.autotrader.co.za/47718666",
-        "https://img.autotrader.co.za/47718671",
-        "https://img.autotrader.co.za/47718589",
-        "https://img.autotrader.co.za/47718621",
-        "https://img.autotrader.co.za/47718678",
-        "https://img.autotrader.co.za/47718686",
-        "https://img.autotrader.co.za/47718689",
-        "https://img.autotrader.co.za/47718698",
-        "https://img.autotrader.co.za/47718660",
-        "https://img.autotrader.co.za/47718641",
-        "https://img.autotrader.co.za/47718705",
-        "https://img.autotrader.co.za/47718656",
-        "https://img.autotrader.co.za/47718650",
-        "https://img.autotrader.co.za/22024143"
-      ],
-      "bodyType": "DoubleCab",
-      "doors": 4,
-      "engineCapacityInCc": 1996,
-      "fuelType": "Diesel",
-      "transmissionDrive": "AllWheelDrive",
-      "transmission": "Automatic",
-      "dealerId": 369,
-      "dealerLogoUrl": "https://img.autotrader.co.za/20764250",
-      "tummCode": 23535220,
-      "registrationNumber": "MC94TPGP",
-      "serviceHistory": "FullByFranchise",
-      "stockNumber": "TAS25000",
-      "vehicleCategory": "Cars",
-      "features": [],
-      "dealerContactInformation": {
-        "name": "The Auto Shed",
-        "emailAddress": "sales2@theautoshed.co.za",
-        "contactNumber": "010 590 9898",
-        "latitude": -25.864466,
-        "longitude": 28.191956,
-        "address": {
-          "line1": "31 Kwartsiet Street",
-          "line2": "Centurion",
-          "postalCode": "0157",
-          "suburb": "Zwartkops Ext 15",
-          "city": "Centurion",
-          "province": "Gauteng"
-        }
-      },
-      "created": "2026-06-03T15:37:18.1532362+02:00",
-      "updated": "2026-06-05T16:57:53.0631268+02:00"
     },
     {
       "id": 28587541,
