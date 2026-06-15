@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { autoshedData } from '@/data/autoshed-data';
-import NewsletterForm from '@/components/NewsletterForm';
+import NewsletterSignup from '@/components/NewsletterSignup';
 
 const footerNavigation = {
   vehicles: [
@@ -141,7 +141,7 @@ export default function Footer() {
                 Subscribe for new arrivals, exclusive offers and finance specials.
               </p>
             </div>
-            <NewsletterForm />
+            <NewsletterSignup />
           </div>
         </div>
       </div>

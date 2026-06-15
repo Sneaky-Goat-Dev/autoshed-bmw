@@ -8,7 +8,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
  */
 export async function POST(request: NextRequest) {
   try {
-    const { email } = await request.json();
+    const { email, firstName, lastName } = await request.json();
 
     if (!email || typeof email !== 'string' || !EMAIL_RE.test(email)) {
       return NextResponse.json(
@@ -43,6 +43,10 @@ export async function POST(request: NextRequest) {
         body: JSON.stringify({
           email_address: email,
           status: 'subscribed',
+          merge_fields: {
+            FNAME: typeof firstName === 'string' ? firstName : '',
+            LNAME: typeof lastName === 'string' ? lastName : '',
+          },
           tags: ['Website Footer'],
         }),
       }
