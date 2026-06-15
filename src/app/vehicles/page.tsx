@@ -22,9 +22,17 @@ function VehiclesContent() {
     setSelectedMake(make);
   }, [searchParams]);
   const [sortBy, setSortBy] = useState<SortOption>('price-desc');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 2000000]);
+  // null upper bound = no cap (show everything); a number means the user set a max.
+  const [priceRange, setPriceRange] = useState<[number, number | null]>([0, null]);
 
   const { vehicles } = useVehicles();
+
+  // Price-filter ceiling = most expensive car in stock, rounded up to the slider step,
+  // so vehicles above any fixed cap (e.g. a > R2m G-Class) still appear and are reachable.
+  const maxPrice = useMemo(() => {
+    const prices = vehicles.map((v) => v.price).filter((p) => p > 0);
+    return prices.length ? Math.ceil(Math.max(...prices) / 50000) * 50000 : 2000000;
+  }, [vehicles]);
 
   // Get unique makes from vehicles
   const makes = useMemo(() => {
@@ -53,7 +61,9 @@ function VehiclesContent() {
     }
 
     // Price range filter
-    result = result.filter((v) => v.price >= priceRange[0] && v.price <= priceRange[1]);
+    result = result.filter(
+      (v) => v.price >= priceRange[0] && (priceRange[1] === null || v.price <= priceRange[1])
+    );
 
     // Sort
     switch (sortBy) {
@@ -80,7 +90,7 @@ function VehiclesContent() {
   const clearFilters = () => {
     setSearchQuery('');
     setSelectedMake('');
-    setPriceRange([0, 2000000]);
+    setPriceRange([0, null]);
     setSortBy('price-desc');
   };
 
@@ -159,7 +169,7 @@ function VehiclesContent() {
               </select>
 
               {/* Clear Filters */}
-              {(searchQuery || selectedMake || priceRange[0] > 0 || priceRange[1] < 2000000) && (
+              {(searchQuery || selectedMake || priceRange[0] > 0 || priceRange[1] !== null) && (
                 <button
                   onClick={clearFilters}
                   className="px-4 py-3 border border-gray-200 text-sm text-gold hover:bg-gray-50 transition-colors"
@@ -174,13 +184,13 @@ function VehiclesContent() {
           <div className="mt-4 pt-4 border-t border-gray-100">
             <div className="flex items-center gap-4">
               <span className="text-sm text-meta-gray">Price Range:</span>
-              <span className="text-sm font-bold">{formatPrice(priceRange[0])} - {formatPrice(priceRange[1])}</span>
+              <span className="text-sm font-bold">{formatPrice(priceRange[0])} - {formatPrice(priceRange[1] ?? maxPrice)}</span>
               <input
                 type="range"
                 min={0}
-                max={2000000}
+                max={maxPrice}
                 step={50000}
-                value={priceRange[1]}
+                value={priceRange[1] ?? maxPrice}
                 onChange={(e) => setPriceRange([priceRange[0], Number(e.target.value)])}
                 className="flex-1 h-2 bg-gray-200 appearance-none cursor-pointer accent-gold max-w-xs"
               />
