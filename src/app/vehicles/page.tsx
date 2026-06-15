@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { autoshedData } from '@/data/autoshed-data';
+import { useVehicles } from '@/hooks/useVehicles';
 import VehicleCard from '@/components/VehicleCard';
 import SectionHeading from '@/components/SectionHeading';
 import { getUniqueValues, formatPrice } from '@/utils/format';
@@ -24,7 +24,7 @@ function VehiclesContent() {
   const [sortBy, setSortBy] = useState<SortOption>('price-desc');
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 2000000]);
 
-  const { vehicles } = autoshedData;
+  const { vehicles } = useVehicles();
 
   // Get unique makes from vehicles
   const makes = useMemo(() => {

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { useForm, ValidationError } from '@formspree/react';
 import { autoshedData } from '@/data/autoshed-data';
+import { useVehicles } from '@/hooks/useVehicles';
 import Button from '@/components/Button';
 import FinanceCalculator from '@/components/FinanceCalculator';
 import VehicleCard from '@/components/VehicleCard';
@@ -17,7 +18,8 @@ interface VehicleDetailPageProps {
 
 export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
   const { id } = use(params);
-  const { vehicles, contact } = autoshedData;
+  const { contact } = autoshedData;
+  const { vehicles, isLoading } = useVehicles();
 
   const vehicle = vehicles.find((v) => v.id === id);
 
@@ -26,6 +28,15 @@ export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
   const vehicleImages = vehicle?.images || [];
 
   const [state, handleSubmit] = useForm('vehicleEnquiry');
+
+  // Vehicles load client-side from /api/vehicles; don't 404 until that resolves.
+  if (isLoading && !vehicle) {
+    return (
+      <div className="min-h-[60vh] flex items-center justify-center">
+        <div className="w-8 h-8 border-2 border-gold border-t-transparent rounded-full animate-spin" />
+      </div>
+    );
+  }
 
   if (!vehicle) {
     notFound();

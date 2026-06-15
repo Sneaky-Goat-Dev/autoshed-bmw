@@ -1,11 +1,16 @@
 import Link from 'next/link';
 import { autoshedData } from '@/data/autoshed-data';
+import { getActiveVehicles } from '@/lib/db';
 import VehicleCard from '@/components/VehicleCard';
 import Button from '@/components/Button';
 import SectionHeading from '@/components/SectionHeading';
 
-export default function HomePage() {
-  const { business, usps, services, vehicles } = autoshedData;
+// Refresh featured vehicles periodically so the homepage tracks the latest stock.
+export const revalidate = 300;
+
+export default async function HomePage() {
+  const { business, usps, services } = autoshedData;
+  const vehicles = await getActiveVehicles();
   const featuredVehicles = vehicles.slice(0, 6);
 
   return (

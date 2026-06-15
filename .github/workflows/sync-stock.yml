@@ -1,9 +1,8 @@
 name: Sync AutoTrader Stock
 
 on:
-  schedule:
-    # Run every 10 minutes
-    - cron: '*/10 * * * *'
+  # Scheduled sync DISABLED — AutoTrader stock is now synced to Supabase every
+  # 10 minutes by the VPS cron (/opt/autoshed-sync). Kept for manual runs only.
   workflow_dispatch: # Allow manual trigger
 
 permissions:

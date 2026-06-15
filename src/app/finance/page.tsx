@@ -3,6 +3,7 @@
 import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { autoshedData } from '@/data/autoshed-data';
+import { useVehicles } from '@/hooks/useVehicles';
 import SectionHeading from '@/components/SectionHeading';
 import Button from '@/components/Button';
 import FinanceCalculator from '@/components/FinanceCalculator';
@@ -11,7 +12,8 @@ import SignioFinanceForm from '@/components/SignioFinanceForm';
 function FinancePageContent() {
   const searchParams = useSearchParams();
   const vehicleId = searchParams.get('vehicle');
-  const { business, financeRequirements, vehicles } = autoshedData;
+  const { business, financeRequirements } = autoshedData;
+  const { vehicles } = useVehicles();
 
   // Find vehicle if ID is provided
   const selectedVehicle = vehicleId ? vehicles.find(v => v.id === vehicleId) : undefined;
@@ -74,7 +76,11 @@ function FinancePageContent() {
               </div>
             )}
 
-            <SignioFinanceForm vehicle={selectedVehicle} />
+            <SignioFinanceForm
+              key={selectedVehicle?.id ?? 'none'}
+              vehicle={selectedVehicle}
+              availableVehicles={vehicles}
+            />
           </div>
         </div>
       </section>

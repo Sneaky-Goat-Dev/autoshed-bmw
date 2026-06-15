@@ -24,7 +24,7 @@ export function useVehicles(): UseVehiclesResult {
   useEffect(() => {
     async function fetchVehicles() {
       try {
-        const response = await fetch('/vehicles.json');
+        const response = await fetch('/api/vehicles');
         if (response.ok) {
           const data: StockData = await response.json();
           setVehicles(data.vehicles);

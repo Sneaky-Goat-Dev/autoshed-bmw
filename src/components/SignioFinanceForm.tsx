@@ -18,9 +18,11 @@ import {
   SIGNIO_REPAYMENT_PERIODS,
 } from '@/types/signio';
 import { Vehicle } from '@/types';
+import VehicleSelect from '@/components/VehicleSelect';
 
 interface SignioFinanceFormProps {
   vehicle?: Vehicle;
+  availableVehicles?: Vehicle[];
   onSuccess?: (referenceNumber: string) => void;
 }
 
@@ -126,7 +128,7 @@ const initialFormData: FinanceApplicationFormData = {
   additionalInfo: '',
 };
 
-export default function SignioFinanceForm({ vehicle, onSuccess }: SignioFinanceFormProps) {
+export default function SignioFinanceForm({ vehicle, availableVehicles = [], onSuccess }: SignioFinanceFormProps) {
   const [currentStep, setCurrentStep] = useState<FormStep>('personal');
   const [formData, setFormData] = useState<FinanceApplicationFormData>(() => {
     if (vehicle) {
@@ -164,6 +166,20 @@ export default function SignioFinanceForm({ vehicle, onSuccess }: SignioFinanceF
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: '' }));
     }
+  };
+
+  // Prefill the vehicle fields when a vehicle is picked from the searchable list.
+  // Only touches the vehicle-related fields; everything else the user entered stays.
+  const applyVehicle = (v: Vehicle) => {
+    setFormData((prev) => ({
+      ...prev,
+      vehicleMake: v.make,
+      vehicleModel: v.model,
+      vehicleYear: String(v.year),
+      vehiclePrice: String(v.price),
+      vehicleCondition: 'Used',
+      vehicleUse: prev.vehicleUse || 'Private',
+    }));
   };
 
   const validateStep = (step: FormStep): boolean => {
@@ -1166,8 +1182,16 @@ export default function SignioFinanceForm({ vehicle, onSuccess }: SignioFinanceF
       <p className="text-sm text-meta-gray mb-4">
         {vehicle
           ? 'Vehicle details have been pre-filled based on your selection.'
-          : 'Enter the vehicle you are interested in financing (optional).'}
+          : 'Search our stock to pre-fill the details below, or enter them manually (optional).'}
       </p>
+
+      {availableVehicles.length > 0 && (
+        <div className="mb-2">
+          <label className={labelClasses}>Select a vehicle from our stock</label>
+          <VehicleSelect vehicles={availableVehicles} onSelect={applyVehicle} />
+        </div>
+      )}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
           <label htmlFor="vehicleMake" className={labelClasses}>Make</label>

@@ -1,0 +1,24 @@
+# Local test database for autoshed-bmw.
+# Start with: docker compose up -d db   (or run scripts/setup-local-db.sh)
+# Mirrors the Supabase `vehicles` schema; used for local dev/testing so you
+# don't hit the production Supabase DB.
+services:
+  db:
+    image: postgres:16
+    container_name: autoshed-local-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: autoshed
+    ports:
+      - "5433:5432"
+    volumes:
+      - autoshed_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  autoshed_pgdata:
