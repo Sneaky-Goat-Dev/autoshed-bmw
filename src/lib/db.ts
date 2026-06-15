@@ -18,10 +18,12 @@ function getPool(): Pool | null {
   const connectionString = process.env.DATABASE_URL;
   if (!connectionString) return null;
   if (!globalForPg._vehiclesPool) {
+    const isLocal = /localhost|127\.0\.0\.1/.test(connectionString);
     globalForPg._vehiclesPool = new Pool({
       connectionString,
-      ssl: { rejectUnauthorized: false },
+      ssl: isLocal ? false : { rejectUnauthorized: false },
       max: 3,
+      connectionTimeoutMillis: 8000,
     });
   }
   return globalForPg._vehiclesPool;

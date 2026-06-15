@@ -99,7 +99,8 @@ async function main() {
   const vehicles = listings.map(transformListingToVehicle).filter((v) => v.id);
   const ids = vehicles.map((v) => String(v.id));
 
-  const pool = new pg.Pool({ connectionString: DATABASE_URL, ssl: { rejectUnauthorized: false } });
+  const isLocal = /localhost|127\.0\.0\.1/.test(DATABASE_URL);
+  const pool = new pg.Pool({ connectionString: DATABASE_URL, ssl: isLocal ? false : { rejectUnauthorized: false } });
   const client = await pool.connect();
   try {
     await client.query('begin');

@@ -19,7 +19,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const stock = JSON.parse(readFileSync(join(__dirname, '..', 'public', 'vehicles.json'), 'utf-8'));
 const vehicles = stock.vehicles ?? [];
 
-const pool = new pg.Pool({ connectionString, ssl: { rejectUnauthorized: false } });
+const isLocal = /localhost|127\.0\.0\.1/.test(connectionString);
+const pool = new pg.Pool({ connectionString, ssl: isLocal ? false : { rejectUnauthorized: false } });
 
 let count = 0;
 for (const v of vehicles) {
