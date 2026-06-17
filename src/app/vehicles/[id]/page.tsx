@@ -143,28 +143,54 @@ export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
                   </div>
                 )}
               </div>
-              {/* Thumbnail Grid (all images, scrollable) */}
+              {/* Thumbnails: first 8; the 8th shows a "+N" overlay when more remain.
+                  Browse every image via the main image's prev/next controls. */}
               {vehicleImages.length > 1 && (
-                <div className="grid grid-cols-4 gap-2 max-h-80 overflow-y-auto">
-                  {vehicleImages.map((image, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setSelectedImageIndex(index)}
-                      className={`relative aspect-[4/3] overflow-hidden cursor-pointer transition-all ${
-                        selectedImageIndex === index
-                          ? 'ring-2 ring-gold'
-                          : 'hover:opacity-80'
-                      }`}
-                    >
-                      <Image
-                        src={image}
-                        alt={`${vehicle.make} ${vehicle.model} - Image ${index + 1}`}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 640px) 25vw, 12vw"
-                      />
-                    </button>
-                  ))}
+                <div className="grid grid-cols-4 gap-2">
+                  {vehicleImages.slice(0, 8).map((image, index) => {
+                    const isOverflowTile = index === 7 && vehicleImages.length > 8;
+                    if (isOverflowTile) {
+                      return (
+                        <div
+                          key={index}
+                          className="relative aspect-[4/3] overflow-hidden"
+                          aria-hidden="true"
+                        >
+                          <Image
+                            src={image}
+                            alt=""
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 640px) 25vw, 12vw"
+                          />
+                          <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
+                            <span className="text-white text-lg font-bold">
+                              +{vehicleImages.length - 8}
+                            </span>
+                          </div>
+                        </div>
+                      );
+                    }
+                    return (
+                      <button
+                        key={index}
+                        onClick={() => setSelectedImageIndex(index)}
+                        className={`relative aspect-[4/3] overflow-hidden cursor-pointer transition-all ${
+                          selectedImageIndex === index
+                            ? 'ring-2 ring-gold'
+                            : 'hover:opacity-80'
+                        }`}
+                      >
+                        <Image
+                          src={image}
+                          alt={`${vehicle.make} ${vehicle.model} - Image ${index + 1}`}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 640px) 25vw, 12vw"
+                        />
+                      </button>
+                    );
+                  })}
                 </div>
               )}
             </div>
