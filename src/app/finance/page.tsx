@@ -85,63 +85,8 @@ function FinancePageContent() {
         </div>
       </section>
 
-      {/* Finance Overview Section */}
-      <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div>
-              <SectionHeading
-                title="Affordable Finance Solutions"
-                subtitle="Making your dream vehicle a reality with flexible payment options"
-              />
-              <div className="space-y-4 text-meta-gray leading-relaxed mb-8">
-                <p>
-                  At {business.name}, we understand that purchasing a premium vehicle is a significant
-                  investment. That is why we have partnered with South Africa&apos;s leading financial
-                  institutions to offer you competitive financing options tailored to your needs.
-                </p>
-                <p>
-                  Our finance team has years of experience navigating the complexities of vehicle
-                  finance. We work with you to find the best possible rates and terms, ensuring
-                  your monthly payments fit comfortably within your budget.
-                </p>
-                <p>
-                  As a registered Financial Services Provider ({business.fsp}), we are authorized
-                  to provide comprehensive finance assistance through our NCA-approved credit centre.
-                </p>
-              </div>
-
-              {/* Finance Benefits */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="p-4 bg-white border-l-2 border-gold">
-                  <h4 className="font-bold text-near-black mb-1">Competitive Rates</h4>
-                  <p className="text-sm text-meta-gray">Access to prime interest rates</p>
-                </div>
-                <div className="p-4 bg-white border-l-2 border-gold">
-                  <h4 className="font-bold text-near-black mb-1">Flexible Terms</h4>
-                  <p className="text-sm text-meta-gray">24 to 84 month options</p>
-                </div>
-                <div className="p-4 bg-white border-l-2 border-gold">
-                  <h4 className="font-bold text-near-black mb-1">Quick Approval</h4>
-                  <p className="text-sm text-meta-gray">Fast turnaround times</p>
-                </div>
-                <div className="p-4 bg-white border-l-2 border-gold">
-                  <h4 className="font-bold text-near-black mb-1">Expert Guidance</h4>
-                  <p className="text-sm text-meta-gray">Personalized assistance</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Finance Calculator */}
-            <div>
-              <FinanceCalculator vehiclePrice={selectedVehicle?.price || 900000} />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Finance Partners Section */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-16 lg:py-24 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Our Finance Partners"
@@ -168,6 +113,61 @@ function FinancePageContent() {
                 )}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Finance Overview Section */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <SectionHeading
+                title="Affordable Finance Solutions"
+                subtitle="Making your dream vehicle a reality with flexible payment options"
+              />
+              <div className="space-y-4 text-meta-gray leading-relaxed mb-8">
+                <p>
+                  At {business.name}, we understand that purchasing a premium vehicle is a significant
+                  investment. That is why we have partnered with South Africa&apos;s leading financial
+                  institutions to offer you competitive financing options tailored to your needs.
+                </p>
+                <p>
+                  Our finance team has years of experience navigating the complexities of vehicle
+                  finance. We work with you to find the best possible rates and terms, ensuring
+                  your monthly payments fit comfortably within your budget.
+                </p>
+                <p>
+                  As a registered Financial Services Provider ({business.fsp}), we are authorized
+                  to provide comprehensive finance assistance through our NCA-approved credit centre.
+                </p>
+              </div>
+
+              {/* Finance Benefits */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="p-4 bg-gray-50 border-l-2 border-gold">
+                  <h4 className="font-bold text-near-black mb-1">Competitive Rates</h4>
+                  <p className="text-sm text-meta-gray">Access to prime interest rates</p>
+                </div>
+                <div className="p-4 bg-gray-50 border-l-2 border-gold">
+                  <h4 className="font-bold text-near-black mb-1">Flexible Terms</h4>
+                  <p className="text-sm text-meta-gray">24 to 84 month options</p>
+                </div>
+                <div className="p-4 bg-gray-50 border-l-2 border-gold">
+                  <h4 className="font-bold text-near-black mb-1">Quick Approval</h4>
+                  <p className="text-sm text-meta-gray">Fast turnaround times</p>
+                </div>
+                <div className="p-4 bg-gray-50 border-l-2 border-gold">
+                  <h4 className="font-bold text-near-black mb-1">Expert Guidance</h4>
+                  <p className="text-sm text-meta-gray">Personalized assistance</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Finance Calculator */}
+            <div>
+              <FinanceCalculator vehiclePrice={selectedVehicle?.price || 900000} />
+            </div>
           </div>
         </div>
       </section>
