@@ -19,9 +19,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const name = `${vehicle.year} ${vehicle.make} ${vehicle.model} ${vehicle.variant}`.trim();
   const heading = `${name} — ${formatPrice(vehicle.price)}`;
-  const description = `${formatPrice(vehicle.price)} · ${formatMileage(vehicle.mileage)} · ${vehicle.transmission} · ${vehicle.fuelType}${
-    vehicle.color ? ` · ${vehicle.color}` : ''
-  }. Premium pre-owned ${vehicle.make} for sale at The Autoshed.`;
+  const specs = [
+    formatMileage(vehicle.mileage),
+    vehicle.transmission,
+    vehicle.fuelType,
+    vehicle.engineCapacity,
+    vehicle.driveType,
+    vehicle.color,
+    vehicle.serviceHistory,
+  ]
+    .filter(Boolean)
+    .join(' · ');
+  const features = (vehicle.features ?? []).slice(0, 4).join(', ');
+  const description = `${formatPrice(vehicle.price)} · ${specs}.${
+    features ? ` Features: ${features}.` : ''
+  } Premium pre-owned ${vehicle.make} at The Autoshed.`;
   const image = vehicle.images?.[0];
 
   return {

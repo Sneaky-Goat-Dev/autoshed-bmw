@@ -53,34 +53,59 @@ export default function VehicleDetailClient({ id }: { id: string }) {
 
   const defaultMessage = `I am interested in the ${vehicle.year} ${vehicle.make} ${vehicle.model} ${vehicle.variant}. Please contact me with more information.`;
 
-  // --- Share handlers ---
+  // --- Share helpers ---
   const shareTitle = `${vehicle.year} ${vehicle.make} ${vehicle.model} ${vehicle.variant}`.trim();
+  const priceStr = formatPrice(vehicle.price);
+  const mainImage = vehicle.images?.[0] ?? '';
   const currentUrl = () => (typeof window !== 'undefined' ? window.location.href : '');
-  // Rich, human-readable blurb (title + price + key specs). The shared link's
-  // image/preview comes from the page's Open Graph tags (see page.tsx metadata).
-  const shareBlurb = () =>
-    `${shareTitle}\n${formatPrice(vehicle.price)} · ${formatMileage(vehicle.mileage)} · ${vehicle.transmission} · ${vehicle.fuelType}`;
+
+  const specBits = [
+    formatMileage(vehicle.mileage),
+    vehicle.transmission,
+    vehicle.fuelType,
+    vehicle.engineCapacity,
+    vehicle.driveType,
+    vehicle.color,
+  ].filter(Boolean) as string[];
+  const topFeatures = (vehicle.features ?? []).slice(0, 5);
+
+  // Plain-text blurb for the native share sheet + clipboard fallback.
+  const plainBlurb = (url: string) =>
+    [
+      `${shareTitle} — ${priceStr}`,
+      specBits.join(' · '),
+      topFeatures.length ? `Features: ${topFeatures.join(', ')}` : '',
+      '',
+      `View at The Autoshed: ${url}`,
+    ]
+      .filter((l) => l !== '')
+      .join('\n');
+
+  // WhatsApp message — WhatsApp renders *bold*; the link unfurls to the car image via OG.
+  const whatsappText = (url: string) =>
+    [
+      `*${shareTitle}*`,
+      `💰 ${priceStr}`,
+      specBits.length ? `📋 ${specBits.join(' · ')}` : '',
+      topFeatures.length ? `✨ ${topFeatures.slice(0, 3).join(' · ')}` : '',
+      '',
+      'View it at The Autoshed 👇',
+      url,
+    ]
+      .filter((l) => l !== '')
+      .join('\n');
 
   const flagCopied = () => {
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const copyToClipboard = async (text: string) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      return true;
-    } catch {
-      return false;
-    }
-  };
-
-  // Native OS share sheet — the right method on mobile (and supported desktop
-  // browsers). Returns true when it handled the share (incl. user dismissal).
+  // Native OS share sheet — the right method on mobile (and supported desktop).
   const tryNativeShare = async () => {
     if (typeof navigator !== 'undefined' && typeof navigator.share === 'function') {
+      const url = currentUrl();
       try {
-        await navigator.share({ title: shareTitle, text: shareBlurb(), url: currentUrl() });
+        await navigator.share({ title: shareTitle, text: plainBlurb(url), url });
         return true;
       } catch (err) {
         return err instanceof Error && err.name === 'AbortError';
@@ -89,36 +114,74 @@ export default function VehicleDetailClient({ id }: { id: string }) {
     return false;
   };
 
-  // Facebook's share dialog pulls the image/title/description from the page's
-  // Open Graph tags and ignores prefilled captions by design.
-  const shareFacebook = () =>
+  // Facebook renders the rich card (image, title, price, specs) from the page's
+  // Open Graph tags; it ignores prefilled text by design (quote is best-effort).
+  const shareFacebook = () => {
+    const url = currentUrl();
     window.open(
-      `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl())}`,
+      `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(
+        `${shareTitle} — ${priceStr}`
+      )}`,
       '_blank',
-      'noopener,noreferrer,width=640,height=640'
+      'noopener,noreferrer,width=660,height=720'
     );
+  };
 
-  // WhatsApp accepts prefilled text; the link unfurls into a rich card (image) via OG.
   const shareWhatsApp = () =>
     window.open(
-      `https://wa.me/?text=${encodeURIComponent(`${shareBlurb()}\n\n${currentUrl()}`)}`,
+      `https://wa.me/?text=${encodeURIComponent(whatsappText(currentUrl()))}`,
       '_blank',
       'noopener,noreferrer'
     );
 
-  // Instagram has no web link-share intent. Mobile: native sheet (pick Instagram).
-  // Desktop: copy a ready-to-paste caption + link and open Instagram.
+  // Rich clipboard: HTML (car image + details + link) for rich paste targets,
+  // with a formatted plain-text fallback.
+  const copyRich = async () => {
+    const url = currentUrl();
+    const plain = plainBlurb(url);
+    const html =
+      `<div style="font-family:Arial,Helvetica,sans-serif;max-width:480px">` +
+      (mainImage
+        ? `<img src="${mainImage}" alt="${shareTitle}" style="width:100%;max-width:480px;height:auto;border-radius:6px" /><br/><br/>`
+        : '') +
+      `<strong>${shareTitle} — ${priceStr}</strong><br/>` +
+      `${specBits.join(' · ')}<br/>` +
+      (topFeatures.length ? `${topFeatures.join(', ')}<br/>` : '') +
+      `<br/><a href="${url}">View at The Autoshed</a>` +
+      `</div>`;
+    try {
+      if (typeof ClipboardItem !== 'undefined' && navigator.clipboard?.write) {
+        await navigator.clipboard.write([
+          new ClipboardItem({
+            'text/html': new Blob([html], { type: 'text/html' }),
+            'text/plain': new Blob([plain], { type: 'text/plain' }),
+          }),
+        ]);
+      } else {
+        await navigator.clipboard.writeText(plain);
+      }
+      flagCopied();
+      return true;
+    } catch {
+      try {
+        await navigator.clipboard.writeText(plain);
+        flagCopied();
+        return true;
+      } catch {
+        return false;
+      }
+    }
+  };
+
+  // Instagram has no web composer. Mobile: native sheet (post to Instagram).
+  // Desktop: copy the rich caption + image, then open Instagram to paste.
   const shareInstagram = async () => {
     if (await tryNativeShare()) return;
-    await copyToClipboard(`${shareBlurb()}\n\n${currentUrl()}`);
-    flagCopied();
+    await copyRich();
     window.open(social.instagram, '_blank', 'noopener,noreferrer');
   };
 
-  // Copy the full blurb + link (not just the bare URL).
-  const copyLink = async () => {
-    if (await copyToClipboard(`${shareBlurb()}\n\n${currentUrl()}`)) flagCopied();
-  };
+  const copyLink = () => copyRich();
 
   return (
     <>
