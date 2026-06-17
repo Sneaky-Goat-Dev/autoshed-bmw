@@ -24,9 +24,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     vehicle.transmission,
     vehicle.fuelType,
     vehicle.engineCapacity,
-    vehicle.driveType,
+    vehicle.driveType?.replace(/([a-z])([A-Z])/g, '$1 $2'),
     vehicle.color,
-    vehicle.serviceHistory,
   ]
     .filter(Boolean)
     .join(' · ');

@@ -13,7 +13,7 @@ import VehicleCard from '@/components/VehicleCard';
 import { formatPrice, formatMileage } from '@/utils/format';
 
 export default function VehicleDetailClient({ id }: { id: string }) {
-  const { contact, social } = autoshedData;
+  const { contact } = autoshedData;
   const { vehicles, isLoading } = useVehicles();
 
   const vehicle = vehicles.find((v) => v.id === id);
@@ -58,13 +58,16 @@ export default function VehicleDetailClient({ id }: { id: string }) {
   const priceStr = formatPrice(vehicle.price);
   const mainImage = vehicle.images?.[0] ?? '';
   const currentUrl = () => (typeof window !== 'undefined' ? window.location.href : '');
+  const isMobileDevice = () =>
+    typeof navigator !== 'undefined' &&
+    (/Android|iPhone|iPad|iPod|Mobi/i.test(navigator.userAgent) || (navigator.maxTouchPoints ?? 0) > 1);
 
   const specBits = [
     formatMileage(vehicle.mileage),
     vehicle.transmission,
     vehicle.fuelType,
     vehicle.engineCapacity,
-    vehicle.driveType,
+    vehicle.driveType?.replace(/([a-z])([A-Z])/g, '$1 $2'),
     vehicle.color,
   ].filter(Boolean) as string[];
   const topFeatures = (vehicle.features ?? []).slice(0, 5);
@@ -85,11 +88,11 @@ export default function VehicleDetailClient({ id }: { id: string }) {
   const whatsappText = (url: string) =>
     [
       `*${shareTitle}*`,
-      `💰 ${priceStr}`,
-      specBits.length ? `📋 ${specBits.join(' · ')}` : '',
-      topFeatures.length ? `✨ ${topFeatures.slice(0, 3).join(' · ')}` : '',
+      priceStr,
+      specBits.length ? specBits.join(' · ') : '',
+      topFeatures.length ? topFeatures.slice(0, 3).join(' · ') : '',
       '',
-      'View it at The Autoshed 👇',
+      'View it at The Autoshed:',
       url,
     ]
       .filter((l) => l !== '')
@@ -123,7 +126,7 @@ export default function VehicleDetailClient({ id }: { id: string }) {
         `${shareTitle} — ${priceStr}`
       )}`,
       '_blank',
-      'noopener,noreferrer,width=660,height=720'
+      'noopener,noreferrer'
     );
   };
 
@@ -173,12 +176,13 @@ export default function VehicleDetailClient({ id }: { id: string }) {
     }
   };
 
-  // Instagram has no web composer. Mobile: native sheet (post to Instagram).
-  // Desktop: copy the rich caption + image, then open Instagram to paste.
+  // Instagram has no web composer. Mobile: native sheet routes to the Instagram
+  // app. Desktop: copy the rich caption (image + details) and open Instagram in a
+  // new tab so the user can create a post and paste.
   const shareInstagram = async () => {
-    if (await tryNativeShare()) return;
+    if (isMobileDevice() && (await tryNativeShare())) return;
     await copyRich();
-    window.open(social.instagram, '_blank', 'noopener,noreferrer');
+    window.open('https://www.instagram.com/', '_blank', 'noopener,noreferrer');
   };
 
   const copyLink = () => copyRich();
