@@ -26,6 +26,10 @@ export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
   const [activeTab, setActiveTab] = useState<'overview' | 'features' | 'finance'>('overview');
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const vehicleImages = vehicle?.images || [];
+  const goPrevImage = () =>
+    setSelectedImageIndex((i) => (i - 1 + vehicleImages.length) % vehicleImages.length);
+  const goNextImage = () =>
+    setSelectedImageIndex((i) => (i + 1) % vehicleImages.length);
 
   const [state, handleSubmit] = useForm('vehicleEnquiry');
 
@@ -83,14 +87,39 @@ export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
               {/* Main Image */}
               <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden">
                 {vehicleImages.length > 0 ? (
-                  <Image
-                    src={vehicleImages[selectedImageIndex]}
-                    alt={`${vehicle.year} ${vehicle.make} ${vehicle.model} ${vehicle.variant}`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    priority
-                  />
+                  <>
+                    <Image
+                      src={vehicleImages[selectedImageIndex]}
+                      alt={`${vehicle.year} ${vehicle.make} ${vehicle.model} ${vehicle.variant}`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      priority
+                    />
+                    {vehicleImages.length > 1 && (
+                      <>
+                        <button
+                          type="button"
+                          onClick={goPrevImage}
+                          aria-label="Previous image"
+                          className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-black/50 text-white hover:bg-black/70 transition-colors"
+                        >
+                          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+                        </button>
+                        <button
+                          type="button"
+                          onClick={goNextImage}
+                          aria-label="Next image"
+                          className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-black/50 text-white hover:bg-black/70 transition-colors"
+                        >
+                          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                        </button>
+                        <div className="absolute bottom-2 right-2 px-2 py-1 bg-black/60 text-white text-xs font-medium">
+                          {selectedImageIndex + 1} / {vehicleImages.length}
+                        </div>
+                      </>
+                    )}
+                  </>
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300">
                     <div className="text-center">
@@ -114,10 +143,10 @@ export default function VehicleDetailPage({ params }: VehicleDetailPageProps) {
                   </div>
                 )}
               </div>
-              {/* Thumbnail Grid */}
+              {/* Thumbnail Grid (all images, scrollable) */}
               {vehicleImages.length > 1 && (
-                <div className="grid grid-cols-4 gap-2">
-                  {vehicleImages.slice(0, 8).map((image, index) => (
+                <div className="grid grid-cols-4 gap-2 max-h-80 overflow-y-auto">
+                  {vehicleImages.map((image, index) => (
                     <button
                       key={index}
                       onClick={() => setSelectedImageIndex(index)}
