@@ -18,13 +18,13 @@ function FinancePageContent() {
   // Find vehicle if ID is provided
   const selectedVehicle = vehicleId ? vehicles.find(v => v.id === vehicleId) : undefined;
 
-  const financePartners = [
-    'ABSA Vehicle Finance',
-    'Wesbank',
-    'MFC',
-    'Standard Bank Vehicle Finance',
-    'Nedbank Vehicle Finance',
-    'FNB Vehicle Finance',
+  const financePartners: { name: string; logo: string | null }[] = [
+    { name: 'Absa', logo: '/images/finance/absa.png' },
+    { name: 'WesBank', logo: null },
+    { name: 'MFC', logo: '/images/finance/mfc.png' },
+    { name: 'Standard Bank', logo: '/images/finance/standard-bank.png' },
+    { name: 'Nedbank', logo: '/images/finance/nedbank.png' },
+    { name: 'FNB', logo: '/images/finance/fnb.png' },
   ];
 
   return (
@@ -149,14 +149,23 @@ function FinancePageContent() {
             centered
           />
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {financePartners.map((partner, index) => (
+            {financePartners.map((partner) => (
               <div
-                key={index}
-                className="bg-gray-50 p-6 flex items-center justify-center text-center border border-gray-200"
+                key={partner.name}
+                className="bg-white p-6 flex items-center justify-center text-center border border-gray-200 h-28"
               >
-                <span className="text-sm font-bold text-near-black uppercase tracking-wider">
-                  {partner}
-                </span>
+                {partner.logo ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-h-14 max-w-full w-auto object-contain"
+                  />
+                ) : (
+                  <span className="text-base font-extrabold text-near-black uppercase tracking-wider">
+                    {partner.name}
+                  </span>
+                )}
               </div>
             ))}
           </div>
