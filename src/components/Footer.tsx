@@ -38,9 +38,9 @@ export default function Footer() {
               <Image
                 src="/images/autoshed-logo.png"
                 alt={business.name}
-                width={33}
-                height={10}
-                className="h-2.5 w-auto brightness-0 invert"
+                width={734}
+                height={734}
+                className="h-10 w-10 brightness-0 invert"
               />
             </Link>
             <p className="text-silver text-sm leading-relaxed mb-6 max-w-md">

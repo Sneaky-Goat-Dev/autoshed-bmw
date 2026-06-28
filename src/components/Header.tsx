@@ -27,9 +27,9 @@ export default function Header() {
               <Image
                 src="/images/autoshed-logo.png"
                 alt={autoshedData.business.name}
-                width={40}
-                height={10}
-                className="h-2.5 w-auto"
+                width={734}
+                height={734}
+                className="h-10 w-10"
                 priority
               />
             </Link>
