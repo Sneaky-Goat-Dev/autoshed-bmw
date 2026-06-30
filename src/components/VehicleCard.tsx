@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Vehicle } from '@/types';
-import { formatPrice, formatMileage } from '@/utils/format';
+import { formatPrice, formatMileage, humanize } from '@/utils/format';
 
 interface VehicleCardProps {
   vehicle: Vehicle;
@@ -148,7 +148,7 @@ export default function VehicleCard({ vehicle }: VehicleCardProps) {
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
               </svg>
-              <span>{vehicle.driveType}</span>
+              <span>{humanize(vehicle.driveType)}</span>
             </div>
           )}
         </div>

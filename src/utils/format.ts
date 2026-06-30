@@ -25,6 +25,35 @@ export function formatMileage(mileage: number): string {
 }
 
 /**
+ * Turn an AutoTrader enum code into a human-readable label.
+ * e.g. "_4x4" -> "4x4", "FrontWheelDrive" -> "Front Wheel Drive",
+ *      "SportsUtilityVehicle" -> "Sports Utility Vehicle".
+ */
+export function humanize(value?: string | null): string {
+  if (!value) return '';
+  return value
+    .replace(/^_+/, '') // leading underscore (e.g. "_4x4" -> "4x4")
+    .replace(/_+/g, ' ') // remaining underscores -> spaces
+    .replace(/([a-z0-9])([A-Z])/g, '$1 $2') // split camelCase
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+const SERVICE_HISTORY_LABELS: Record<string, string> = {
+  Full: 'Full',
+  FullByFranchise: 'Full (Franchise)',
+  Partial: 'Partial',
+  None: 'None',
+  NoHistory: 'None',
+};
+
+/** Human-readable service-history label (e.g. "FullByFranchise" -> "Full (Franchise)"). */
+export function formatServiceHistory(value?: string | null): string {
+  if (!value) return '';
+  return SERVICE_HISTORY_LABELS[value] ?? humanize(value);
+}
+
+/**
  * Calculate monthly payment for vehicle finance
  */
 export function calculateMonthlyPayment(

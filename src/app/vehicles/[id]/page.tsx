@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getVehicleById } from '@/lib/db';
-import { formatPrice, formatMileage } from '@/utils/format';
+import { formatPrice, formatMileage, humanize } from '@/utils/format';
 import VehicleDetailClient from './VehicleDetailClient';
 
 interface PageProps {
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     vehicle.transmission,
     vehicle.fuelType,
     vehicle.engineCapacity,
-    vehicle.driveType?.replace(/([a-z])([A-Z])/g, '$1 $2'),
+    humanize(vehicle.driveType),
     vehicle.color,
   ]
     .filter(Boolean)

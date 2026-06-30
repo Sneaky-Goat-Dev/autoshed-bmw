@@ -10,7 +10,7 @@ import { useVehicles } from '@/hooks/useVehicles';
 import Button from '@/components/Button';
 import FinanceCalculator from '@/components/FinanceCalculator';
 import VehicleCard from '@/components/VehicleCard';
-import { formatPrice, formatMileage } from '@/utils/format';
+import { formatPrice, formatMileage, humanize, formatServiceHistory } from '@/utils/format';
 
 export default function VehicleDetailClient({ id }: { id: string }) {
   const { contact } = autoshedData;
@@ -67,7 +67,7 @@ export default function VehicleDetailClient({ id }: { id: string }) {
     vehicle.transmission,
     vehicle.fuelType,
     vehicle.engineCapacity,
-    vehicle.driveType?.replace(/([a-z])([A-Z])/g, '$1 $2'),
+    humanize(vehicle.driveType),
     vehicle.color,
   ].filter(Boolean) as string[];
   const topFeatures = (vehicle.features ?? []).slice(0, 5);
@@ -360,7 +360,7 @@ export default function VehicleDetailClient({ id }: { id: string }) {
                 {vehicle.driveType && (
                   <div className="p-4 bg-gray-50 border-l-2 border-gold">
                     <p className="text-xs text-meta-gray uppercase tracking-wider mb-1">Drive Type</p>
-                    <p className="font-bold text-near-black">{vehicle.driveType}</p>
+                    <p className="font-bold text-near-black">{humanize(vehicle.driveType)}</p>
                   </div>
                 )}
               </div>
@@ -477,7 +477,7 @@ export default function VehicleDetailClient({ id }: { id: string }) {
                               <p className="font-semibold text-near-black mb-2">{headerLine}</p>
                             )}
                             {textLines.length > 0 && (
-                              <p className="mb-2">{textLines.join(' ')}</p>
+                              <p className="mb-2 whitespace-pre-line">{textLines.join('\n')}</p>
                             )}
                             <ul className="space-y-1">
                               {bulletLines.map((line, j) => (
@@ -490,7 +490,7 @@ export default function VehicleDetailClient({ id }: { id: string }) {
                           </div>
                         );
                       }
-                      return <p key={i}>{block}</p>;
+                      return <p key={i} className="whitespace-pre-line">{block}</p>;
                     })}
                   </div>
 
@@ -534,7 +534,7 @@ export default function VehicleDetailClient({ id }: { id: string }) {
                     {vehicle.driveType && (
                       <div className="flex justify-between py-3 border-b border-gray-100">
                         <span className="text-meta-gray">Drive Type</span>
-                        <span className="font-bold text-near-black">{vehicle.driveType}</span>
+                        <span className="font-bold text-near-black">{humanize(vehicle.driveType)}</span>
                       </div>
                     )}
                     {vehicle.doors && (
@@ -552,7 +552,7 @@ export default function VehicleDetailClient({ id }: { id: string }) {
                     {vehicle.serviceHistory && (
                       <div className="flex justify-between py-3 border-b border-gray-100">
                         <span className="text-meta-gray">Service History</span>
-                        <span className="font-bold text-near-black">{vehicle.serviceHistory}</span>
+                        <span className="font-bold text-near-black">{formatServiceHistory(vehicle.serviceHistory)}</span>
                       </div>
                     )}
                   </div>
